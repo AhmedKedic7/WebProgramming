@@ -1,0 +1,274 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Local Basketball League Management System</title>
+      <link rel="shortcut icon" href="https://basket.ba/prvenstvo/wp-content/uploads/2019/03/faivon2.png">
+      <!-- Link css -->
+      <link rel="stylesheet" href="./css/main.css">
+      <link rel="stylesheet" href="./css/dashboard.css">
+      <!-- link icons -->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+      <!-- link swiper.min.css -->
+      <link rel="stylesheet" href="../swiper-bundle.min.css">
+      <style>
+         .shortText{
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+         overflow: hidden !important;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Dashboard starts here -->
+      <div class="dashboardFlex flex">
+         <!-- Dashboard side menu starts -->
+         <!-- Dashboard side menu starts -->
+         <div class="dashboardMenu">
+            <!-- LogoDiv -->
+            <div class="logoDiv flex">
+               <img src="./assets/logos/bhpl1.png" alt="League 
+                  Logo">
+            </div>
+            <!-- Menu Player Starts -->
+            <div class="menuGrid">
+               <a href="admin.html" class="singleLink flex active">
+               <i class="uil uil-create-dashboard icon"></i>
+               <span> Dashboard </span>
+               </a>
+               <a href="./adteams.html" class="singleLink flex">
+               <i class="uil uil-trophy icon"></i>
+               <span> Teams </span>
+               </a>
+               <a href="./adfixtures.html" class="singleLink flex">
+               <i class="uil uil-schedule icon"></i>
+               <span> Fixtures </span>
+               </a>
+               <a href="adresults.html" class="singleLink flex">
+               <i class="uil uil-football icon"></i>
+               <span> Results </span>
+               </a>
+               <a href="adplayers.html" class="singleLink flex">
+               <i class="uil uil-head-side icon"></i>
+               <span> Players </span>
+               </a>
+               <a href="adsettings.html" class="singleLink flex">
+               <i class="uil uil-sliders-v-alt icon"></i>
+               <span> Settings </span>
+               </a>
+            </div>
+            <!-- Menu Player Ends -->
+            <!-- Featured Player Starts -->
+            <!-- Featured Player Ends -->
+            <!-- Admininstrator Div Starts  -->
+            <div class="adminDiv sectionDesign">
+               <div class="sectionIntro">
+                  <h2 class="title">Administrator</h2>
+                  <span class="subTitle">Please Be Authentic!</span>
+               </div>
+               <div class="secContent grid">
+                  <img src="./uploads/admin.jpg" alt="Team Logo" class="adminImg">
+                  <span class="adminName">Ahmed </span>
+                  <span class="adminEmail">ahmedkedic7@gmail.com</span>
+                  <button class="btn">
+                  <a href="./index.html">
+                  Sign Out <i class="uil uil-signout icon"></i></a>
+                  </button>
+               </div>
+            </div>
+            <!-- Admininstrator Div Ends -->
+         </div>
+         <script>
+            // Get the current page URL
+            const currentUrl = window.location.href;
+            
+            // Find all links on the page
+            const links = document.querySelectorAll(".singleLink");
+            console.log(links)
+            
+            // Iterate over the links and add the active class if the href attribute matches the current page URL
+            for (const link of links) {
+              if (link.href === currentUrl) {
+                link.classList.toggle("active");
+              }
+            }
+         </script>      
+         <div class="dashboardBody">
+            <!-- dashboard Body section starts here =============================================================-->
+            <section class="topSection flex">
+               <div class="imgSlider swiper swiper-container-initialized swiper-container-vertical swiper-container-pointer-events swiper-container-css-mode">
+                  <div class="swiper-wrapper" id="swiper-wrapper-13e77228d512df8d" aria-live="off">
+                     <div class="content swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="4" style="height: 400px; margin-bottom: 20px;" role="group" aria-label="1 / 7">
+                        <img src="./uploads/KK-Siroki.jpeg" alt="Team Logo">
+                        <div class="slideInfo">
+                           <div class="infoContainer">
+                              <span class="title">LIVE BLOG</span>
+                              <h1 class="shortText">LIVE: KK Široki to the league table with maximum points</h1>
+                              <p>
+                                 Details are available in the results section, navigate via the button below.
+                              </p>
+                              <button class="btn">
+                              <a href="./adresults.html">
+                              Find more <i class="uil uil-arrow-right"></i>
+                              </a>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+               </div>
+               <section class="section container logSection sectionDesign">
+                  <div class="sectionContainer">
+                     <div class="sectionIntro">
+                        <h2>Ongoing Season</h2>
+                        <span class="sectionSubTitle">Our current league stats</span>
+                     </div>
+                     <div class="sectionContent grid">
+                        <div class="resultsDiv borderTop">
+                           <span class="matchNumber"> Matchweek 1 Results </span>
+                           <div class="leagueLogo">
+                              <img
+                                 src="assets/logos/bhpl1.png"
+                                 alt="Logo"
+                                 class="logo"
+                                 />
+                           </div>
+                           <small>Results from week 1</small>
+                           <div class="date">Sunday 21 April</div>
+                           <div class="singleFixture">
+                              <div class="teams flex">
+                                 <div class="teamName_teamLogo flex">
+                                    <div class="name">KK Široki</div>
+                                    <div class="teamLogoDiv">
+                                       <img
+                                          src="assets/logos/team&#32;(1).png"
+                                          alt="Team Logo"
+                                          class="teamLogo"
+                                          />
+                                    </div>
+                                 </div>
+                                 <p class="results">5-0</p>
+                                 <div class="teamName_teamLogo flex">
+                                    <div class="teamLogoDiv">
+                                       <img
+                                          src="assets/logos/team&#32;(10).png"
+                                          alt="Team Logo"
+                                          class="teamLogo"
+                                          />
+                                    </div>
+                                    <div class="name">KK Slavija</div>
+                                 </div>
+                              </div>
+                              <span class="venue"><strong>Venue: </strong>Pitch Two</span>
+                           </div>
+                           <div class="singleFixture">
+                              <div class="teams flex">
+                                 <div class="teamName_teamLogo flex">
+                                    <div class="name">KK Sloboda</div>
+                                    <div class="teamLogoDiv">
+                                       <img
+                                          src="assets/logos/team&#32;(3).png"
+                                          alt="Team Logo"
+                                          class="teamLogo"
+                                          />
+                                    </div>
+                                 </div>
+                                 <p class="time">N-P</p>
+                                 <div class="teamName_teamLogo flex">
+                                    <div class="teamLogoDiv">
+                                       <img
+                                          src="assets/logos/team&#32;(4).png"
+                                          alt="Team Logo"
+                                          class="teamLogo"
+                                          />
+                                    </div>
+                                    <div class="name">KK Borac</div>
+                                 </div>
+                              </div>
+                              <span class="venue"
+                                 ><strong>Venue: </strong>Pitch Three</span>
+                           </div>
+                           <div class="singleFixture">
+                              <div class="teams flex">
+                                 <div class="teamName_teamLogo flex">
+                                    <div class="name">KK Spars</div>
+                                    <div class="teamLogoDiv">
+                                       <img
+                                          src="assets/logos/team&#32;(5).png"
+                                          alt="Team Logo"
+                                          class="teamLogo"
+                                          />
+                                    </div>
+                                 </div>
+                                 <p class="time">N-P</p>
+                                 <div class="teamName_teamLogo flex">
+                                    <div class="teamLogoDiv">
+                                       <img
+                                          src="assets/logos/team&#32;(6).png"
+                                          alt="Team Logo"
+                                          class="teamLogo"
+                                          />
+                                    </div>
+                                    <div class="name">KK Orlovik</div>
+                                 </div>
+                              </div>
+                              <span class="venue"
+                                 ><strong>Venue: </strong>Pitch Four</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </section>
+            <!-- dashboard Body section ends here =============================================================-->
+            <!-- dashboard news section starts here =============================================================-->
+            <!-- dashboard news section ends here =============================================================-->
+            <!-- dashboard banner section starts here =============================================================-->
+            <div class="section banner sectionDesign">
+               <div class="secContent flex">
+                  <img src="./assets/logos/Košarkaški_Savez_BiH_logo.png" alt="banner Image">
+                  <div class="bannerText">
+                     <h2 class="title">ABOUT OUR LEAGUE</h2>
+                     <p>
+                        The Bosnian and Herzegovinian Basketball League is the top-tier professional basketball competition in Bosnia and Herzegovina. Known for its competitive and dynamic play, the league features prominent teams from various regions of the country.
+                        With a structure that includes regular-season matches and playoffs, the league serves as a vital platform for local talent development and showcases high-quality basketball.
+                     </p>
+                     <a href="./about.html" class="btn flex">
+                     Explore Now <i class="uil uil-arrow-right icon"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <!-- dashboard banner section ends here =============================================================-->
+            <!-- footer section starts here =============================================================-->
+            <div class="footer">
+            </div>
+         </div>
+         <!-- footer section ends here =============================================================-->
+      </div>
+      </div>
+      <div class="smallDevices grid">
+         <i class="uil uil-exclamation-triangle icon exclamation"></i>
+         <h2>Please Login On Desktop</h2>
+         <span>Admininstrator dashboard is currently available on deskop screen size only.
+         <br>
+         <br>
+         <a href="./index.html" class="btn homeBtn">
+         <i class="uil uil-arrow-left icon"></i> Back Home 
+         </a>
+         <!-- footer section starts here =============================================================-->
+         <div class="footer">
+            <div class="copyRight">
+            </div>
+         </div>
+         <!-- footer section ends here =============================================================-->
+      </div>
+      <!-- swiper.js link -->
+      <script src="../swiper-bundle.min.js"></script>
+      <!-- link javascript -->
+      
+   </body>
+</html>

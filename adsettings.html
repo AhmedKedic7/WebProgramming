@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Local Basketball League Management System</title>
+      <link rel="shortcut icon" href="https://basket.ba/prvenstvo/wp-content/uploads/2019/03/faivon2.png">
+      <!-- Link css -->
+      <link rel="stylesheet" href="./css/main.css">
+      <link rel="stylesheet" href="./css/dashboard.css">
+      <link rel="stylesheet" href="./css/adsettings.css">
+      <!-- link icons -->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+   </head>
+   <body>
+      <!-- Dashboard starts here -->
+      <div class="dashboardFlex flex">
+         <!-- Dashboard side menu starts -->
+         <!-- Dashboard side menu starts -->
+         <div class="dashboardMenu">
+            <!-- LogoDiv -->
+            <div class="logoDiv flex">
+               <img src="./assets/logos/bhpl1.png" alt="League 
+                  Logo">
+            </div>
+            <!-- Menu Player Starts -->
+            <div class="menuGrid">
+               <a href="./admin.html" class="singleLink flex">
+               <i class="uil uil-create-dashboard icon"></i>
+               <span> Dashboard </span>
+               </a>
+               <a href="./adteams.html" class="singleLink flex ">
+               <i class="uil uil-trophy icon"></i>
+               <span> Teams </span>
+               </a>
+               <a href="./adfixtures.html" class="singleLink flex">
+               <i class="uil uil-schedule icon"></i>
+               <span> Fixtures </span>
+               </a>
+               <a href="adresults.html" class="singleLink flex">
+               <i class="uil uil-football icon"></i>
+               <span> Results </span>
+               </a>
+               <a href="adplayers.html" class="singleLink flex ">
+               <i class="uil uil-head-side icon"></i>
+               <span> Players </span>
+               </a>
+               <a href="adsettings.html" class="singleLink flex active">
+               <i class="uil uil-sliders-v-alt icon"></i>
+               <span> Settings </span>
+               </a>
+            </div>
+            <!-- Menu Player Ends -->
+            <!-- Admininstrator Div Starts  -->
+            <div class="adminDiv sectionDesign">
+               <div class="sectionIntro">
+                  <h2 class="title">Administrator</h2>
+                  <span class="subTitle">Please Be Authentic!</span>
+               </div>
+               <div class="secContent grid">
+                  <img src="./uploads/admin.jpg" alt="Team Logo" class="adminImg">
+                  <span class="adminName">Ahmed </span>
+                  <span class="adminEmail">ahmedkedic7@gmail.com</span>
+                  <button class="btn">
+                  <a href="./index.html">
+                  Sign Out <i class="uil uil-signout icon"></i></a>
+                  </button>
+               </div>
+            </div>
+            <!-- Admininstrator Div Ends -->
+         </div>
+         <script>
+            // Get the current page URL
+            const currentUrl = window.location.href;
+            
+            // Find all links on the page
+            const links = document.querySelectorAll(".singleLink");
+            console.log(links)
+            
+            // Iterate over the links and add the active class if the href attribute matches the current page URL
+            for (const link of links) {
+                if (link.href === currentUrl) {
+                    link.classList.toggle("active");
+                }
+            }
+         </script>
+         <div class="dashboardBody">
+            <div class="secHeading">
+               <h2>Settings</h2>
+            </div>
+            <div class="settingsButtons flex">
+               <a href="./index.html" class="settingButton flex" data-filter="homePage">
+               Public Page <i class="uil uil-info-circle icon"></i>
+               </a>
+               <a href="#" class="settingButton  flex" data-filter="createPage">
+               Create <i class="uil uil-focus-add icon"></i
+                  ></a>
+               <a href="#" class="settingButton activeBtn flex" data-filter="myAccount">
+               My Account<i class="uil uil-arrow-compress-h icon"></i
+                  ></a>
+               <a href="#" class="settingButton flex" data-filter="accountDms">Administrators<i class="uil uil-user icon"></i
+                  ></a>
+            </div>
+            <div class="settingsContainer sectionDesign">
+               <div class="toggleDiv create_Update_Sections grid hide" data-item="createPage">
+                  <div class="cardsContainer createSection grid">
+                     <div class="sectionIntro borderBottom">
+                        <h2>Create/Add New</h2>
+                        <span class="sectionSubTitle">This is where everything task effect, some areas require
+                        extra permission.</span>
+                     </div>
+                  </div>
+                  <!--Create Results -->
+               </div>
+               <div class="toggleDiv myAccount live" data-item="myAccount">
+                  <div class="infoSection flex">
+                     <div class="adminDiv">
+                        <div class="secContent grid">
+                           <img
+                              src="uploads/admin.jpg"
+                              alt="Team Logo"
+                              class="adminImg"
+                              />
+                           <span class="adminName">Ahmed</span>
+                           <span class="adminEmail">ahmedkedic7@gmail.com</span>
+                           <button class="badge">
+                           General Role<i class="uil uil-award icon"></i>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="detailsDiv">
+                        <form action="" method="post">
+                           <div class="rows grid">
+                              <div class="row">
+                                 <label for="">First Name</label>
+                                 <input type="" placeholder="Ahmed" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">Second Name</label>
+                                 <input type="" placeholder="Kedić" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">User Name</label>
+                                 <input type="" placeholder="ahmedkedic7" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">Email</label>
+                                 <input type="" placeholder="ahmedkedic7@gmail.com" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">Date Of Birth</label>
+                                 <input type="" placeholder="2003-06-15" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">Password Expires</label>
+                                 <input type="" placeholder="14 days" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">Role</label>
+                                 <input type="" placeholder="GA" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="username">Account Permission</label>
+                                 <input type="" value="" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="username">Access Status </label>
+                                 <input type="" placeholder="Unlocked" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="username">Password Last reset </label>
+                                 <input type="" placeholder="2023/20/10" disabled />
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+                  <div class="infoSection sectionDesign">
+                     <div class="sectionIntro borderBottom">
+                        <h2>Update Your Details</h2>
+                        <span class="sectionSubTitle">Any change in this section will log out your account!</span
+                           >
+                     </div>
+                     <div class="updateForm">
+                        <form  method="POST" enctype="multipart/form-data">
+                           <div class="rows grid">
+                              <div class="row">
+                                 <label for="fName">First Name</label>
+                                 <input
+                                    type="text"
+                                    id="fName"
+                                    name="fNameUpdate"
+                                    placeholder="Enter your First Name"
+                                    value="Ahmed"
+                                    />
+                              </div>
+                              <div class="row">
+                                 <label for="sName">Second Name</label>
+                                 <input
+                                    type="text"
+                                    id="sName"
+                                    name="sNameUpdate"
+                                    placeholder="Enter your Second Name"
+                                    value="Kedić"
+                                    />
+                              </div>
+                              <div class="row">
+                                 <label for="updateEmail">Email</label>
+                                 <input
+                                    type="text"
+                                    id="updateEmail"
+                                    name="emailUpdate"
+                                    placeholder="Enter your Email"
+                                    value="ahmedkedic7@gmail.com"
+                                    />
+                              </div>
+                              <div class="row">
+                                 <label for="dob">Date Of Birth</label>
+                                 <input
+                                    type="date"
+                                    id="dob"
+                                    name="dobUpdate"
+                                    placeholder="Enter your Date of birth"
+                                    value="2003-6-15"
+                                    />
+                              </div>
+                              <div class="row">
+                                 <label class="image" for="image"
+                                    >My Profile Picture
+                                 <i class="uil uil-camera-plus icon"></i>
+                                 </label>
+                                 <input
+                                    type="file"
+                                    name="adminImage"
+                                    id="image"
+                                    />
+                              </div>
+                              <div class="row">
+                                 <label for="passwrd">Password</label>
+                                 <input
+                                    type="password"
+                                    id="passwrd"
+                                    name="passwrdUpdate"
+                                    placeholder="Enter your Password"
+                                    value=""
+                                    />
+                              </div>
+                              <button class="btn flex" name='updateMyself'>
+                              Update <i class="uil uil-exchange icon"></i>
+                              <input type="hidden" name='currentImage' value='1.png'>
+                              </button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="toggleDiv accountDms hide" data-item="accountDms">
+                  <section class="dms">
+                     <table>
+                        <tbody>
+                           <tr>
+                              <th>Admin ID</th>
+                              <th>Name</th>
+                              <th>Team</th>
+                              <th>User Name</th>
+                              <th>Email</th>
+                              <th>Role</th>
+                              <th>Status</th>
+                              <th>Action</th>
+                           </tr>
+                           <tr class="td_row">
+                              <td>1</td>
+                              <td>ahmedkedic7</td>
+                              <td ><i class="uil uil-shield-check icon" style='color: green; font-size: 20px'></i></td>
+                              <td>ahmedkedic7</td>
+                              <td>ahmedkedic7@gmail.com</td>
+                              <td>GA</td>
+                              <td>Unlocked</td>
+                           </tr>
+                           <tr class="td_row">
+                              <td>2</td>
+                              <td>name name</td>
+                              <td>Team Name</td>
+                              <td>name.name</td>
+                              <td>name@gmail.com</td>
+                              <td>TA</td>
+                              <td>Unlocked</td>
+                              <td class="actioBtn flex" style='gap:0.5rem; justify-content: center;'>
+                                 <a href=""><i class="uil uil-pen icon btn"></i></a>
+                                 <a href=""><i class="uil uil-trash-alt icon btn deleteBtn"></i></a>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </section>
+               </div>
+            </div>
+            <!-- Dashboard Body content -->
+            <!-- footer section starts here =============================================================-->
+            <div class="footer">
+            </div>
+            <!-- footer section ends here =============================================================-->
+         </div>
+      </div>
+      <script src="./dashboard.js"></script>
+   </body>
+</html>
+<!-- Create Team -->
+<!-- Create Fixture -->
+<!-- Create News -->
+<!-- Create Player -->
+<!-- Create Administrator -->
+<!-- Update Admin -->

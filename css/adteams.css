@@ -1,0 +1,62 @@
+:root {
+    --primaryColor: rgb(2, 2, 134); /* Dark Blue, matching Bosnian and Herzegovinian flag */
+    --secondaryColor: #ffea2f; /* Yellow, matching Bosnian and Herzegovinian flag */
+    --thirdColor: #0b166f;
+    --hoverColor: #0b010c;
+    --bgColor: #2379e9;
+    --whiteColor: #ffffff;
+    --greyTexts: #807a82;
+    --blackColor: #000000;
+    --greyColor: rgb(241, 241, 241);
+    --borderRadius: 3px;
+    --linearGradient: linear-gradient(to right, #3b54c3, #131100);
+    --fontSize_13px: 13px;
+    --boxShadow: 0px 2px 2px var(--greyColor);
+}
+.dashboardBody .clubsSection .sectionHeader {
+    position: relative;
+    border-radius: var(--borderRadius);
+    background: var(--secondaryColor);
+}
+
+.dashboardBody .clubsSection .sectionHeader .seasonYear h6 {
+    color: var(--primaryColor);
+    font-size: 16px;
+    cursor: not-allowed;
+}
+
+
+
+.dashboardBody .clubsSection .clubsContainer .singleClub .singleClubHidden {
+    position: relative;
+    gap: 1rem;
+}
+
+.dashboardBody .clubsSection .clubsContainer .singleClub .singleClubHidden .clubImage {
+    height: 80%;
+    width: 280px;
+    position: absolute;
+    right: 10%;
+}
+
+.dashboardBody .clubsSection .clubsContainer .singleClub .singleClubHidden .clubImage img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.dashboardBody .addClub {
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.dashboardBody .addClub em {
+    font-size: 13px;
+    color: var(--thirdColor);
+    padding-top: 0.5rem;
+}
+
+/*# sourceMappingURL=adteams.css.map */

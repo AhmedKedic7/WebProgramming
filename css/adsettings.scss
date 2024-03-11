@@ -1,0 +1,423 @@
+:root {
+  --primaryColor: #37003c;
+  --secondaryColor: #fe2882;
+  --thirdColor: #11b6d0;
+  --hoverColor: #260229;
+  --bgColor: #963bfe;
+  --whiteColor: #ffffff;
+  --greyTexts: #807a82;
+  --blackColor: #160331;
+  --buttonBg: rgb(223, 225, 248);
+  --greyColor: rgb(241, 241, 241);
+  --greyColorDark: hsl(231, 13%, 89%);
+  --borderRadius: 3px;
+  --linearGradient: linear-gradient(to right, #963bfe, #fe2882);
+  --fontSize_13px: 13px;
+  --boxShadow: 0px 2px 2px var(--greyColor);
+}
+
+.dashboardBody {
+  .settingsButtons {
+    margin-top: 1rem;
+    bottom: 0;
+    gap: 10px;
+
+    a {
+      gap: 0.5rem;
+      padding: 10px 15px;
+      background: var(--buttonBg);
+      color: var(--primaryColor);
+      border-top-right-radius: var(--borderRadius);
+      border-top-left-radius: var(--borderRadius);
+      font-weight: 500;
+      font-size: 14px;
+      &:hover {
+        background: var(--secondaryColor);
+        color: var(--whiteColor);
+      }
+    }
+    .aboutBtnActive {
+      background: var(--greyColor);
+      color: var(--primaryColor);
+    }
+    .activeBtn {
+      background-color: var(--primaryColor);
+      color: var(--whiteColor);
+    }
+  }
+
+  .settingsContainer {
+    position: relative;
+    .btn {
+      height: max-content;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      margin: unset;
+      transform: translateY(10px);
+    }
+    em {
+      color: var(--secondaryColor);
+      font-size: 16px;
+    }
+
+    .homePageSettings {
+      .subMenu {
+        // position: fixed;
+        width: 100%;
+        padding: 0 1rem;
+        background: var(--greyColor);
+        gap: 1rem;
+
+        a {
+          color: var(--primaryColor);
+          padding: 1rem;
+          font-weight: 500;
+          border-bottom: 3px solid transparent;
+          &:hover {
+            color: var(--secondaryColor);
+            border-bottom: 3px solid var(--secondaryColor);
+          }
+        }
+        .active {
+          color: var(--secondaryColor);
+          border-bottom: 3px solid var(--secondaryColor);
+        }
+      }
+
+      .comingSoon {
+        margin-top: 3rem;
+      }
+    }
+
+    .create_Update_Sections {
+      // gap: 1.5rem;
+      .cardsContainer {
+        margin-top: 1rem;
+        gap: 1rem;
+
+        .sectionIntro {
+          text-align: left;
+        }
+
+        .divider {
+          position: relative;
+        }
+        .singleCard {
+          border-radius: 10px;
+          border: 1px solid var(--greyColorDark);
+          padding: 1rem;
+
+          .cardTitle {
+            color: var(--primaryColor);
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            &:hover {
+              color: var(--secondaryColor);
+            }
+          }
+          .tbh {
+            display: none;
+            .sectionIntro {
+              padding-top: 0.5rem;
+              text-align: left;
+            }
+            .updateForm {
+              form {
+                width: 100%;
+                .rows {
+                  grid-template-columns: repeat(3, 1fr);
+                  .row {
+                    label {
+                      font-size: var(--fontSize_13px);
+                      font-weight: 500;
+                      display: block;
+                      padding-bottom: 0.285rem;
+                    }
+                    input,
+                    select,
+                    textarea {
+                      padding: 10px;
+                      border-radius: var(--borderRadius);
+                      border: 2px solid transparent;
+                      background: #e0e1e7;
+                      width: 100%;
+                      font-size: 13px;
+                      font-weight: 500;
+
+                      &::placeholder {
+                        opacity: 1;
+                      }
+
+                      &:focus {
+                        outline: 2px solid var(--secondaryColor);
+                      }
+
+                      option {
+                        background: var(--primaryColor);
+                        color: var(--whiteColor);
+                      }
+                    }
+
+                    .Score {
+                      width: 50px;
+                      text-align: center;
+                    }
+
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                      -webkit-appearance: none;
+                      margin: 0;
+                    }
+                    // Hide dropdown icon from a select field
+                    select {
+                      -webkit-appearance: none;
+                      -moz-appearance: none;
+                      appearance: none;
+                    }
+                    #image,
+                    #nImage,
+                    #pImage {
+                      display: none;
+                    }
+                    .image {
+                      padding: 10px;
+                      transform: translateY(19px);
+                      background: var(--greyColorDark);
+                      border-radius: var(--borderRadius);
+                      border: 2px solid transparent;
+                      width: 100%;
+                      &:hover {
+                        color: var(--secondaryColor);
+                      }
+                    }
+                    .submitBtn {
+                      cursor: pointer;
+                      background: var(--primaryColor);
+                      color: var(--whiteColor);
+                      &:hover {
+                        background: var(--secondaryColor);
+                      }
+                    }
+                    .registerLink {
+                      display: block;
+                      text-align: center;
+                      margin-top: 1rem;
+                      a {
+                        font-weight: 500;
+                        color: var(--secondaryColor);
+                      }
+                    }
+                  }
+
+                  .row.flex {
+                    width: 100%;
+                    align-items: center;
+                    gap: 0.5rem;
+                    margin-top: 0.5rem;
+
+                    .inputOne {
+                      flex: 1;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .active {
+            display: block;
+            transition: all 1s ease-in-out;
+          }
+
+          &:hover {
+            border: 1px solid var(--primaryColor);
+          }
+        }
+      }
+    }
+
+    .infoSection {
+      position: relative;
+      width: 100%;
+      margin: 1rem 0;
+      padding: 2rem 1rem;
+      border-radius: var(--borderRadius);
+      background: var(--greyColor);
+      align-items: flex-start;
+      justify-content: space-evenly;
+      gap: 1rem;
+
+      .adminDiv {
+        .sectionIntro {
+          padding: 1rem 0;
+        }
+        .secContent {
+          width: 80%;
+          margin: auto;
+          gap: 0.5rem;
+
+          .adminImg {
+            height: 120px;
+            width: 120px;
+            object-fit: cover;
+            margin: auto;
+            border: 10px solid var(--whiteColor);
+            border-radius: var(--borderRadius);
+            box-shadow: 0 4px 8px #e0e1e7;
+          }
+
+          span {
+            margin: auto;
+            color: var(--blackColor);
+            display: block;
+          }
+          .adminName {
+            font-size: 16px;
+            font-weight: 600;
+            display: block;
+          }
+
+          .adminEmail {
+            font-size: 13px;
+            font-weight: 400;
+          }
+
+          .badge {
+            background: var(--primaryColor);
+            color: var(--whiteColor);
+            padding: 0.5rem;
+            border-radius: var(--borderRadius);
+          }
+        }
+      }
+
+      .detailsDiv,
+      .updateForm {
+        form {
+          width: 100%;
+          .rows {
+            grid-template-columns: repeat(3, 1fr);
+            .row {
+              label {
+                font-size: var(--fontSize_13px);
+                font-weight: 500;
+                display: block;
+                padding-bottom: 0.285rem;
+              }
+              input,
+              select {
+                padding: 10px;
+                border-radius: var(--borderRadius);
+                border: 2px solid transparent;
+                background: #e0e1e7;
+                width: 100%;
+                font-size: 13px;
+                font-weight: 500;
+
+                &::placeholder {
+                  opacity: 1;
+                }
+
+                &:focus {
+                  outline: 2px solid var(--secondaryColor);
+                }
+
+                option {
+                  background: var(--primaryColor);
+                  color: var(--whiteColor);
+                }
+              }
+              .submitBtn {
+                cursor: pointer;
+                background: var(--primaryColor);
+                color: var(--whiteColor);
+                &:hover {
+                  background: var(--secondaryColor);
+                }
+              }
+              .registerLink {
+                display: block;
+                text-align: center;
+                margin-top: 1rem;
+                a {
+                  font-weight: 500;
+                  color: var(--secondaryColor);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .sectionIntro {
+        text-align: left;
+        align-items: center;
+      }
+
+      .updateForm {
+        form {
+          .rows {
+            grid-template-columns: repeat(4, 1fr);
+          }
+          .btn {
+            height: max-content;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            margin: unset;
+            transform: translateY(10px);
+          }
+        }
+      }
+    }
+
+    .accountDms {
+      .dms {
+        margin-top: 1rem;
+        table {
+          border-collapse: collapse;
+          border: none;
+          width: 100%;
+          th {
+            padding: 10px;
+            font-size: var(--fontSize_13px);
+            color: var(--whiteColor);
+            font-weight: 500;
+            align-items: center;
+            background: var(--primaryColor);
+          }
+          td {
+            text-align: center;
+            border-radius: var(--borderRadius);
+            padding: 1.5rem 0.5rem;
+            box-shadow: var(--boxShadow);
+            font-size: var(--fontSize_13px);
+            font-weight: 600;
+            color: var(--greyTexts);
+          }
+          .actioBtn {
+            // gap: .5rem;
+            .icon {
+              font-size: 20px;
+              padding: 6px 13px;
+            }
+          }
+
+          .club {
+            justify-content: center;
+            gap: 0.5rem;
+            .clubLogo {
+              height: 40px;
+              width: 40px;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .hide {
+    display: none;
+  }
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Local Basketball League Management System</title>
+      <link rel="shortcut icon" href="https://basket.ba/prvenstvo/wp-content/uploads/2019/03/faivon2.png">
+      <!-- Link css -->
+      <link rel="stylesheet" href="css/main.css">
+      <!-- link icons -->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+      <!-- link swiper.min.css -->
+      <link rel="stylesheet" href="swiper-bundle.min.css">
+   </head>
+   <body>
+      <div class="header">
+         <!-- club logos -->
+         <div class="topSection">
+            <a href="clubs.html">
+            <img src="./assets/logos/team (1).png" alt="Team Logo" class="teamLogo" />
+            </a>
+            <a href="clubs.html">
+            <img src="./assets/logos/team (2).png" alt="Team Logo" class="teamLogo" />
+            </a>
+            <a href="clubs.html">
+            <img src="./assets/logos/team (3).png" alt="Team Logo" class="teamLogo" />
+            </a>
+            <a href="clubs.html">
+            <img src="./assets/logos/team (4).png" alt="Team Logo" class="teamLogo" />
+            </a>
+            <a href="clubs.html">
+            <img src="./assets/logos/team (5).png" alt="Team Logo" class="teamLogo" />
+            </a>
+            <a href="clubs.html">
+            <img src="./assets/logos/team (6).png" alt="Team Logo" class="teamLogo" />
+            </a>
+            <a href="clubs.html">
+            <img src="./assets/logos/team (7).png" alt="Team Logo" class="teamLogo" />
+            </a>
+            <a href="clubs.html">
+            <img src="./assets/logos/team (8).png" alt="Team Logo" class="teamLogo" />
+            </a>
+            <a href="clubs.html">
+            <img src="./assets/logos/team (9).png" alt="Team Logo" class="teamLogo" />
+            </a>
+            <a href="clubs.html">
+            <img src="./assets/logos/team (10).png" alt="Team Logo" class="teamLogo" />
+            </a>
+            <a href="clubs.html">
+            <img src="./assets/logos/team (11).png" alt="Team Logo" class="teamLogo" />
+            </a>
+            <a href="clubs.html">
+            <img src="./assets/logos/team (12).png" alt="Team Logo" class="teamLogo" />
+            </a>
+         </div>
+         <div class="lowerSection">
+            <div class="logoDiv">
+               <img src="assets/logos/kksbih.png" alt="Logo" class="logo">
+            </div>
+            <div class="navBar">
+               <ul class="navList">
+                  <li class="navItem"><a href="index.html" class="navLink">Home</a></li>
+                  <li class="navItem"><a href="about.html" class="navLink">About</a></li>
+                  <li class="navItem"><a href="clubs.html" class="navLink">Clubs</a></li>
+                  <li class="navItem"><a href="fixtures.html" class="navLink">Fixtures</a></li>
+                  <li class="navItem"><a href="results.html" class="navLink">Results</a></li>
+               </ul>
+               <a href="login.html">
+                  <div class="button" >
+                     LOG IN
+                  </div>
+               </a>
+            </div>
+            <div class="navBarBtn">
+               <i class="uil uil-bars icon"></i>
+            </div>
+         </div>
+      </div>
+      <div class="aboutBanner" style="padding: 10rem 0 5rem;">
+         <span class="bannerText">
+            <i class="uil uil-constructor icon"></i>
+            <h2>Admin Login</h2>
+         </span>
+      </div>
+      <!-- Login Section ======================== -->
+      <section class=" loginSection section">
+         <div class="sectionIntro">
+            <h2 class="title">
+               Club Admin
+            </h2>
+            <span class="subTitle" style='margin-bottom: .5rem'>
+            Be authentic, only admins.
+            </span>
+         </div>
+         <div class="formContainer">
+            <div class="overlay"></div>
+            <form method = 'POST'>
+               <div class="rows grid">
+                  <div class="row">
+                     <label for="username">User Name</label>
+                     <input type="text" id="username" name="adun" placeholder="Enter your User Name" required>
+                  </div>
+                  <div class="row">
+                     <label for="password">Password</label>
+                     <input type="password" id="password" name="adpswd" placeholder="Enter Password" required>
+                  </div>
+                  <div class="row">
+                     <button  name="submit" class="submitBtn btn flex">Login <i class="uil uil-arrow-up-right icon"></i></button>
+                  </div>
+                  <span class='forgotPass flex'>Forgot Password!</span>
+                  <div class="infoCard">
+                     <div class="info">
+                        <i class="uil uil-exclamation-triangle icon exclamation"></i>
+                        <h6>We're Notified!</h6>
+                        <p>
+                           This feature will be available in the next few versions.
+                           <br> <br>
+                           Kindly reach out to your Administrator to reset your password!
+                        </p>
+                        <button class='btn flex' id='closeCard'>Close</button>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div class="registerBtn">
+            <a  href="./register.html" class="registerBtn submitBtn btn flex">Register here <i class="uil uil-arrow-up-right icon"></i></a>
+         </div>
+      </section>
+      <!-- Login Section ends ======================== -->
+      <!--<script>
+         // Show Alert
+         const calink = document.querySelector(".forgotPass");
+         console.log(calink)
+         const card = document.querySelector(".infoCard");
+         const close = document.getElementById("closeCard");
+         
+         calink.addEventListener('click', function () {
+           card.classList.add('flowIn')
+         })
+         close.addEventListener('click', function () {
+           card.classList.remove('flowIn')
+         })
+         </script>
+         -->  
+      <!-- footer section starts here =============================================================-->
+      <div class="footer">
+         <div class="footerContent container grid">
+            <div class="col firstCol">
+               <img src="assets/logos/bhbl.png" alt="Logo Image" class="footerLogo">
+               <span class="text">
+               Basketball League
+               </span>
+               <p>We celebrate our Basketball and generations!</p>
+               <div class="socials flex">
+                  <a href="#" target="_blank">
+                  <i class="uil uil-facebook-f icon"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                  <i class="uil uil-envelope-heart icon"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                  <i class="uil uil-whatsapp icon"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                  <i class="uil uil-youtube icon"></i>
+                  </a>
+               </div>
+            </div>
+            <div class="col">
+               <h6>MAIN LINKS</h6>
+               <a href="./index.html" class="footerLink">Home</a>
+               <a href="./about.html" class="footerLink">About</a>
+               <a href="./clubs.html" class="footerLink">Clubs</a>
+            </div>
+            <div class="col">
+               <h6>STATS</h6>
+               <a href="./results.html" class="footerLink">Table</a>
+               <a href="./results.html" class="footerLink">Results</a>
+               <a href="./fixtures.html" class="footerLink">Fixtures</a>
+            </div>
+         </div>
+      </div>
+      <!-- footer section ends here =============================================================-->
+      <!-- swiper.js link -->
+      <script src="swiper-bundle.min.js"></script>
+      <!-- link javascript -->
+      <script src="main.js"></script>
+   </body>
+</html>

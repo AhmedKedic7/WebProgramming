@@ -1,0 +1,690 @@
+:root {
+    --primaryColor: rgb(2, 2, 134); /* Dark Blue, matching Bosnian and Herzegovinian flag */
+  --secondaryColor: #ffea2f; /* Yellow, matching Bosnian and Herzegovinian flag */
+  --thirdColor: #0b166f;
+  --hoverColor: #0b010c;
+  --bgColor: #2379e9;
+  --whiteColor: #ffffff;
+  --greyTexts: #807a82;
+  --blackColor: #000000;
+  --greyColor: rgb(241, 241, 241);
+  --borderRadius: 3px;
+  --linearGradient: linear-gradient(to right, #3b54c3, #131100);
+  --fontSize_13px: 13px;
+  --boxShadow: 0px 2px 2px var(--greyColor);
+}
+
+body .test {
+    display: none;
+}
+
+.dashboardFlex {
+    width: 100%;
+    height: auto;
+    align-items: flex-start;
+}
+
+.dashboardFlex .deleteBtn {
+    background: var(--secondaryColor) !important;
+}
+
+.dashboardFlex .deleteBtn:hover {
+    background: var(--primaryColor);
+}
+
+.dashboardFlex .shortText {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden !important;
+}
+
+.dashboardFlex .comingSoon {
+    width: 100%;
+    padding: 2rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.dashboardFlex .comingSoon .exclamation {
+    font-size: 10rem;
+    color: var(--secondaryColor);
+}
+
+.dashboardFlex .comingSoon h2 {
+    font-weight: 700;
+    color: var(--primaryColor);
+}
+
+.dashboardFlex .comingSoon span {
+    font-size: 15px;
+    color: var(--blackColor);
+}
+
+.dashboardFlex .comingSoon .israTech {
+    color: var(--secondaryColor);
+    font-weight: 600;
+    /*font-style: italic;*/
+}
+
+.dashboardFlex .secHeading {
+    padding: 1rem;
+    border-radius: var(--borderRadius);
+    background: var(--primaryColor);
+}
+
+.dashboardFlex .secHeading h2 {
+    color: var(--whiteColor);
+}
+
+.dashboardFlex .dashboardMenu {
+    width: 20%;
+    background: var(--greyColor);
+}
+
+.dashboardFlex .dashboardMenu .logoDiv {
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+    padding: 2rem 1rem;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../assets/bahrain/Logo-BG.png);
+    background-position: 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dashboardFlex .dashboardMenu .logoDiv img {
+    width: 100px;
+}
+
+.dashboardFlex .dashboardMenu .logoDiv span {
+    display: block;
+    padding-top: 1rem;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.dashboardFlex .dashboardMenu .menuGrid {
+    width: 100%;
+    display: grid;
+    margin: auto;
+}
+
+.dashboardFlex .dashboardMenu .menuGrid .singleLink {
+    padding: 1rem 0;
+    box-shadow: var(--boxShadow);
+    color: var(--whiteColor);
+    gap: 0.5rem;
+    background: var(--primaryColor);
+    justify-content: left;
+    padding-left: 25%;
+    width: 100%;
+    box-shadow: 0 2px 4px var(--whiteColor);
+    border-left: 10px solid transparent;
+}
+
+.dashboardFlex .dashboardMenu .menuGrid .singleLink .icon {
+    font-size: 18px;
+}
+
+.dashboardFlex .dashboardMenu .menuGrid .singleLink span {
+    font-size: 16px;
+}
+
+.dashboardFlex .dashboardMenu .menuGrid .singleLink:hover {
+    background: var(--secondaryColor);
+    border-left: 10px solid var(--bgColor);
+}
+
+.dashboardFlex .dashboardMenu .menuGrid .active {
+    background: var(--secondaryColor);
+    border-left: 10px solid var(--bgColor);
+}
+
+.dashboardFlex .dashboardMenu .featuredPlayer {
+    position: relative;
+    padding: 2rem 0 1rem;
+}
+
+.dashboardFlex .dashboardMenu .featuredPlayer .sectionIntro {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.dashboardFlex .dashboardMenu .featuredPlayer .secContent {
+    width: 90%;
+    margin: 1rem auto 0;
+}
+
+.dashboardFlex .dashboardMenu .featuredPlayer .secContent img {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--borderRadius);
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.dashboardFlex .dashboardMenu .featuredPlayer .secContent .playerInfo {
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.dashboardFlex .dashboardMenu .featuredPlayer .secContent .playerInfo h3 {
+    color: var(--blackColor);
+}
+
+.dashboardFlex .dashboardMenu .featuredPlayer .secContent .playerInfo span {
+    display: block;
+    color: var(--hoverColor);
+    opacity: 0.8;
+}
+
+.dashboardFlex .dashboardMenu .featuredPlayer .secContent .playerInfo .clubLogo {
+    top: -50%;
+    right: 10%;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 5px solid var(--grey);
+    background: var(--greyColor);
+}
+
+.dashboardFlex .dashboardMenu .featuredPlayer .secContent .playerInfo .clubLogo img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 40px;
+}
+
+.dashboardFlex .dashboardMenu .featuredPlayer .secContent .playerInfo a {
+    float: right;
+    transform: translateY(-20px);
+    color: var(--secondaryColor);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboardFlex .dashboardMenu .featuredPlayer .secContent .playerInfo a:hover {
+    color: var(--primaryColor);
+}
+
+.dashboardFlex .dashboardMenu .adminDiv {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.dashboardFlex .dashboardMenu .adminDiv .sectionIntro {
+    padding: 1rem 0;
+}
+
+.dashboardFlex .dashboardMenu .adminDiv .secContent {
+    width: 80%;
+    margin: auto;
+    gap: 0.5rem;
+}
+
+.dashboardFlex .dashboardMenu .adminDiv .secContent .adminImg {
+    height: 120px;
+    width: 120px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin: auto;
+    border: 10px solid var(--whiteColor);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--boxShadow);
+}
+
+.dashboardFlex .dashboardMenu .adminDiv .secContent span {
+    margin: auto;
+    color: var(--blackColor);
+    display: block;
+}
+
+.dashboardFlex .dashboardMenu .adminDiv .secContent .adminName {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+}
+
+.dashboardFlex .dashboardMenu .adminDiv .secContent .adminEmail {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.dashboardFlex .dashboardBody {
+    width: 80%;
+    height: auto;
+    padding: 1rem 2rem;
+}
+
+.dashboardFlex .dashboardBody .topSection {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider {
+    position: relative;
+    height: 400px;
+    width: 70%;
+    overflow: hidden;
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content .slideInfo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    background: linear-gradient(to right, rgba(32, 18, 48, 0.831372549), rgba(255, 255, 255, 0));
+    z-index: 1;
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content .slideInfo .infoContainer {
+    padding-left: 2rem;
+    transform: translateY(50%);
+    width: 70%;
+    color: var(--whiteColor);
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content .slideInfo .infoContainer .title {
+    color: var(--secondaryColor);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content .slideInfo .infoContainer h1 {
+    font-weight: 700;
+    color: var(--whiteColor);
+    padding: 0.5rem 0;
+    display: block;
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content .slideInfo .infoContainer p {
+    padding-bottom: 1rem;
+    font-size: 13px;
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content .slideInfo .infoContainer .btn {
+    background: var(--whiteColor);
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content .slideInfo .infoContainer .btn a {
+    color: var(--primaryColor);
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content .slideInfo .infoContainer .btn:hover {
+    background: var(--secondaryColor);
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content .slideInfo .infoContainer .btn:hover a {
+    color: var(--whiteColor);
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .content .slideInfo .updates {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: -moz-max-content;
+    width: max-content;
+    float: right;
+}
+
+.dashboardFlex .dashboardBody .topSection .imgSlider .swiper-pagination {
+    position: absolute;
+    z-index: 100;
+    transform: translateY(5rem);
+}
+
+.dashboardFlex .dashboardBody .topSection .logSection {
+    width: 30%;
+    align-items: end;
+    justify-content: end;
+    align-self: flex-end;
+}
+
+.dashboardFlex .dashboardBody .topSection .logSection .sectionContainer .sectionContent .fixtureDiv {
+    transform: translateX(16px);
+    padding: 1rem 1rem;
+    border: 2px solid rgb(235, 235, 235);
+}
+
+.dashboardFlex .dashboardBody .dashboardNews {
+    width: 100%;
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .sectionHeading {
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .sectionHeading .detailsLink {
+    transform: translateY(-10px);
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .secContent {
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .secContent .singleNews {
+    width: 100%;
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .secContent .singleNews img {
+    height: 200px;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: var(--borderRadius);
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .secContent .singleNews .newInfo span {
+    color: var(--blackColor);
+    font-size: 15px;
+    display: block;
+    padding: 0.5rem 0;
+    opacity: 0.7;
+    font-weight: 700;
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .secContent .singleNews .newInfo a {
+    color: var(--primaryColor);
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .secContent .singleNews .newInfo a:hover {
+    color: var(--secondaryColor);
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .secContent .singleNews .subNews {
+    display: grid;
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    gap: 0.2rem;
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .secContent .singleNews .subNews .singleSubNews {
+    gap: 0.5rem;
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .secContent .singleNews .subNews .singleSubNews img {
+    height: 50px;
+    width: 50px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: var(--borderRadius);
+    padding: 0.2rem;
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .secContent .singleNews .subNews .singleSubNews a {
+    font-size: 13px;
+    color: var(--blackColor);
+}
+
+.dashboardFlex .dashboardBody .dashboardNews .secContent .singleNews .subNews .singleSubNews a:hover {
+    color: var(--secondaryColor);
+}
+
+.dashboardFlex .dashboardBody .banner {
+    position: relative;
+    background-image: url(../assets/bahrain/Plain-BG-White.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+    width: 100%;
+    margin: auto;
+    border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+}
+
+.dashboardFlex .dashboardBody .banner .secContent {
+    gap: 2rem;
+    width: 75%;
+    padding: 1rem;
+    border-radius: var(--borderRadius);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboardFlex .dashboardBody .banner .secContent img {
+    max-width: 20%;
+}
+
+.dashboardFlex .dashboardBody .banner .secContent .bannerText .title {
+    color: var(--blackColor);
+}
+
+.dashboardFlex .dashboardBody .banner .secContent .bannerText p {
+    padding: 1rem 0;
+}
+
+.dashboardFlex .dashboardBody .banner .secContent .bannerText .btn {
+    width: -moz-max-content;
+    width: max-content;
+}
+
+.dashboardFlex .Update_Sections .btn {
+    height: -moz-max-content;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin: unset;
+    transform: translateY(10px);
+}
+
+.dashboardFlex .Update_Sections em {
+    color: var(--secondaryColor);
+    font-size: 16px;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer {
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .sectionIntro {
+    text-align: left;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .divider {
+    position: relative;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard {
+    border-radius: 10px;
+    border: 1px solid var(--greyColorDark);
+    padding: 1rem;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .cardTitle {
+    color: var(--primaryColor);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .cardTitle:hover {
+    color: var(--secondaryColor);
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .sectionIntro {
+    padding-top: 0.5rem;
+    text-align: left;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form {
+    width: 100%;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row label {
+    font-size: var(--fontSize_13px);
+    font-weight: 500;
+    display: block;
+    padding-bottom: 0.285rem;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row textarea {
+    padding: 10px;
+    border-radius: var(--borderRadius);
+    border: 2px solid transparent;
+    background: #e0e1e7;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input::-moz-placeholder,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select::-moz-placeholder,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row textarea::-moz-placeholder {
+    opacity: 1;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input::placeholder,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select::placeholder,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row textarea::placeholder {
+    opacity: 1;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input:focus,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select:focus,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row textarea:focus {
+    outline: 2px solid var(--secondaryColor);
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input option,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select option,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row textarea option {
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .Score {
+    width: 50px;
+    text-align: center;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input::-webkit-outer-spin-button,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row #image,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row #nImage,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row #pImage,
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row #teamImage {
+    display: none;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .image {
+    padding: 10px;
+    transform: translateY(19px);
+    background: var(--greyColorDark);
+    border-radius: var(--borderRadius);
+    border: 2px solid transparent;
+    width: 100%;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .image:hover {
+    color: var(--secondaryColor);
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .submitBtn {
+    cursor: pointer;
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .submitBtn:hover {
+    background: var(--secondaryColor);
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .registerLink {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .registerLink a {
+    font-weight: 500;
+    color: var(--secondaryColor);
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row.flex {
+    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row.flex .inputOne {
+    flex: 1;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard .active {
+    display: block;
+    transition: all 1s ease-in-out;
+}
+
+.dashboardFlex .Update_Sections .cardsContainer .singleCard:hover {
+    border: 1px solid var(--primaryColor);
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
+
+@media screen and (max-width: 1110px) {
+    body .dashboardFlex {
+        display: none;
+    }
+    body .test {
+        display: block;
+    }
+}
+
+/*# sourceMappingURL=dashboard.css.map */
