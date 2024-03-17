@@ -1,0 +1,302 @@
+:root {
+    --primaryColor: rgb(2, 2, 134); /* Dark Blue, matching Bosnian and Herzegovinian flag */
+    --secondaryColor: #ffea2f; /* Yellow, matching Bosnian and Herzegovinian flag */
+    --thirdColor: #0b166f;
+    --hoverColor: #0b010c;
+    --bgColor: #2379e9;
+    --whiteColor: #ffffff;
+    --greyTexts: #807a82;
+    --blackColor: #000000;
+    --greyColor: rgb(241, 241, 241);
+    --borderRadius: 3px;
+    --linearGradient: linear-gradient(to right, #3b54c3, #131100);
+    --fontSize_13px: 13px;
+    --boxShadow: 0px 2px 2px var(--greyColor);
+}
+
+.dashboardBody .playersDiv .sectionIntro {
+    justify-content: start;
+    margin-top: 1rem;
+    align-items: start;
+}
+
+.dashboardBody .playersDiv .sectionHeader {
+    box-shadow: var(--boxShadow);
+}
+
+.dashboardBody .playersDiv .captainsContainer {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.dashboardBody .playersDiv .captainsContainer .singleCaptain {
+    width: 100%;
+    margin: 1rem auto 0;
+    box-shadow: var(--boxShadow);
+}
+
+.dashboardBody .playersDiv .captainsContainer .singleCaptain img {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--borderRadius);
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.dashboardBody .playersDiv .captainsContainer .singleCaptain .playerInfo {
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.dashboardBody .playersDiv .captainsContainer .singleCaptain .playerInfo h3 {
+    color: var(--blackColor);
+}
+
+.dashboardBody .playersDiv .captainsContainer .singleCaptain .playerInfo span {
+    display: block;
+    color: var(--hoverColor);
+    opacity: 0.8;
+}
+
+.dashboardBody .playersDiv .captainsContainer .singleCaptain .playerInfo .clubLogo {
+    top: -50%;
+    right: 10%;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 5px solid var(--grey);
+    background: var(--greyColor);
+    padding: 8px;
+}
+
+.dashboardBody .playersDiv .captainsContainer .singleCaptain .playerInfo .clubLogo img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 40px;
+}
+
+.dashboardBody .playersDiv .captainsContainer .singleCaptain .playerInfo a {
+    float: right;
+    transform: translateY(-20px);
+    color: var(--secondaryColor);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboardBody .playersDiv .captainsContainer .singleCaptain .playerInfo a:hover {
+    color: var(--primaryColor);
+}
+
+.dashboardBody .playersDiv .playersList {
+    margin-top: 2rem;
+}
+
+.dashboardBody .playersDiv .playersList .sectionHeader {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.dashboardBody .playersDiv .playersList .listTitle {
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--greyColor);
+    border-radius: var(--borderRadius);
+}
+
+.dashboardBody .playersDiv .playersList .listTitle span {
+    font-weight: 500;
+    color: var(--blackColor);
+}
+
+.dashboardBody .playersDiv .playersList .singlePlayer .playerDiv {
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgb(227, 227, 227);
+    border-left: 5px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.dashboardBody .playersDiv .playersList .singlePlayer .playerDiv:hover {
+    border-bottom: 1px dashed var(--primaryColor);
+    transition: all 0.5s ease-in-out;
+    background: linear-gradient(to right, rgba(150, 59, 254, 0.1254901961), #ffffff);
+}
+
+.dashboardBody .playersDiv .playersList .singlePlayer .playerDiv img {
+    height: 60px;
+    width: 70px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    border-radius: var(--borderRadius);
+}
+
+.dashboardBody .playersDiv .playersList .singlePlayer .playerDiv .link {
+    color: var(--secondaryColor);
+    font-weight: 600;
+}
+
+.dashboardBody .playersDiv .playersList .singlePlayer .playerDiv .link:hover {
+    color: var(--primaryColor);
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer {
+    width: 100%;
+    align-items: flex-start;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .leftSection {
+    width: 30%;
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .leftSection .imgDiv {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .leftSection .imgDiv img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .leftSection .imgDiv .playerInfor {
+    position: absolute;
+    height: 80%;
+    background: linear-gradient(to top, #963bfe, rgba(255, 255, 255, 0));
+    padding-bottom: 3rem;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .leftSection .imgDiv .playerInfor .clubLogo {
+    transform: translateY(30px);
+    height: 80px;
+    width: 80px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    background: var(--greyColor);
+    border-radius: 50%;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .leftSection .otherDetails {
+    display: grid;
+    padding: 1rem;
+    gap: 0.5rem;
+    background: var(--bgColor);
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .leftSection .otherDetails .stat {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #706d9f;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .leftSection .otherDetails .stat span {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .leftSection .otherDetails .stat blockquote {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .leftSection .otherDetails .h3 {
+    margin: 0.5rem 0;
+    position: relative;
+    padding-top: 0.5rem;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection {
+    width: 70%;
+    padding: 1rem;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection .btn {
+    float: right;
+    background: #000;
+    margin-top: 2rem;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection h2 {
+    margin-bottom: 1rem;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection .top {
+    width: 100%;
+    justify-content: space-between;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    border: 1px solid #e2e2e2;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection .top .stat {
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection .top .stat blockquote {
+    font-weight: 600;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection .top .stat:nth-child(2) {
+    border-right: 1px solid #e2e2e2;
+    border-left: 1px solid #e2e2e2;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection .playingCareer table {
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection .playingCareer table th {
+    padding: 10px;
+    font-size: var(--fontSize_13px);
+    color: var(--whiteColor);
+    font-weight: 500;
+    align-items: center;
+    background: var(--primaryColor);
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection .playingCareer table td {
+    text-align: center;
+    border-radius: var(--borderRadius);
+    padding: 0.8rem 0.5rem;
+    box-shadow: var(--boxShadow);
+    font-size: var(--fontSize_13px);
+    font-weight: 600;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection .playingCareer table .club {
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.dashboardBody .playersDiv .singlePlayerContainer .rightSection .playingCareer table .club .clubLogo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+/*# sourceMappingURL=adplayers.css.map */

@@ -1,0 +1,54 @@
+:root {
+     --primaryColor: rgb(2, 2, 134); /* Dark Blue, matching Bosnian and Herzegovinian flag */
+  --secondaryColor: #ffea2f; /* Yellow, matching Bosnian and Herzegovinian flag */
+  --thirdColor: #0b166f;
+  --hoverColor: #0b010c;
+  --bgColor: #2379e9;
+  --whiteColor: #ffffff;
+  --greyTexts: #807a82;
+  --blackColor: #000000;
+  --greyColor: rgb(241, 241, 241);
+  --borderRadius: 3px;
+  --linearGradient: linear-gradient(to right, #3b54c3, #131100);
+  --fontSize_13px: 13px;
+  --boxShadow: 0px 2px 2px var(--greyColor);
+}
+
+.dashboardBody .fixturesSection .sectionContainer .sectionContent .fixtureDiv .allFixtures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.dashboardBody .fixturesSection .sectionContainer .sectionContent .fixtureDiv .allFixtures .singleFixture {
+    padding-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.dashboardBody .fixturesSection .sectionContainer .sectionContent .fixtureDiv .allFixtures .singleFixture .editResult {
+    transition: all 0.3s ease-in-out;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.dashboardBody .fixturesSection .sectionContainer .sectionContent .fixtureDiv .allFixtures .singleFixture .editResult em {
+    font-size: 13px;
+    color: var(--primaryColor);
+    padding-top: 0.5rem;
+}
+
+.dashboardBody .editFixture {
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.dashboardBody .editFixture em {
+    font-size: 13px;
+    color: var(--primaryColor);
+    padding-top: 0.5rem;
+}
+
+/*# sourceMappingURL=adfixtures.css.map */

@@ -1,0 +1,474 @@
+:root {
+    --primaryColor: rgb(2, 2, 134); /* Dark Blue, matching Bosnian and Herzegovinian flag */
+    --secondaryColor: #ffea2f; /* Yellow, matching Bosnian and Herzegovinian flag */
+    --thirdColor: #0b166f;
+    --hoverColor: #0b010c;
+    --bgColor: #2379e9;
+    --whiteColor: #ffffff;
+    --greyTexts: #807a82;
+    --blackColor: #000000;
+    --greyColor: rgb(241, 241, 241);
+    --borderRadius: 3px;
+    --linearGradient: linear-gradient(to right, #3b54c3, #131100);
+    --fontSize_13px: 13px;
+    --boxShadow: 0px 2px 2px var(--greyColor);
+}
+
+.dashboardBody .settingsButtons {
+    margin-top: 1rem;
+    bottom: 0;
+    gap: 10px;
+}
+
+.dashboardBody .settingsButtons a {
+    gap: 0.5rem;
+    padding: 10px 15px;
+    background: var(--buttonBg);
+    color: var(--primaryColor);
+    border-top-right-radius: var(--borderRadius);
+    border-top-left-radius: var(--borderRadius);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.dashboardBody .settingsButtons a:hover {
+    background: var(--secondaryColor);
+    color: var(--whiteColor);
+}
+
+.dashboardBody .settingsButtons .aboutBtnActive {
+    background: var(--greyColor);
+    color: var(--primaryColor);
+}
+
+.dashboardBody .settingsButtons .activeBtn {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.dashboardBody .settingsContainer {
+    position: relative;
+}
+
+.dashboardBody .settingsContainer .btn {
+    height: -moz-max-content;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin: unset;
+    transform: translateY(10px);
+}
+
+.dashboardBody .settingsContainer em {
+    color: var(--secondaryColor);
+    font-size: 16px;
+}
+
+.dashboardBody .settingsContainer .homePageSettings .subMenu {
+    width: 100%;
+    padding: 0 1rem;
+    background: var(--greyColor);
+    gap: 1rem;
+}
+
+.dashboardBody .settingsContainer .homePageSettings .subMenu a {
+    color: var(--primaryColor);
+    padding: 1rem;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+}
+
+.dashboardBody .settingsContainer .homePageSettings .subMenu a:hover {
+    color: var(--secondaryColor);
+    border-bottom: 3px solid var(--secondaryColor);
+}
+
+.dashboardBody .settingsContainer .homePageSettings .subMenu .active {
+    color: var(--secondaryColor);
+    border-bottom: 3px solid var(--secondaryColor);
+}
+
+.dashboardBody .settingsContainer .homePageSettings .comingSoon {
+    margin-top: 3rem;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer {
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .sectionIntro {
+    text-align: left;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .divider {
+    position: relative;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard {
+    border-radius: 10px;
+    border: 1px solid var(--greyColorDark);
+    padding: 1rem;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .cardTitle {
+    color: var(--primaryColor);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .cardTitle:hover {
+    color: var(--secondaryColor);
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh {
+    display: none;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .sectionIntro {
+    padding-top: 0.5rem;
+    text-align: left;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form {
+    width: 100%;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row label {
+    font-size: var(--fontSize_13px);
+    font-weight: 500;
+    display: block;
+    padding-bottom: 0.285rem;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row textarea {
+    padding: 10px;
+    border-radius: var(--borderRadius);
+    border: 2px solid transparent;
+    background: #e0e1e7;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input::-moz-placeholder,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select::-moz-placeholder,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row textarea::-moz-placeholder {
+    opacity: 1;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input::placeholder,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select::placeholder,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row textarea::placeholder {
+    opacity: 1;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input:focus,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select:focus,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row textarea:focus {
+    outline: 2px solid var(--secondaryColor);
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input option,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select option,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row textarea option {
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .Score {
+    width: 50px;
+    text-align: center;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input::-webkit-outer-spin-button,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row #image,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row #nImage,
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row #pImage {
+    display: none;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .image {
+    padding: 10px;
+    transform: translateY(19px);
+    background: var(--greyColorDark);
+    border-radius: var(--borderRadius);
+    border: 2px solid transparent;
+    width: 100%;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .image:hover {
+    color: var(--secondaryColor);
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .submitBtn {
+    cursor: pointer;
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .submitBtn:hover {
+    background: var(--secondaryColor);
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .registerLink {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row .registerLink a {
+    font-weight: 500;
+    color: var(--secondaryColor);
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row.flex {
+    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .tbh .updateForm form .rows .row.flex .inputOne {
+    flex: 1;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard .active {
+    display: block;
+    transition: all 1s ease-in-out;
+}
+
+.dashboardBody .settingsContainer .create_Update_Sections .cardsContainer .singleCard:hover {
+    border: 1px solid var(--primaryColor);
+}
+
+.dashboardBody .settingsContainer .infoSection {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 2rem 1rem;
+    border-radius: var(--borderRadius);
+    background: var(--greyColor);
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.dashboardBody .settingsContainer .infoSection .adminDiv .sectionIntro {
+    padding: 1rem 0;
+}
+
+.dashboardBody .settingsContainer .infoSection .adminDiv .secContent {
+    width: 80%;
+    margin: auto;
+    gap: 0.5rem;
+}
+
+.dashboardBody .settingsContainer .infoSection .adminDiv .secContent .adminImg {
+    height: 120px;
+    width: 120px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin: auto;
+    border: 10px solid var(--whiteColor);
+    border-radius: var(--borderRadius);
+    box-shadow: 0 4px 8px #e0e1e7;
+}
+
+.dashboardBody .settingsContainer .infoSection .adminDiv .secContent span {
+    margin: auto;
+    color: var(--blackColor);
+    display: block;
+}
+
+.dashboardBody .settingsContainer .infoSection .adminDiv .secContent .adminName {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+}
+
+.dashboardBody .settingsContainer .infoSection .adminDiv .secContent .adminEmail {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.dashboardBody .settingsContainer .infoSection .adminDiv .secContent .badge {
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+    padding: 0.5rem;
+    border-radius: var(--borderRadius);
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form,
+.dashboardBody .settingsContainer .infoSection .updateForm form {
+    width: 100%;
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row label,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row label {
+    font-size: var(--fontSize_13px);
+    font-weight: 500;
+    display: block;
+    padding-bottom: 0.285rem;
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row input,
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row select,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row input,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row select {
+    padding: 10px;
+    border-radius: var(--borderRadius);
+    border: 2px solid transparent;
+    background: #e0e1e7;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row input::-moz-placeholder,
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row select::-moz-placeholder,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row input::-moz-placeholder,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row select::-moz-placeholder {
+    opacity: 1;
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row input::placeholder,
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row select::placeholder,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row input::placeholder,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row select::placeholder {
+    opacity: 1;
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row input:focus,
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row select:focus,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row input:focus,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row select:focus {
+    outline: 2px solid var(--secondaryColor);
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row input option,
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row select option,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row input option,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row select option {
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row .submitBtn,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row .submitBtn {
+    cursor: pointer;
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row .submitBtn:hover,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row .submitBtn:hover {
+    background: var(--secondaryColor);
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row .registerLink,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row .registerLink {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dashboardBody .settingsContainer .infoSection .detailsDiv form .rows .row .registerLink a,
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows .row .registerLink a {
+    font-weight: 500;
+    color: var(--secondaryColor);
+}
+
+.dashboardBody .settingsContainer .infoSection .sectionIntro {
+    text-align: left;
+    align-items: center;
+}
+
+.dashboardBody .settingsContainer .infoSection .updateForm form .rows {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.dashboardBody .settingsContainer .infoSection .updateForm form .btn {
+    height: -moz-max-content;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin: unset;
+    transform: translateY(10px);
+}
+
+.dashboardBody .settingsContainer .accountDms .dms {
+    margin-top: 1rem;
+}
+
+.dashboardBody .settingsContainer .accountDms .dms table {
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+}
+
+.dashboardBody .settingsContainer .accountDms .dms table th {
+    padding: 10px;
+    font-size: var(--fontSize_13px);
+    color: var(--whiteColor);
+    font-weight: 500;
+    align-items: center;
+    background: var(--primaryColor);
+}
+
+.dashboardBody .settingsContainer .accountDms .dms table td {
+    text-align: center;
+    border-radius: var(--borderRadius);
+    padding: 1.5rem 0.5rem;
+    box-shadow: var(--boxShadow);
+    font-size: var(--fontSize_13px);
+    font-weight: 600;
+    color: var(--greyTexts);
+}
+
+.dashboardBody .settingsContainer .accountDms .dms table .actioBtn .icon {
+    font-size: 20px;
+    padding: 6px 13px;
+}
+
+.dashboardBody .settingsContainer .accountDms .dms table .club {
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.dashboardBody .settingsContainer .accountDms .dms table .club .clubLogo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.dashboardBody .hide {
+    display: none;
+}
+
+/*# sourceMappingURL=adsettings.css.map */

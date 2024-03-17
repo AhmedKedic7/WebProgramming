@@ -1,0 +1,647 @@
+:root {
+  --primaryColor: #37003c;
+  --secondaryColor: #fe2882;
+  --thirdColor: #11b6d0;
+  --hoverColor: #260229;
+  --bgColor: #963bfe;
+  --whiteColor: #ffffff;
+  --greyTexts: #807a82;
+  --blackColor: #160331;
+  --greyColor: rgb(241, 241, 241);
+  --borderRadius: 3px;
+  --linearGradient: linear-gradient(to right, #963bfe, #fe2882);
+  --fontSize_13px: 13px;
+  --boxShadow: 0px 2px 2px var(--greyColor);
+}
+body {
+  .test {
+    display: none;
+  }
+}
+
+input, textarea{
+    font-size: 100%;
+}
+
+.dashboardFlex {
+  width: 100%;
+  height: auto;
+  align-items: flex-start;
+
+  .deleteBtn {
+    background: var(--secondaryColor) !important;
+    &:hover {
+      background: var(--primaryColor);
+    }
+  }
+
+  .shortText{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden !important;
+  }
+
+  .comingSoon {
+    width: 100%;
+    padding: 2rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    margin-top: 7rem;
+
+    .exclamation {
+      font-size: 10rem;
+      color: var(--secondaryColor);
+    }
+    h2 {
+      font-weight: 700;
+      color: var(--primaryColor);
+    }
+    span {
+      font-size: 15px;
+      color: var(--blackColor);
+    }
+    .israTech {
+      color: var(--secondaryColor);
+      font-weight: 600;
+      font-style: italic;
+    }
+  }
+
+  .secHeading {
+    padding: 1rem;
+    border-radius: var(--borderRadius);
+    background: var(--primaryColor);
+
+    h2 {
+      color: var(--whiteColor);
+    }
+  }
+
+  .dashboardMenu {
+    width: 20%;
+    background: var(--greyColor);
+    // overflow-y: auto;
+    // height: 100vh;
+
+    .logoDiv {
+      // position: relative;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      padding: 2rem 1rem;
+      margin: auto;
+      flex-direction: column;
+      justify-content: center;
+      background-image: url(../assets/bahrain/Logo-BG.png);
+      background-position: 1px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      img {
+        width: 100px;
+      }
+      span {
+        display: block;
+        padding-top: 1rem;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .menuGrid {
+      width: 100%;
+      // background: #000;
+      display: grid;
+      margin: auto;
+
+      .singleLink {
+        padding: 1rem 0;
+        box-shadow: var(--boxShadow);
+        color: var(--whiteColor);
+        gap: 0.5rem;
+        background: var(--primaryColor);
+        justify-content: left;
+        padding-left: 25%;
+        width: 100%;
+        box-shadow: 0 2px 4px var(--whiteColor);
+        border-left: 10px solid transparent;
+        .icon {
+          font-size: 18px;
+        }
+        span {
+          font-size: 16px;
+        }
+
+        &:hover {
+          background: var(--secondaryColor);
+          border-left: 10px solid var(--bgColor);
+        }
+      }
+      .active {
+        background: var(--secondaryColor);
+        border-left: 10px solid var(--bgColor);
+      }
+    }
+
+    .featuredPlayer {
+      position: relative;
+      padding: 2rem 0 1rem;
+      .sectionIntro {
+        display: block;
+        width: 90%;
+        margin: auto;
+      }
+
+      .secContent {
+        width: 90%;
+        margin: 1rem auto 0;
+
+        img {
+          width: 100%;
+          height: 200px;
+          border-radius: var(--borderRadius);
+          object-fit: cover;
+        }
+
+        .playerInfo {
+          padding: 0.5rem 0;
+          position: relative;
+          h3 {
+            color: var(--blackColor);
+          }
+          span {
+            display: block;
+            color: var(--hoverColor);
+            opacity: 0.8;
+          }
+          .clubLogo {
+            top: -50%;
+            right: 10%;
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            border: 5px solid var(--grey);
+            background: var(--greyColor);
+            img {
+              object-fit: cover;
+              width: 40px;
+            }
+          }
+
+          a {
+            float: right;
+            transform: translateY(-20px);
+            color: var(--secondaryColor);
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            &:hover {
+              color: var(--primaryColor);
+            }
+          }
+        }
+      }
+    }
+
+    .adminDiv {
+      position: relative;
+      margin: 1rem 0;
+
+      .sectionIntro {
+        padding: 1rem 0;
+      }
+      .secContent {
+        width: 80%;
+        margin: auto;
+        gap: 0.5rem;
+
+        .adminImg {
+          height: 120px;
+          width: 120px;
+          object-fit: cover;
+          margin: auto;
+          border: 10px solid var(--whiteColor);
+          border-radius: var(--borderRadius);
+          box-shadow: var(--boxShadow);
+        }
+
+        span {
+          margin: auto;
+          color: var(--blackColor);
+          display: block;
+        }
+        .adminName {
+          font-size: 16px;
+          font-weight: 600;
+          display: block;
+        }
+
+        .adminEmail {
+          font-size: 13px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .dashboardBody {
+    width: 80%;
+    height: auto;
+    padding: 1rem 2rem;
+
+    .topSection {
+      width: 100%;
+      align-items: flex-start;
+      justify-content: space-between;
+      .imgSlider {
+        position: relative;
+        height: 400px;
+        width: 70%;
+        overflow: hidden;
+        .content {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border-radius: var(--borderRadius);
+          overflow: hidden;
+          z-index: 1;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+          }
+
+          .slideInfo {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            align-items: center;
+            justify-content: left;
+            background: linear-gradient(to right, #201230d4, #ffffff00);
+            z-index: 1;
+
+            .infoContainer {
+              padding-left: 2rem;
+              transform: translateY(50%);
+              width: 70%;
+              color: var(--whiteColor);
+
+              .title {
+                color: var(--secondaryColor);
+                font-size: 13px;
+                font-weight: 500;
+              }
+
+              h1 {
+                font-weight: 700;
+                color: var(--whiteColor);
+                padding: 0.5rem 0;
+                display: block;
+              }
+
+              p {
+                padding-bottom: 1rem;
+                font-size: 13px;
+              }
+
+              .btn {
+                background: var(--whiteColor);
+                a {
+                  color: var(--primaryColor);
+                }
+
+                &:hover {
+                  background: var(--secondaryColor);
+                  a {
+                    color: var(--whiteColor);
+                  }
+                }
+              }
+            }
+            .updates {
+              position: absolute;
+              top: 1rem;
+              right: 1rem;
+              width: max-content;
+              float: right;
+            }
+          }
+        }
+
+        .swiper-pagination {
+          position: absolute;
+          z-index: 100;
+          transform: translateY(5rem);
+        }
+      }
+
+      .logSection {
+        width: 30%;
+        align-items: end;
+        justify-content: end;
+        align-self: flex-end;
+
+        .sectionContainer {
+          .sectionContent {
+            .fixtureDiv {
+              transform: translateX(16px);
+              padding: 1rem 1rem;
+              border: 2px solid rgb(235, 235, 235);
+            }
+          }
+        }
+      }
+    }
+
+    .dashboardNews {
+      width: 100%;
+      .sectionHeading {
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        align-items: center;
+
+        .detailsLink {
+          transform: translateY(-10px);
+        }
+      }
+
+      .secContent {
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        .singleNews {
+          width: 100%;
+
+          img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: var(--borderRadius);
+          }
+
+          .newInfo {
+            span {
+              color: var(--blackColor);
+              font-size: 15px;
+              display: block;
+              padding: 0.5rem 0;
+              opacity: 0.7;
+              font-weight: 700;
+            }
+
+            a {
+              color: var(--primaryColor);
+              &:hover {
+                color: var(--secondaryColor);
+              }
+            }
+          }
+
+          .subNews {
+            display: grid;
+            margin-top: 1rem;
+            padding: 0.5rem 0;
+            gap: 0.2rem;
+
+            .singleSubNews {
+              gap: 0.5rem;
+              img {
+                height: 50px;
+                width: 50px;
+                object-fit: cover;
+                border-radius: var(--borderRadius);
+                // background: var(--greyColor);
+                padding: 0.2rem;
+              }
+              a {
+                font-size: 13px;
+                color: var(--blackColor);
+                &:hover {
+                  color: var(--secondaryColor);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .banner {
+      position: relative;
+      background-image: url(../assets/bahrain/Plain-BG-White.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      backface-visibility: hidden;
+      width: 100%;
+      margin: auto;
+      border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+
+      .secContent {
+        gap: 2rem;
+        width: 75%;
+        padding: 1rem;
+        border-radius: var(--borderRadius);
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 20%;
+        }
+
+        .bannerText {
+          .title {
+            color: var(--blackColor);
+          }
+          p {
+            padding: 1rem 0;
+          }
+
+          .btn {
+            width: max-content;
+          }
+        }
+      }
+    }
+  }
+  .Update_Sections {
+    .btn {
+      height: max-content;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      margin: unset;
+      transform: translateY(10px);
+    }
+    em {
+      color: var(--secondaryColor);
+      font-size: 16px;
+    }
+    .cardsContainer {
+      margin-top: 1rem;
+      gap: 1rem;
+
+      .sectionIntro {
+        text-align: left;
+      }
+
+      .divider {
+        position: relative;
+      }
+      .singleCard {
+        border-radius: 10px;
+        border: 1px solid var(--greyColorDark);
+        padding: 1rem;
+
+        .cardTitle {
+          color: var(--primaryColor);
+          font-size: 16px;
+          font-weight: 700;
+          cursor: pointer;
+          &:hover {
+            color: var(--secondaryColor);
+          }
+        }
+        .tbh {
+          .sectionIntro {
+            padding-top: 0.5rem;
+            text-align: left;
+          }
+          .updateForm {
+            form {
+              width: 100%;
+              .rows {
+                grid-template-columns: repeat(3, 1fr);
+                .row {
+                  label {
+                    font-size: var(--fontSize_13px);
+                    font-weight: 500;
+                    display: block;
+                    padding-bottom: 0.285rem;
+                  }
+                  input,
+                  select,
+                  textarea {
+                    padding: 10px;
+                    border-radius: var(--borderRadius);
+                    border: 2px solid transparent;
+                    background: #e0e1e7;
+                    width: 100%;
+                    font-size: 13px;
+                    font-weight: 500;
+
+                    &::placeholder {
+                      opacity: 1;
+                    }
+
+                    &:focus {
+                      outline: 2px solid var(--secondaryColor);
+                    }
+
+                    option {
+                      background: var(--primaryColor);
+                      color: var(--whiteColor);
+                    }
+                  }
+
+                  .Score {
+                    width: 50px;
+                    text-align: center;
+                  }
+
+                  input::-webkit-outer-spin-button,
+                  input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                  }
+                  // Hide dropdown icon from a select field
+                  select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                  }
+                  #image,
+                  #nImage,
+                  #pImage,
+                  #teamImage {
+                    display: none;
+                  }
+                  .image {
+                    padding: 10px;
+                    transform: translateY(19px);
+                    background: var(--greyColorDark);
+                    border-radius: var(--borderRadius);
+                    border: 2px solid transparent;
+                    width: 100%;
+                    &:hover {
+                      color: var(--secondaryColor);
+                    }
+                  }
+                  .submitBtn {
+                    cursor: pointer;
+                    background: var(--primaryColor);
+                    color: var(--whiteColor);
+                    &:hover {
+                      background: var(--secondaryColor);
+                    }
+                  }
+                  .registerLink {
+                    display: block;
+                    text-align: center;
+                    margin-top: 1rem;
+                    a {
+                      font-weight: 500;
+                      color: var(--secondaryColor);
+                    }
+                  }
+                }
+
+                .row.flex {
+                  width: 100%;
+                  align-items: center;
+                  gap: 0.5rem;
+                  margin-top: 0.5rem;
+
+                  .inputOne {
+                    flex: 1;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .active {
+          display: block;
+          transition: all 1s ease-in-out;
+        }
+
+        &:hover {
+          border: 1px solid var(--primaryColor);
+        }
+      }
+    }
+  }
+}
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+@media screen and (max-width: 1110px) {
+  body {
+    .dashboardFlex {
+      display: none;
+    }
+    .test {
+      display: block;
+    }
+  }
+}
