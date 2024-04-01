@@ -22,6 +22,7 @@
       </style>
    </head>
    <body>
+      
       <!-- Dashboard starts here -->
       <div class="dashboardFlex flex">
          <!-- Dashboard side menu starts -->
@@ -34,27 +35,27 @@
             </div>
             <!-- Menu Player Starts -->
             <div class="menuGrid">
-               <a href="admin.html" class="singleLink flex active">
+               <a href="#admin" class="singleLink flex active">
                <i class="uil uil-create-dashboard icon"></i>
                <span> Dashboard </span>
                </a>
-               <a href="./adteams.html" class="singleLink flex">
+               <a href="#adteams" class="singleLink flex">
                <i class="uil uil-trophy icon"></i>
                <span> Teams </span>
                </a>
-               <a href="./adfixtures.html" class="singleLink flex">
+               <a href="#adfixtures" class="singleLink flex">
                <i class="uil uil-schedule icon"></i>
                <span> Fixtures </span>
                </a>
-               <a href="adresults.html" class="singleLink flex">
+               <a href="#adresults" class="singleLink flex">
                <i class="uil uil-football icon"></i>
                <span> Results </span>
                </a>
-               <a href="adplayers.html" class="singleLink flex">
+               <a href="#adplayers" class="singleLink flex">
                <i class="uil uil-head-side icon"></i>
                <span> Players </span>
                </a>
-               <a href="adsettings.html" class="singleLink flex">
+               <a href="#adsettings" class="singleLink flex">
                <i class="uil uil-sliders-v-alt icon"></i>
                <span> Settings </span>
                </a>
@@ -72,8 +73,8 @@
                   <img src="./uploads/admin.jpg" alt="Team Logo" class="adminImg">
                   <span class="adminName">Ahmed </span>
                   <span class="adminEmail">ahmedkedic7@gmail.com</span>
-                  <button class="btn">
-                  <a href="./index.html">
+                  <button class="btn" id="signOutBtn">
+                  <a href="#home">
                   Sign Out <i class="uil uil-signout icon"></i></a>
                   </button>
                </div>
@@ -98,9 +99,9 @@
          <div class="dashboardBody">
             <!-- dashboard Body section starts here =============================================================-->
             <section class="topSection flex">
-               <div class="imgSlider swiper swiper-container-initialized swiper-container-vertical swiper-container-pointer-events swiper-container-css-mode">
-                  <div class="swiper-wrapper" id="swiper-wrapper-13e77228d512df8d" aria-live="off">
-                     <div class="content swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="4" style="height: 400px; margin-bottom: 20px;" role="group" aria-label="1 / 7">
+               <div class="imgSlider ">
+                  <div class="swiper-wrapper" >
+                     <div class="content ">
                         <img src="./uploads/KK-Siroki.jpeg" alt="Team Logo">
                         <div class="slideInfo">
                            <div class="infoContainer">
@@ -110,7 +111,7 @@
                                  Details are available in the results section, navigate via the button below.
                               </p>
                               <button class="btn">
-                              <a href="./adresults.html">
+                              <a href="#results">
                               Find more <i class="uil uil-arrow-right"></i>
                               </a>
                               </button>
@@ -224,8 +225,7 @@
                </section>
             </section>
             <!-- dashboard Body section ends here =============================================================-->
-            <!-- dashboard news section starts here =============================================================-->
-            <!-- dashboard news section ends here =============================================================-->
+            
             <!-- dashboard banner section starts here =============================================================-->
             <div class="section banner sectionDesign">
                <div class="secContent flex">
@@ -236,7 +236,7 @@
                         The Bosnian and Herzegovinian Basketball League is the top-tier professional basketball competition in Bosnia and Herzegovina. Known for its competitive and dynamic play, the league features prominent teams from various regions of the country.
                         With a structure that includes regular-season matches and playoffs, the league serves as a vital platform for local talent development and showcases high-quality basketball.
                      </p>
-                     <a href="./about.html" class="btn flex">
+                     <a href="#about" class="btn flex">
                      Explore Now <i class="uil uil-arrow-right icon"></i>
                      </a>
                   </div>
@@ -256,7 +256,7 @@
          <span>Admininstrator dashboard is currently available on deskop screen size only.
          <br>
          <br>
-         <a href="./index.html" class="btn homeBtn">
+         <a href="#home" class="btn homeBtn">
          <i class="uil uil-arrow-left icon"></i> Back Home 
          </a>
          <!-- footer section starts here =============================================================-->
@@ -266,9 +266,8 @@
          </div>
          <!-- footer section ends here =============================================================-->
       </div>
-      <!-- swiper.js link -->
-      <script src="../swiper-bundle.min.js"></script>
-      <!-- link javascript -->
       
+      <!-- link javascript -->
+      <script src="../forms.js"></script>
    </body>
 </html>

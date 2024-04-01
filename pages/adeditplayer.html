@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Local Basketball League</title>
+      <!-- Link css -->
+      <link rel="stylesheet" href="../css/main.css" />
+      <link rel="stylesheet" href="../css/dashboard.css" />
+      <link rel="stylesheet" href="../css/adsettings.css" />
+      <!-- link icons -->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+   </head>
+   <body>
+      <!-- Dashboard starts here -->
+      <div class="dashboardFlex flex">
+         <!-- Dashboard side menu starts -->
+         <!-- Dashboard side menu starts -->
+         <div class="dashboardMenu">
+            <!-- LogoDiv -->
+            <div class="logoDiv flex">
+               <img src="./assets/logos/bhpl1.png" alt="League 
+                  Logo">
+            </div>
+            <!-- Menu Player Starts -->
+            <div class="menuGrid">
+               <a href="#admin" class="singleLink flex">
+               <i class="uil uil-create-dashboard icon"></i>
+               <span> Dashboard </span>
+               </a>
+               <a href="#adteams" class="singleLink flex">
+               <i class="uil uil-trophy icon"></i>
+               <span> Teams </span>
+               </a>
+               <a href="#adfixtures" class="singleLink flex">
+               <i class="uil uil-schedule icon"></i>
+               <span> Fixtures </span>
+               </a>
+               <a href="#adresults" class="singleLink flex ">
+               <i class="uil uil-football icon"></i>
+               <span> Results </span>
+               </a>
+               <a href="#adplayers" class="singleLink flex active">
+               <i class="uil uil-head-side icon"></i>
+               <span> Players </span>
+               </a>
+               <a href="#adsettings" class="singleLink flex">
+               <i class="uil uil-sliders-v-alt icon"></i>
+               <span> Settings </span>
+               </a>
+            </div>
+         </div>
+         <script>
+            // Get the current page URL
+            const currentUrl = window.location.href;
+            
+            // Find all links on the page
+            const links = document.querySelectorAll(".singleLink");
+            console.log(links)
+            
+            // Iterate over the links and add the active class if the href attribute matches the current page URL
+            for (const link of links) {
+                if (link.href === currentUrl) {
+                    link.classList.toggle("active");
+                }
+            }
+         </script>
+         <div class="dashboardBody">
+            <div class="secHeading">
+               <h2>Update Player</h2>
+            </div>
+            <!-- Dashboard Body content -->
+            <div class="Update_Sections active">
+               <div class="cardsContainer updateSection grid">
+                  <div class="sectionIntro borderBottom">
+                     <h2>Modify Existing Data</h2>
+                     <span class="sectionSubTitle">Some areas require extra permission to modify.</span
+                        >
+                  </div>
+                  <!-- Update Player -->
+                  <div class="singleCard updatePlayer">
+                     <span class="cardTitle"> Update Player </span>
+                     <div class="tbh">
+                        <div class="sectionIntro borderBottom">
+                           <span class="sectionSubTitle">One new superstar to the leauge.</span
+                              >
+                        </div>
+                        <div class="updateForm">
+                           <form id="updateForm1" method="POST" >
+                              <div class="rows grid">
+                                 <div class="row">
+                                    <label for="pFName">Player First Name</label>
+                                    <input
+                                       type="text"
+                                       id="pFName"
+                                       name="pFName"
+                                       placeholder="Enter Player First Name"
+                                       required/>
+                                 </div>
+                                 <div class="row">
+                                    <label for="pSName">Player Second Name</label>
+                                    <input
+                                       type="text"
+                                       id="pSName"
+                                       name="pSName"
+                                       placeholder="Enter Player Second Name"
+                                       required/>
+                                 </div>
+                                 <!--<div class="row">
+                                    <label for="dob">Date Of Birth</label>
+                                    <input
+                                       type="date"
+                                       id="dob"
+                                       name="pDob"
+                                       placeholder=""
+                                       />
+                                 </div>-->
+                                 
+                                 <div class="row">
+                                    <label for="nationality">Nationality</label>
+                                    <input
+                                       type="text"
+                                       id="nationality"
+                                       name="nationality"
+                                       placeholder="Enter Player Nationality"
+                                       required/>
+                                 </div>
+                                 <div class="row">
+                                    <label for="height">Height</label>
+                                    <input
+                                       type="number"
+                                       id="height"
+                                       name="height"
+                                       placeholder="Enter Player Height"
+                                       required
+                                       />
+                                 </div>
+                                 <div class="row">
+                                    <label for="position">Position</label>
+                                    <select name="playerPostn" >
+                                       <option value="">-- Select Position --</option>
+                                       <option value="Center">Center</option>
+                                       <option value="Guard">Guard</option>
+                                       <option value="Forward">Forward</option>
+                                    </select>
+                                 </div>
+                                 <div class="row">
+                                    <label for="playerTeam">Player Team</label>
+                                    <input
+                                       type="text"
+                                       id="playerTeam"
+                                       name="playerTeam"
+                                       placeholder='Enter players team'
+                                       required
+                                       />
+                                    
+                                 </div>
+                                 <div class="row">
+                                    <label for="playerNumber">Player Number</label>
+                                    <input
+                                       type="number"
+                                       id="playernumber"
+                                       name="playerNumber"
+                                       placeholder='Enter players jersey number'
+                                       required/>
+                                 </div>
+                                 <!--<button class="btn flex" name='updatePlayer' id="updatePlayer">-->
+                                    
+                                        <button name="submit" class=" btn flex">Update player<i class="uil uil-arrow-up-right icon"></i></button>
+                                     
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- footer section starts here =============================================================-->
+            <!-- footer section ends here =============================================================-->
+         </div>
+      </div>
+      <div class="smallDevices grid">
+         <i class="uil uil-exclamation-triangle icon exclamation"></i>
+         <h2>Please Login On Desktop</h2>
+         <span>Admininstrator dashboard is currently available on deskop screen size only.
+         <br />
+         <br />
+         <a href="#index" class="btn homeBtn">
+         <i class="uil uil-arrow-left icon"></i> Back Home 
+         </a>
+         <!-- footer section starts here =============================================================-->
+         <!-- footer section ends here =============================================================-->
+      </div>
+      <script src="../forms.js"></script>
+      
+   </body>
+</html>

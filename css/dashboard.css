@@ -22,10 +22,11 @@ body .test {
     width: 100%;
     height: auto;
     align-items: flex-start;
+    padding-top: 190px;
 }
 
 .dashboardFlex .deleteBtn {
-    background: var(--secondaryColor) !important;
+    background: red !important;
 }
 
 .dashboardFlex .deleteBtn:hover {
@@ -84,6 +85,7 @@ body .test {
 .dashboardFlex .dashboardMenu {
     width: 20%;
     background: var(--greyColor);
+    
 }
 
 .dashboardFlex .dashboardMenu .logoDiv {
@@ -94,7 +96,7 @@ body .test {
     margin: auto;
     flex-direction: column;
     justify-content: center;
-    background-image: url(../assets/bahrain/Logo-BG.png);
+    
     background-position: 1px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,13 +166,7 @@ body .test {
     margin: 1rem auto 0;
 }
 
-.dashboardFlex .dashboardMenu .featuredPlayer .secContent img {
-    width: 100%;
-    height: 200px;
-    border-radius: var(--borderRadius);
-    -o-object-fit: cover;
-    object-fit: cover;
-}
+
 
 .dashboardFlex .dashboardMenu .featuredPlayer .secContent .playerInfo {
     padding: 0.5rem 0;

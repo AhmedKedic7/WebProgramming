@@ -14,6 +14,7 @@
     --boxShadow: 0px 2px 2px var(--greyColor);
 }
 
+
 .dashboardBody .playersDiv .sectionIntro {
     justify-content: start;
     margin-top: 1rem;
@@ -280,7 +281,7 @@
 }
 
 .dashboardBody .playersDiv .singlePlayerContainer .rightSection .playingCareer table td {
-    text-align: center;
+    text-align: right;
     border-radius: var(--borderRadius);
     padding: 0.8rem 0.5rem;
     box-shadow: var(--boxShadow);

@@ -1,0 +1,149 @@
+{
+    "teams":[
+       {
+          "pos":1,
+          "club":"KK Široki",
+          "PL":1,
+          "W":1,
+          "L":0,
+          "GF":5,
+          "GA":0,
+          "GD":"+5",
+          "Pts":3,
+          "logo":"assets/logos/team (1).png"
+       },
+       {
+          "pos":2,
+          "club":"KK Bosna",
+          "PL":1,
+          "W":0,
+          "L":1,
+          "GF":0,
+          "GA":5,
+          "GD":"-5",
+          "Pts":0,
+          "logo":"assets/logos/team (2).png"
+       },
+       {
+          "pos":3,
+          "club":"KK Sloboda",
+          "PL":0,
+          "W":0,
+          "L":0,
+          "GF":0,
+          "GA":0,
+          "GD":0,
+          "Pts":0,
+          "logo":"assets/logos/team (3).png"
+       },
+       {
+          "pos":4,
+          "club":"KK Borac",
+          "PL":0,
+          "W":0,
+          "L":0,
+          "GF":0,
+          "GA":0,
+          "GD":0,
+          "Pts":0,
+          "logo":"assets/logos/team (4).png"
+       },
+       {
+          "pos":5,
+          "club":"KK Spars",
+          "PL":0,
+          "W":0,
+          "L":0,
+          "GF":0,
+          "GA":0,
+          "GD":0,
+          "Pts":0,
+          "logo":"assets/logos/team (5).png"
+       },
+       {
+          "pos":6,
+          "club":"KK Orlovik",
+          "PL":0,
+          "W":0,
+          "L":0,
+          "GF":0,
+          "GA":0,
+          "GD":0,
+          "Pts":0,
+          "logo":"assets/logos/team (6).png"
+       },
+       {
+          "pos":7,
+          "club":"KK Leotar",
+          "PL":0,
+          "W":0,
+          "L":0,
+          "GF":0,
+          "GA":0,
+          "GD":0,
+          "Pts":0,
+          "logo":"assets/logos/team (7).png"
+       },
+       {
+          "pos":8,
+          "club":"KK Mladost",
+          "PL":0,
+          "W":0,
+          "L":0,
+          "GF":0,
+          "GA":0,
+          "GD":0,
+          "Pts":0,
+          "logo":"assets/logos/team (8).png"
+       },
+       {
+          "pos":9,
+          "club":"KK Promo",
+          "PL":0,
+          "W":0,
+          "L":0,
+          "GF":0,
+          "GA":0,
+          "GD":0,
+          "Pts":0,
+          "logo":"assets/logos/team (9).png"
+       },
+       {
+          "pos":10,
+          "club":"KK Slavija",
+          "PL":1,
+          "W":-5,
+          "L":-5,
+          "GF":-5,
+          "GA":-5,
+          "GD":-5,
+          "Pts":0,
+          "logo":"assets/logos/team (10).png"
+       },
+       {
+          "pos":11,
+          "club":"KK Posušje",
+          "PL":1,
+          "W":-5,
+          "L":-5,
+          "GF":-5,
+          "GA":-5,
+          "GD":-5,
+          "Pts":0,
+          "logo":"assets/logos/team (11).png"
+       },
+       {
+          "pos":12,
+          "club":"KK Spartak",
+          "PL":1,
+          "W":-5,
+          "L":-5,
+          "GF":-5,
+          "GA":-5,
+          "GD":-5,
+          "Pts":0,
+          "logo":"assets/logos/team (12).png"
+       }
+    ]
+ }
+ 
