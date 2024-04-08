@@ -8,730 +8,124 @@
       <link rel="shortcut icon" href="https://basket.ba/prvenstvo/wp-content/uploads/2019/03/faivon2.png">
       <!-- Link css -->
       <link rel="stylesheet" href="css/main.css">
+      <link href="spapp/css/spapp.css" rel="stylesheet">
       <!-- link icons -->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
       <!-- link swiper.min.css -->
-      <link rel="stylesheet" href="swiper-bundle.min.css">
+      
+      
+    <!-- DataTables Bootstrap 5 CSS -->
+      <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css">
    </head>
    <body>
       <div class="header">
          <!-- club logos -->
          <div class="topSection">
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (1).png" alt="Team Logo" class="teamLogo" />
             </a>
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (2).png" alt="Team Logo" class="teamLogo" />
             </a>
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (3).png" alt="Team Logo" class="teamLogo" />
             </a>
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (4).png" alt="Team Logo" class="teamLogo" />
             </a>
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (5).png" alt="Team Logo" class="teamLogo" />
             </a>
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (6).png" alt="Team Logo" class="teamLogo" />
             </a>
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (7).png" alt="Team Logo" class="teamLogo" />
             </a>
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (8).png" alt="Team Logo" class="teamLogo" />
             </a>
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (9).png" alt="Team Logo" class="teamLogo" />
             </a>
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (10).png" alt="Team Logo" class="teamLogo" />
             </a>
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (11).png" alt="Team Logo" class="teamLogo" />
             </a>
-            <a href="clubs.html">
+            <a href="#clubs">
             <img src="./assets/logos/team (12).png" alt="Team Logo" class="teamLogo" />
             </a>
          </div>
          <div class="lowerSection">
             <div class="logoDiv">
-               <img src="./assets/logos/kksbih.png" alt="Logo" class="logo">
+               <a href ="#home"><img src="./assets/logos/kksbih.png" alt="Logo" class="logo"></a>
             </div>
             <div class="navBar">
                <ul class="navList">
-                  <li class="navItem"><a href="./index.html" class="navLink">Home</a></li>
-                  <li class="navItem"><a href="./about.html" class="navLink">About</a></li>
-                  <li class="navItem"><a href="./clubs.html" class="navLink">Clubs</a></li>
-                  <li class="navItem"><a href="./fixtures.html" class="navLink">Fixtures</a></li>
-                  <li class="navItem"><a href="./results.html" class="navLink">Results</a></li>
+                  <li class="navItem"><a href="#home" class="navLink">Home</a></li>
+                  <li class="navItem"><a href="#about" class="navLink">About</a></li>
+                  <li class="navItem"><a href="#clubs" class="navLink">Clubs</a></li>
+                  <li class="navItem"><a href="#fixtures" class="navLink">Fixtures</a></li>
+                  <li class="navItem"><a href="#results" class="navLink">Results</a></li>
+                  <li class="navItem" id="adminLink" style="display: none;"><a href="#admin" class="navLink">Admin</a></li>
+                  <li class="navItem">
+                     <a href="#login" class="navLinkAbout">
+                        <div class="button" >
+                           LOG IN
+                        </div>
+                     </a>
+                  </li>
                </ul>
-               <a href="login.html">
-                  <div class="button" >
-                     LOG IN
-                  </div>
-               </a>
             </div>
             <div class="navBarBtn">
                <i class="uil uil-bars icon"></i>
             </div>
          </div>
+      
       </div>
-      <div class="bodyFlex">
-         <div class="sideBody">
-            <!-- Clubs section =================================== -->
-            <div class="clubsSection section" id="clubs">
-               <div class="sectionHeader flex">
-                  <div class="seasonYear">
-                     <h6>2022/5</h6>
-                  </div>
-                  <div class="seasonYear">
-                     <h6>Featured Club</h6>
-                  </div>
-               </div>
-               <div class="clubsContainer container">
-                  <div class="singleClub">
-                     <div class="singleClubTop flex">
-                        <div class="leftRow flex">
-                           <div class="teamLogoDiv">
-                              <img src="assets/logos/team (6).png" alt="Team Logo" class="teamLogo" />
-                           </div>
-                           <div class="clubName">
-                              <span class="name">KK Orlovik</span>
-                              <span class="classYear">Established: 1999</span>
-                           </div>
-                        </div>
-                        <div class="rightRow">
-                           <a href="clubs.html"><i class="uil uil-angle-right icon"></i></a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- Clubs section ends =================================== -->
-            <!-- League Logs Section -->
-            <section class="section container logSection sectionDesign">
-               <div class="sectionContainer">
-                  <div class="sectionIntro">
-                     <h2>Ongoing Season</h2>
-                     <span class="sectionSubTitle">Our current league stats</span>
-                  </div>
-                  <div class="sectionContent grid">
-                     <div class="resultsDiv borderTop">
-                        <span class="matchNumber"> Matchweek 1 Results </span>
-                        <div class="leagueLogo">
-                           <img src="assets/logos/Košarkaški_Savez_BiH_logo.png" alt="Logo" class="logo" />
-                        </div>
-                        <small>Results from week 1</small>
-                        <div class="date">Sunday 21 April</div>
-                        <div class="singleFixture">
-                           <div class="teams flex">
-                              <div class="teamName_teamLogo flex">
-                                 <div class="name">KK Mladost</div>
-                                 <div class="teamLogoDiv">
-                                    <img src="assets/logos/team&#32;(8).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                              </div>
-                              <p class="results">2-0</p>
-                              <div class="teamName_teamLogo flex">
-                                 <div class="teamLogoDiv">
-                                    <img src="assets/logos/team&#32;(3).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                                 <div class="name">KK Sloboda</div>
-                              </div>
-                           </div>
-                           <span class="venue"><strong>Venue: </strong>Pitch Six</span>
-                        </div>
-                        <div class="singleFixture">
-                           <div class="teams flex">
-                              <div class="teamName_teamLogo flex">
-                                 <div class="name">KK Široki</div>
-                                 <div class="teamLogoDiv">
-                                    <img src="assets/logos/team&#32;(1).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                              </div>
-                              <p class="results">1-4</p>
-                              <div class="teamName_teamLogo flex">
-                                 <div class="teamLogoDiv">
-                                    <img src="assets/logos/team&#32;(6).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                                 <div class="name">KK Orlovik</div>
-                              </div>
-                           </div>
-                           <span class="venue"><strong>Venue: </strong>Pitch Two</span>
-                        </div>
-                        <div class="detailsLink">
-                           <a href="results.html">
-                           <span>View All <i class="uil uil-arrow-right icon"></i></span>
-                           </a>
-                        </div>
-                     </div>
-                     <div class="fixtureDiv borderTop">
-                        <span class="matchNumber"> Matchweek 2 Fixtures </span>
-                        <div class="leagueLogo">
-                           <img src="assets/logos/Košarkaški_Savez_BiH_logo.png" alt="Logo" class="logo" />
-                        </div>
-                        <small>All times shown are local</small>
-                        <div class="date">Thursday 28 April</div>
-                        <div class="singleFixture">
-                           <div class="teams flex">
-                              <div class="teamName_teamLogo flex">
-                                 <div class="name">KK Promo</div>
-                                 <div class="teamLogoDiv">
-                                    <img src="./assets/logos/team (9).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                              </div>
-                              <p class="time">13:17</p>
-                              <div class="teamName_teamLogo flex">
-                                 <div class="teamLogoDiv">
-                                    <img src="assets/logos/team (11).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                                 <div class="name">KK Posušje</div>
-                              </div>
-                           </div>
-                           <span class="venue"><strong>Venue: </strong>Ulsan Munsu Stadium</span>
-                        </div>
-                        <div class="singleFixture">
-                           <div class="teams flex">
-                              <div class="teamName_teamLogo flex">
-                                 <div class="name">KK Leotar</div>
-                                 <div class="teamLogoDiv">
-                                    <img src="./assets/logos/team (7).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                              </div>
-                              <p class="time">18:12</p>
-                              <div class="teamName_teamLogo flex">
-                                 <div class="teamLogoDiv">
-                                    <img src="./assets/logos/team (12).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                                 <div class="name">KK Spartak</div>
-                              </div>
-                           </div>
-                           <span class="venue"><strong>Venue: </strong>Kyamate Stadium</span>
-                        </div>
-                        <div class="detailsLink">
-                           <a href="fixtures.html">
-                           <span>View All <i class="uil uil-arrow-right icon"></i></span>
-                           </a>
-                        </div>
-                     </div>
-                     <div class="tableDiv">
-                        <div class="tableLogoDiv">
-                           <img src="assets/logos/kksbih.png" alt="Logo" class="logo" />
-                        </div>
-                        <div class="table">
-                           <table>
-                              <tr>
-                                 <th>Pos</th>
-                                 <th>Club</th>
-                                 <th>Pl</th>
-                                 <th>GD</th>
-                                 <th>Pts</th>
-                              </tr>
-                              <tr class="tr" style="padding: 1rem 0">
-                                 <td class="pos green leader">1</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(1).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Široki</div>
-                                 </td>
-                                 <td>1</td>
-                                 <td>+5</td>
-                                 <td class="points">3</td>
-                              </tr>
-                              <tr class="tr">
-                                 <td class="pos green">2</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(2).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Bosna</div>
-                                 </td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td class="points">0</td>
-                              </tr>
-                              <tr class="tr">
-                                 <td class="pos">3</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(3).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Sloboda</div>
-                                 </td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td class="points">0</td>
-                              </tr>
-                              <tr class="tr">
-                                 <td class="pos">4</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(4).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Borac</div>
-                                 </td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td class="points">0</td>
-                              </tr>
-                           </table>
-                           <div class="detailsLink">
-                              <a href="results.html">
-                              <span>View Full Table <i class="uil uil-arrow-right icon"></i></span>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <!-- League Logs Section end -->
-            <!-- Weekly Team Section Starts -->
-            <section class="section container weeklyTeam sectionDesign">
-               <div class="sectionIntro">
-                  <h2 class="title">Men Of The Week</h2>
-                  <span class="subTitle"> They were unstoppable! </span>
-               </div>
-               <div class="menDiv grid">
-                  <div class="topScorer borderTop">
-                     <span class="matchNumber"> Matchweek 1 </span>
-                     <div class="leagueLogo">
-                        <img
-                           src="assets/logos/bhpl1.png"
-                           alt="Logo"
-                           class="logo"
-                           />
-                     </div>
-                     <small>Best Scorer Contenders</small>
-                     <div class="menTitle">Top Scorer</div>
-                     <div class="imgDiv">
-                        <img src="uploads/emir.jpg" alt="Top Scorer image" />
-                     </div>
-                     <div class="infoDiv">
-                        <span class="honor">He's been exeptional over the weekend</span>
-                        <span class="topScorerText">
-                        Name who plays for KK Široki is the league leading goal scorer
-                        with a maximum of 5 goals in 1 game.
-                        </span>
-                     </div>
-                  </div>
-                  <div class="pow borderTop">
-                     <span class="matchNumber"> Matchweek 1 </span>
-                     <div class="leagueLogo">
-                        <img
-                           src="assets/logos/bhpl1.png"
-                           alt="Logo"
-                           class="logo"
-                           />
-                     </div>
-                     <small>MVP Contender</small>
-                     <div class="menTitle">Player of the week</div>
-                     <div class="imgDiv">
-                        <img
-                           src="uploads/FB_IMG_1687269135336.jpg"
-                           alt="Top Scorer image"
-                           />
-                     </div>
-                     <div class="infoDiv">
-                        <span class="honor">He's been exeptional over the weekend</span>
-                        <span class="topScorerText">
-                        Name who plays for KK Orlovik Žepče is the league leading goal scorer
-                        with a maximum of 5 goals in 1 game.
-                        </span>
-                     </div>
-                  </div>
-                  <div class="tow borderTop">
-                     <span class="matchNumber"> Matchweek 1 </span>
-                     <div class="leagueLogo">
-                        <img
-                           src="assets/logos/bhpl1.png"
-                           alt="Logo"
-                           class="logo"
-                           />
-                     </div>
-                     <small>Best 5 of the week</small>
-                     <div class="menTitle">Team of the week</div>
-                     <div class="imgDiv">
-                        <img src="uploads/KK-Siroki.jpeg" alt="Top Scorer image" />
-                     </div>
-                     <div class="infoDiv">
-                        <span class="honor"
-                           >They been exeptional in their respective teams</span
-                           >
-                        <span class="topScorerText">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veritatis, modi!
-                        </span>
-                     </div>
-                  </div>
-                  <div class="detailsLink">
-                     <a href="results.html">
-                     <span>View More <i class="uil uil-arrow-right icon"></i></span>
-                     </a>
-                  </div>
-               </div>
-            </section>
-            <!-- Weekly Team section ends here -->
-         </div>
-         <div class="mainBody">
-            <!-- banner section -->
-            <div class="bannerSection">
-               <h1 class="title">Welcome To Bosnian Basketball</h1>
-               <span class="subTitle">We exist for a reason!</span>
-               <div class="button">
-                  <a href="about.html">About Us</a>
-               </div>
-            </div>
-            <!-- banner ends -->
-            <!-- About Us Section  -->
-            <section class="section container aboutSection">
-               <div class="sectionContainer grid">
-                  <div class="textDiv">
-                     <h2>This could be yours!</h2>
-                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                        fugit culpa assumenda cum harum consectetur mollitia velit.
-                        Quibusdam, blanditiis aliquid. <br />
-                        <br />
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Repudiandae, ex quas soluta magnam temporibus mollitia optio
-                        enim nemo quasi error aut, eligendi voluptatibus.
-                     </p>
-                     <div class="button">
-                        <a href="about.html"
-                           >Read More <i class="uil uil-angle-right-b icon"></i
-                           ></a>
-                     </div>
-                  </div>
-                  <div class="aboutSectionImageDiv">
-                     <img src="uploads/kup_bosna.jpg" alt="" />
-                  </div>
-               </div>
-            </section>
-            <!-- About section end -->
-            <!-- League Logs Section -->
-            <section class="section container logSection sectionDesign">
-               <div class="sectionContainer">
-                  <div class="sectionIntro">
-                     <h2>Ongoing Season</h2>
-                     <span class="sectionSubTitle">Our current league stats</span>
-                  </div>
-                  <div class="sectionContent grid">
-                     <div class="fixtureDiv borderTop">
-                        <span class="matchNumber"> Matchweek 2 Fixtures </span>
-                        <div class="leagueLogo">
-                           <img src="assets/logos/Košarkaški_Savez_BiH_logo.png" alt="Logo" class="logo" />
-                        </div>
-                        <small>All times shown are local</small>
-                        <div class="date">Thursday 28 April</div>
-                        <div class="singleFixture">
-                           <div class="teams flex">
-                              <div class="teamName_teamLogo flex">
-                                 <div class="name">KK Široki</div>
-                                 <div class="teamLogoDiv">
-                                    <img src="assets/logos/team (1).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                              </div>
-                              <p class="time">13:31</p>
-                              <div class="teamName_teamLogo flex">
-                                 <div class="teamLogoDiv">
-                                    <img src="assets/logos/team (5).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                                 <div class="name">KK Spars</div>
-                              </div>
-                           </div>
-                           <span class="venue"><strong>Venue: </strong>Vila Belmiro Stadium</span>
-                        </div>
-                        <div class="detailsLink">
-                           <a href="fixtures.html">
-                           <span>View All <i class="uil uil-arrow-right icon"></i></span>
-                           </a>
-                        </div>
-                     </div>
-                     <div class="resultsDiv borderTop">
-                        <span class="matchNumber"> Matchweek 1 Results </span>
-                        <div class="leagueLogo">
-                           <img src="assets/logos/Košarkaški_Savez_BiH_logo.png" alt="Logo" class="logo" />
-                        </div>
-                        <small>Results from week 1</small>
-                        <div class="date">Sunday 21 April</div>
-                        <div class="singleFixture">
-                           <div class="teams flex">
-                              <div class="teamName_teamLogo flex">
-                                 <div class="name">KK Sloboda</div>
-                                 <div class="teamLogoDiv">
-                                    <img src="assets/logos/team&#32;(8).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                              </div>
-                              <p class="results">2-0</p>
-                              <div class="teamName_teamLogo flex">
-                                 <div class="teamLogoDiv">
-                                    <img src="assets/logos/team&#32;(3).png" alt="Team Logo" class="teamLogo" />
-                                 </div>
-                                 <div class="name">KK Borac</div>
-                              </div>
-                           </div>
-                           <span class="venue"><strong>Venue: </strong>Pitch One</span>
-                        </div>
-                        <div class="detailsLink">
-                           <a href="results.html">
-                           <span>View All <i class="uil uil-arrow-right icon"></i></span>
-                           </a>
-                        </div>
-                     </div>
-                     <div class="tableDiv">
-                        <div class="tableLogoDiv">
-                           <img style="height: 60px;  width:260px;" src="assets/logos/kksbih.png" alt="Logo" class="logo2" />
-                        </div>
-                        <div class="table">
-                           <table>
-                              <tr>
-                                 <th>Pos</th>
-                                 <th>Club</th>
-                                 <th>PL</th>
-                                 <th>W</th>
-                                 <th>L</th>
-                                 <th>GF</th>
-                                 <th>GA</th>
-                                 <th>GD</th>
-                                 <th>Pts</th>
-                              </tr>
-                              <tr class="tr" style="padding: 1rem 0">
-                                 <td class="pos green leader">1</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(1).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Široki</div>
-                                 </td>
-                                 <td>1</td>
-                                 <td>1</td>
-                                 <td>0</td>
-                                 <td>5</td>
-                                 <td>0</td>
-                                 <td>+5</td>
-                                 <td class="points">3</td>
-                              </tr>
-                              <tr class="tr" style="padding: 1rem 0">
-                                 <td class="pos green leader">2</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team (2).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Bosna</div>
-                                 </td>
-                                 <td>1</td>
-                                 <td>0</td>
-                                 <td>1</td>
-                                 <td>0</td>
-                                 <td>5</td>
-                                 <td>-5</td>
-                                 <td class="points">0</td>
-                              </tr>
-                              <tr class="tr">
-                                 <td class="pos">3</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(3).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Sloboda</div>
-                                 </td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td class="points">0</td>
-                              </tr>
-                              <tr class="tr">
-                                 <td class="pos">4</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(4).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Borac</div>
-                                 </td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td class="points">0</td>
-                              </tr>
-                              <tr class="tr">
-                                 <td class="pos">5</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(5).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Spars</div>
-                                 </td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td class="points">0</td>
-                              </tr>
-                           </table>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <!-- League Logs Section end -->
-            <!-- Weekly Team Section end -->
-            <section class="section container weeklyTeam sectionDesign">
-               <div class="sectionIntro">
-                  <h2 class="title">Men Of The Week</h2>
-                  <span class="subTitle"> They were unstoppable! </span>
-               </div>
-               <div class="menDiv grid">
-                  <div class="topScorer borderTop">
-                     <span class="matchNumber"> Matchweek 1 </span>
-                     <div class="leagueLogo">
-                        <img
-                           src="assets/logos/bhpl1.png"
-                           alt="Logo"
-                           class="logo"
-                           />
-                     </div>
-                     <small>Best Scorer Contenders</small>
-                     <div class="menTitle">Top Scorer</div>
-                     <div class="imgDiv">
-                        <img
-                           src="uploads/emir.jpg"
-                           alt="Top Scorer image"
-                           />
-                     </div>
-                     <div class="infoDiv">
-                        <span class="honor">He's been exeptional over the weekend</span>
-                        <span class="topScorerText">
-                        Name who plays for KK Orlovik Žepče is the league leading goal scorer
-                        with a maximum of 5 goals in 1 game.
-                        </span>
-                     </div>
-                  </div>
-                  <div class="pow borderTop">
-                     <span class="matchNumber"> Matchweek 1 </span>
-                     <div class="leagueLogo">
-                        <img
-                           src="assets/logos/bhpl1.png"
-                           alt="Logo"
-                           class="logo"
-                           />
-                     </div>
-                     <small>MVP Contender</small>
-                     <div class="menTitle">Player of the week</div>
-                     <div class="imgDiv">
-                        <img
-                           src="uploads/FB_IMG_1687269135336.jpg"
-                           alt="Top Scorer image"
-                           />
-                     </div>
-                     <div class="infoDiv">
-                        <span class="honor">He's been exeptional over the weekend</span>
-                        <span class="topScorerText">
-                        Name who plays for KK Orlovik Žepče is the league leading goal scorer
-                        with a maximum of 5 goals in 1 game.
-                        </span>
-                     </div>
-                  </div>
-                  <div class="tow borderTop">
-                     <span class="matchNumber"> Matchweek 1 </span>
-                     <div class="leagueLogo">
-                        <img
-                           src="assets/logos/bhpl1.png"
-                           alt="Logo"
-                           class="logo"
-                           />
-                     </div>
-                     <small>Best 5 of the week</small>
-                     <div class="menTitle">Team of the week</div>
-                     <div class="imgDiv">
-                        <img src="uploads/KK-Siroki.jpeg" alt="Top Scorer image" />
-                     </div>
-                     <div class="infoDiv">
-                        <span class="honor"
-                           >They been exeptional in their respective teams</span
-                           >
-                        <span class="topScorerText">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veritatis, modi!
-                        </span>
-                     </div>
-                  </div>
-                  <div class="detailsLink">
-                     <a href="results.html">
-                     <span>View More <i class="uil uil-arrow-right icon"></i></span>
-                     </a>
-                  </div>
-               </div>
-            </section>
-            <!-- Weekly Team section ends here -->
-            <!-- Middle banner section -->
-            <section class="section container middleBanner grid">
-               <div class="sectionText">
-                  <h1>We are celebrating 10 years of basketball!</h1>
-                  <div class="button">
-                     <a href="about.html">Find Out</a>
-                  </div>
-               </div>
-            </section>
-            <!-- Middle banner section ends -->
-            <!-- swiper.js link -->
-            <script src="swiper-bundle.min.js"></script>
-            <!-- link javascript -->
-            <script src="main.js"></script>
-         </div>
-      </div>
-      <!-- footer section starts here =============================================================-->
-      <div class="footer">
-         <div class="footerContent container grid">
-            <div class="col firstCol">
-               <img src="assets/logos/bhbl.png" alt="Logo Image" class="footerLogo">
-               <span class="text">
-               Basketball League
-               </span>
-               <p>We celebrate our Basketball and generations!</p>
-               <div class="socials flex">
-                  <a href="#" target="_blank">
-                  <i class="uil uil-facebook-f icon"></i>
-                  </a>
-                  <a href="#" target="_blank">
-                  <i class="uil uil-envelope-heart icon"></i>
-                  </a>
-                  <a href="#" target="_blank">
-                  <i class="uil uil-whatsapp icon"></i>
-                  </a>
-                  <a href="#" target="_blank">
-                  <i class="uil uil-youtube icon"></i>
-                  </a>
-               </div>
-            </div>
-            <div class="col">
-               <h6>MAIN LINKS</h6>
-               <a href="./index.html" class="footerLink">Home</a>
-               <a href="./about.html" class="footerLink">About</a>
-               <a href="./clubs.html" class="footerLink">Clubs</a>
-            </div>
-            <div class="col">
-               <h6>STATS</h6>
-               <a href="./results.html" class="footerLink">Table</a>
-               <a href="./results.html" class="footerLink">Results</a>
-               <a href="./fixtures.html" class="footerLink">Fixtures</a>
-            </div>
-         </div>
-      </div>
+      
+      <main id="spapp" role="main">
+            <section id="home" data-load="home.html"></section>
+            <section id="players" data-load="players.html"></section>
+            <section id="about" data-load="about.html"></section>
+            <section id="results" data-load="results.html"></section>
+            <section id="fixtures" data-load="fixtures.html"></section>
+            <section id="clubs" data-load="clubs.html"></section>
+            <section id="admin" data-load="admin.html"></section>
+            <section id="adteams" data-load="adteams.html"></section>
+            <section id="adfixtures" data-load="adfixtures.html"></section>
+            <section id="adresults" data-load="adresults.html"></section>
+            <section id="adplayers" data-load="adplayers.html"></section>
+            <section id="adsettings" data-load="adsettings.html"></section>
+            <section id="login" data-load="login.html"></section>
+            <section id="register" data-load="register.html"></section>
+            <section id="adeditplayer" data-load="adeditplayer.html"></section>
+        
+         </main>
+     
+     
+      
+      
+      
       <!-- footer section ends here =============================================================-->
       <!-- swiper.js link -->
-      <script src="swiper-bundle.min.js"></script>
-      <!-- link javascript -->
       <script src="main.js"></script>
+      <script src="forms.js"></script>
+      <!-- link javascript -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+      
+      <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+      <script src="spapp/js/jquery.spapp.js"></script>
+      <script src="spapp/js/custom.js"></script>
+      <!-- Bootstrap DataTables JavaScript -->
+      <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+      
    </body>
 </html>

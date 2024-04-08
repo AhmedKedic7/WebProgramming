@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Local Basketball League Management System</title>
+      <link rel="shortcut icon" href="https://basket.ba/prvenstvo/wp-content/uploads/2019/03/faivon2.png">
+      <!-- Link css -->
+      <link rel="stylesheet" href="../css/main.css">
+      <link rel="stylesheet" href="../css/dashboard.css">
+      <link rel="stylesheet" href="../css/adsettings.css">
+      <!-- link icons -->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+   </head>
+   <body>
+      <!-- Dashboard starts here -->
+      <div class="dashboardFlex flex">
+         <!-- Dashboard side menu starts -->
+         <!-- Dashboard side menu starts -->
+         <div class="dashboardMenu">
+            <!-- LogoDiv -->
+            <div class="logoDiv flex">
+               <img src="./assets/logos/bhpl1.png" alt="League 
+                  Logo">
+            </div>
+            <!-- Menu Player Starts -->
+            <div class="menuGrid">
+               <a href="#admin" class="singleLink flex ">
+               <i class="uil uil-create-dashboard icon"></i>
+               <span> Dashboard </span>
+               </a>
+               <a href="#adteams" class="singleLink flex">
+               <i class="uil uil-trophy icon"></i>
+               <span> Teams </span>
+               </a>
+               <a href="#adfixtures" class="singleLink flex">
+               <i class="uil uil-schedule icon"></i>
+               <span> Fixtures </span>
+               </a>
+               <a href="#adresults" class="singleLink flex">
+               <i class="uil uil-football icon"></i>
+               <span> Results </span>
+               </a>
+               <a href="#adplayers" class="singleLink flex">
+               <i class="uil uil-head-side icon"></i>
+               <span> Players </span>
+               </a>
+               <a href="#adsettings" class="singleLink flex active">
+               <i class="uil uil-sliders-v-alt icon"></i>
+               <span> Settings </span>
+               </a>
+            </div>
+            <!-- Menu Player Ends -->
+            <!-- Admininstrator Div Starts  -->
+            <div class="adminDiv sectionDesign">
+               <div class="sectionIntro">
+                  <h2 class="title">Administrator</h2>
+                  <span class="subTitle">Please Be Authentic!</span>
+               </div>
+               <div class="secContent grid">
+                  <img src="./uploads/admin.jpg" alt="Team Logo" class="adminImg">
+                  <span class="adminName">Ahmed </span>
+                  <span class="adminEmail">ahmedkedic7@gmail.com</span>
+                  <button class="btn" id="signOutBtn">
+                  <a href="#index">
+                  Sign Out <i class="uil uil-signout icon"></i></a>
+                  </button>
+               </div>
+            </div>
+            <!-- Admininstrator Div Ends -->
+         </div>
+         <script>
+            // Get the current page URL
+            const currentUrl = window.location.href;
+            
+            // Find all links on the page
+            const links = document.querySelectorAll(".singleLink");
+            console.log(links)
+            
+            // Iterate over the links and add the active class if the href attribute matches the current page URL
+            for (const link of links) {
+                if (link.href === currentUrl) {
+                    link.classList.toggle("active");
+                }
+            }
+         </script>
+         <div class="dashboardBody">
+            <div class="secHeading">
+               <h2>Settings</h2>
+            </div>
+            <div class="settingsButtons flex">
+               <a href="#home" class="settingButton flex" data-filter="homePage">
+               Public Page <i class="uil uil-info-circle icon"></i>
+               </a>
+               <a href="#adsettings" class="settingButton activeBtn flex" data-filter="createPage">
+               Create <i class="uil uil-focus-add icon"></i
+                  ></a>
+               <a href="#adsettings" class="settingButton  flex" data-filter="myAccount">
+               My Account<i class="uil uil-arrow-compress-h icon"></i
+                  ></a>
+               <a href="#adsettings" class="settingButton flex" data-filter="accountDms">Administrators<i class="uil uil-user icon"></i
+                  ></a>
+            </div>
+            <div class="settingsContainer sectionDesign">
+               <div class="toggleDiv create_Update_Sections grid live" data-item="createPage">
+                  <div class="cardsContainer createSection grid">
+                     <div class="sectionIntro borderBottom">
+                        <h2>Create/Add New</h2>
+                        <span class="sectionSubTitle">This is where everything task effect, some areas require
+                        extra permission.</span>
+                     </div>
+                     <!-- Create Team -->
+                     <div class="singleCard createTeam">
+                        <span class="cardTitle"> Create New Team </span>
+                        <div class="tbh">
+                           <div class="sectionIntro borderBottom">
+                              <span class="sectionSubTitle">Your about to make a big change to the entire
+                              league.</span>
+                           </div>
+                           <div class="updateForm">
+                              <form method="POST" class="createForm">
+                                 <div class="rows grid">
+                                    <div class="row">
+                                       <label for="cName">Team Name <em>*</em></label>
+                                       <input type="text" id="cName" name="cName" placeholder="Enter Team Name" value="" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="cYear">Establishment Year <em>*</em></label>
+                                       <input type="date" id="cYear" name="cYear" placeholder="Enter Year Of Establishment" value="" required="" maxlength="4">
+                                    </div>
+                                    <div class="row">
+                                       <label class="image" for="image">Team Logo <i class="uil uil-camera-plus icon"></i><em>*</em>
+                                       </label>
+                                       <input type="file" id="image" name="teamLogo" accept=".png" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="stadium">Home Stadium <em>*</em></label>
+                                       <input type="text" id="stadium" name="stadium" placeholder="Enter Team Home Ground" value="">
+                                    </div>
+                                    <button class="btn flex" name="submit">
+                                    Create Team <i class="uil uil-plus icon"></i>
+                                    </button>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- <div class="divider sectionDesign">
+                        </div> -->
+                     <!--Create Fixture -->
+                     <div class="singleCard createFixture">
+                        <span class="cardTitle"> Create Fixture </span>
+                        <div class="tbh">
+                           <div class="sectionIntro borderBottom">
+                              <span class="sectionSubTitle">Stadium will be selected automatically</span>
+                           </div>
+                           <div class="updateForm">
+                              <form class="createForm" method="POST" >
+                                 <div class="rows grid">
+                                    <div class="row">
+                                       <label for="cName">Home Team <em>*</em></label>
+                                       <select name="homeTeam" id="cName">
+                                          <option value="">-- Select Home Team --</option>
+                                         
+                                          <option value="20">KK Široki</option>
+                                          <option value="21">KK Bosna</option>
+                                          <option value="22">KK Promo</option>
+                                          <option value="24">KK Spartak</option>
+                                          <option value="25">KK Spars</option>
+                                          <option value="26">KK Orlovik</option>
+                                          <option value="27">KK Borac</option>
+                                          <option value="28">KK Posušje</option>
+                                          <option value="29">KK Slavija</option>
+                                          <option value="30">KK Mladost</option>
+                                          <option value="31">KK Leotar</option>
+                                          <option value="32">KK Sloboda</option>
+                                       </select>
+                                    </div>
+                                    <div class="row">
+                                       <label for="cName">Away Team <em>*</em></label>
+                                       <select name="awayTeam" id="">
+                                          <option value="">-- Select Home Team --</option>
+                                          
+                                          <option value="20">KK Široki</option>
+                                          <option value="21">KK Bosna</option>
+                                          <option value="22">KK Promo</option>
+                                          <option value="24">KK Spartak</option>
+                                          <option value="25">KK Spars</option>
+                                          <option value="26">KK Orlovik</option>
+                                          <option value="27">KK Borac</option>
+                                          <option value="28">KK Posušje</option>
+                                          <option value="29">KK Slavija</option>
+                                          <option value="30">KK Mladost</option>
+                                          <option value="31">KK Leotar</option>
+                                          <option value="32">KK Sloboda</option>
+                                       </select>
+                                    </div>
+                                    <div class="row">
+                                       <label for="date">Date &amp; Time<em>*</em></label>
+                                       <input type="datetime-local" id="date" name="date" placeholder="Enter Year Of Establishment" value="" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="matchWeek">Match-Week Number</label>
+                                       <input type="number" id="matchWeek" name="matchWeek" placeholder="Enter Match-Week Number" value="">
+                                    </div>
+                                    <div class="row" style="cursor: not-allowed; opacity: .5">
+                                       <label for="stadium">Stadium</label>
+                                       <input type="text" id="stadium" name="stadium" placeholder="Home team stadium will be set automatically" value="" disabled="">
+                                    </div>
+                                    <button class="btn flex" name="submit">
+                                    Create Fixture <i class="uil uil-plus icon"></i>
+                                    </button>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Create Results -->
+                     <div class="singleCard createResults">
+                        <span class="cardTitle">Match Results </span>
+                        <div class="tbh">
+                           <div class="sectionIntro borderBottom">
+                              <span class="sectionSubTitle">Create match result from the set fixture.</span>
+                           </div>
+                           <div class="updateForm">
+                              <form class="createForm" method="post">
+                                 <div class="rows grid">
+                                    <div class="row">
+                                       <label for="fID">Fixture ID<em>*</em></label>
+                                       <input type="number" id="fID" name="fID" placeholder="Enter Fixture ID " value="" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="cName">Home Team <em>*</em></label>
+                                       <select name="homeTeam" id="">
+                                          <option value="">-- Select Home Team --</option>
+                                          
+                                          <option value="20">KK Široki</option>
+                                          <option value="21">KK Bosna</option>
+                                          <option value="22">KK Promo</option>
+                                          <option value="24">KK Spartak</option>
+                                          <option value="25">KK Spars</option>
+                                          <option value="26">KK Orlovik</option>
+                                          <option value="27">KK Borac</option>
+                                          <option value="28">KK Posušje</option>
+                                          <option value="29">KK Slavija</option>
+                                          <option value="30">KK Mladost</option>
+                                          <option value="31">KK Leotar</option>
+                                          <option value="32">KK Sloboda</option>
+                                       </select>
+                                       <div class="row">
+                                          <label for="homeTeamScore">Home Team Score<em>*</em></label>
+                                          <input type="number" class="Score" id="homeTeamScore" name="homeTeamScore" placeholder="0" required="">
+                                       </div>
+                                       <div class="row grid" id="homeTeamGoalScorersContainer"></div>
+                                    </div>
+                                    <div class="row">
+                                       <label for="awayTeamName">Away Team <em>*</em></label>
+                                       <select name="awayTeam" id="awayTeamName">
+                                          <option value="">-- Select Away Team --</option>
+                                          
+                                          <option value="20">KK Široki</option>
+                                          <option value="21">KK Bosna</option>
+                                          <option value="22">KK Promo</option>
+                                          <option value="24">KK Spartak</option>
+                                          <option value="25">KK Spars</option>
+                                          <option value="26">KK Orlovik</option>
+                                          <option value="27">KK Borac</option>
+                                          <option value="28">KK Posušje</option>
+                                          <option value="29">KK Slavija</option>
+                                          <option value="30">KK Mladost</option>
+                                          <option value="31">KK Leotar</option>
+                                          <option value="32">KK Sloboda</option>
+                                       </select>
+                                       <div class="row">
+                                          <label for="awayTeamNameScore">Away Team Score<em>*</em></label>
+                                          <input type="number" class="Score" id="awayTeamScore" name="awayTeamNameScore" placeholder="0" required="">
+                                       </div>
+                                       <div class="row grid" id="awayTeamGoalScorersContainer"></div>
+                                    </div>
+                                    <div class="row">
+                                       <label for="date">Date & Time<em>*</em></label>
+                                       <input
+                                         type="datetime-local"
+                                         id="date"
+                                         name="date"
+                                         placeholder="Enter Year Of Establishment"
+                                         value=""
+                                         required
+                                       />
+                                       </div>
+                                       
+                                       <div class="row">
+                                       <label for="stadium">Stadium</label>
+                                       <input
+                                         type="text"
+                                         id="stadium"
+                                         name="stadium"
+                                         placeholder="Home team stadium will be set automatically"
+                                         value=""
+                                         disabled
+                                       />
+                                       </div> 
+                                    <button class="btn flex" name="submit">
+                                    Create Result <i class="uil uil-plus icon"></i>
+                                    </button>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Create Player -->
+                     <div class="singleCard createPlayer">
+                        <span class="cardTitle"> Add New Player </span>
+                        <div class="tbh">
+                           <div class="sectionIntro borderBottom">
+                              <span class="sectionSubTitle">One new superstar to the leauge.</span>
+                           </div>
+                           <div class="updateForm">
+                              <form class="createForm" method="POST" >
+                                 <div class="rows grid">
+                                    <div class="row">
+                                       <label for="pFName">Player First Name <em>*</em></label>
+                                       <input type="text" id="pFName" name="pFName" placeholder="Enter Player First Name" value="" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="pSName">Player Second Name <em>*</em></label>
+                                       <input type="text" id="pSName" name="pSName" placeholder="Enter Player Second Name" value="" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="playerTeam">Team<em>*</em></label>
+                                       <select name="playerTeam" id="playerTeam">
+                                          <option value="-1">All</option>
+                                          <option value="20">KK Široki</option>
+                                          <option value="21">KK Bosna</option>
+                                          <option value="22">KK Promo</option>
+                                          <option value="24">KK Spartak</option>
+                                          <option value="25">KK Spars</option>
+                                          <option value="26">KK Orlovik</option>
+                                          <option value="27">KK Borac</option>
+                                          <option value="28">KK Posušje</option>
+                                          <option value="29">KK Slavija</option>
+                                          <option value="30">KK Mladost</option>
+                                          <option value="31">KK Leotar</option>
+                                          <option value="32">KK Sloboda</option>
+                                       </select>
+                                    </div>
+                                    <div class="row">
+                                       <label for="dob">Date Of Birth<em>*</em></label>
+                                       <input type="date" id="dob" name="dob" placeholder="" value="" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label class="image" for="pImage">Player Image <i class="uil uil-camera-plus icon"></i><em>*</em>
+                                       </label>
+                                       <input type="file" id="pImage" name="playerImage" accept=".png" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="nationality">Nationality<em>*</em></label>
+                                       <input type="text" id="nationality" name="nationality" placeholder="Enter Player Nationality" value="" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="height">Height<em>*</em></label>
+                                       <input type="number" id="height" name="height" placeholder="Enter Player Height" value="" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="position">Position<em>*</em></label>
+                                       <select name="playerPosition" id="position">
+                                          <option value="">-- Select Position --</option>
+                                          <option value="Goal Keeper">Goal Keeper</option>
+                                          <option value="Defender">Defender</option>
+                                          <option value="Midfielder">Midfielder</option>
+                                          <option value="Forward">Forward</option>
+                                       </select>
+                                    </div>
+                                    <div class="row">
+                                       <label for="position">Captain?</label>
+                                       <select name="captain" id="position">
+                                          <option value="no" selected="">No</option>
+                                          <option value="yes">Yes</option>
+                                       </select>
+                                    </div>
+                                    <!-- <input type="reset" value="Clear Form"> -->
+                                    <button class="btn flex" name="submit">
+                                    Add Player <i class="uil uil-plus icon"></i>
+                                    </button>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Create News -->
+                     
+                     <!-- Create Administrator -->
+                     <div class="singleCard createAdmin">
+                        <span class="cardTitle"> Create Administrator </span>
+                        <div class="tbh">
+                           <div class="sectionIntro borderBottom">
+                              <span class="sectionSubTitle">Add a new administrator and set roles accordingly</span>
+                           </div>
+                           <div class="updateForm">
+                              <form method="POST" class="createForm">
+                                 <div class="rows grid">
+                                    <div class="row">
+                                       <label for="fName">First Name <em>*</em></label>
+                                       <input type="text" id="fName" name="fName" placeholder="Enter your First Name" value="" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="sName">Second Name <em>*</em></label>
+                                       <input type="text" id="sName" name="sName" placeholder="Enter your Second Name" value="" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="email">Email <em>*</em>
+                                       <small style="font-style: italic; opacity: 0.6">(Enter a valid email)</small></label>
+                                       <input type="text" id="email" name="email" placeholder="Enter your Email" value="" required="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="dob">Date Of Birth <em>*</em></label>
+                                       <input type="date" id="dob" name="dob" placeholder="Enter your Date of birth" value="">
+                                    </div>
+                                    <div class="row">
+                                       <label for="accRole">Account Role <em>*</em></label>
+                                       <select name="adminRole" id="accRole" required="">
+                                          <option value="">--Select Role--</option>
+                                          <option value="GA">General Admininstrator</option>
+                                          <option value="TA">Team Admininstrator</option>
+                                       </select>
+                                    </div>
+                                    <div class="row">
+                                       <label for="access">Team Access <em>*</em> </label>
+                                       <select name="adminAccess" id="access" required="">
+                                          <option value="">
+                                             --Select Access To Access --
+                                          </option>
+                                          <option value="-1">All</option>
+                                          <option value="20">KK Široki</option>
+                                          <option value="21">KK Bosna</option>
+                                          <option value="22">KK Promo</option>
+                                          <option value="24">KK Spartak</option>
+                                          <option value="25">KK Spars</option>
+                                          <option value="26">KK Orlovik</option>
+                                          <option value="27">KK Borac</option>
+                                          <option value="28">KK Posušje</option>
+                                          <option value="29">KK Slavija</option>
+                                          <option value="30">KK Mladost</option>
+                                          <option value="31">KK Leotar</option>
+                                          <option value="32">KK Sloboda</option>
+                                       </select>
+                                    </div>
+                                    <div class="row">
+                                       <label>Account Status</label>
+                                       <select name="accStatus">
+                                          <option value="">
+                                             --Select Account Status --
+                                          </option>
+                                          <option value="Locked">Lock Account</option>
+                                          <option value="Unlocked">Unlock Account</option>
+                                       </select>
+                                    </div>
+                                    <div class="row">
+                                       <label for="pswd">Password <em>*</em></label>
+                                       <input type="password" id="pswd" name="adPswd" placeholder="Create Administrator Password" value="" required="">
+                                    </div>
+                                    <button class="btn flex" name="submit">
+                                    Add Admininstrator <i class="uil uil-plus icon"></i>
+                                    </button>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="toggleDiv myAccount live" data-item="myAccount">
+                  <div class="infoSection flex">
+                     <div class="adminDiv">
+                        <div class="secContent grid">
+                           <img
+                              src="uploads/admin.jpg"
+                              alt="Team Logo"
+                              class="adminImg"
+                              />
+                           <span class="adminName">Ahmed</span>
+                           <span class="adminEmail">ahmedkedic7@gmail.com</span>
+                           <button class="badge">
+                           General Role<i class="uil uil-award icon"></i>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="detailsDiv">
+                        <form class="updateForm1" method="post">
+                           <div class="rows grid">
+                              <div class="row">
+                                 <label for="">First Name</label>
+                                 <input type="" placeholder="Ahmed" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">Second Name</label>
+                                 <input type="" placeholder="Kedić" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">User Name</label>
+                                 <input type="" placeholder="ahmedkedic7" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">Email</label>
+                                 <input type="" placeholder="ahmedkedic7@gmail.com" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">Date Of Birth</label>
+                                 <input type="" placeholder="2003-06-15" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">Password Expires</label>
+                                 <input type="" placeholder="14 days" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="">Role</label>
+                                 <input type="" placeholder="GA" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="username">Account Permission</label>
+                                 <input type="" value="" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="username">Access Status </label>
+                                 <input type="" placeholder="Unlocked" disabled />
+                              </div>
+                              <div class="row">
+                                 <label for="username">Password Last reset </label>
+                                 <input type="" placeholder="2023/20/10" disabled />
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+                  <div class="infoSection sectionDesign">
+                     <div class="sectionIntro borderBottom">
+                        <h2>Update Your Details</h2>
+                        <span class="sectionSubTitle">Any change in this section will log out your account!</span
+                           >
+                     </div>
+                     <div class="updateForm">
+                        <form  method="POST" class="updateForm1">
+                           <div class="rows grid">
+                              <div class="row">
+                                 <label for="fName">First Name</label>
+                                 <input
+                                    type="text"
+                                    id="fName"
+                                    name="fNameUpdate"
+                                    placeholder="Enter your First Name"
+                                    value="Ahmed"
+                                    />
+                              </div>
+                              <div class="row">
+                                 <label for="sName">Second Name</label>
+                                 <input
+                                    type="text"
+                                    id="sName"
+                                    name="sNameUpdate"
+                                    placeholder="Enter your Second Name"
+                                    value="Kedić"
+                                    />
+                              </div>
+                              <div class="row">
+                                 <label for="updateEmail">Email</label>
+                                 <input
+                                    type="text"
+                                    id="updateEmail"
+                                    name="emailUpdate"
+                                    placeholder="Enter your Email"
+                                    value="ahmedkedic7@gmail.com"
+                                    />
+                              </div>
+                              <div class="row">
+                                 <label for="dob">Date Of Birth</label>
+                                 <input
+                                    type="date"
+                                    id="dob"
+                                    name="dobUpdate"
+                                    placeholder="Enter your Date of birth"
+                                    value="2003-6-15"
+                                    />
+                              </div>
+                              <div class="row">
+                                 <label class="image" for="image"
+                                    >My Profile Picture
+                                 <i class="uil uil-camera-plus icon"></i>
+                                 </label>
+                                 <input
+                                    type="file"
+                                    name="adminImage"
+                                    id="image"
+                                    />
+                              </div>
+                              <div class="row">
+                                 <label for="passwrd">Password</label>
+                                 <input
+                                    type="password"
+                                    id="passwrd"
+                                    name="passwrdUpdate"
+                                    placeholder="Enter your Password"
+                                    
+                                    />
+                              </div>
+                              <button class="btn flex" name='submit'>
+                              Update <i class="uil uil-exchange icon"></i>
+                              
+                              </button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="toggleDiv accountDms hide" data-item="accountDms">
+                  <section class="dms">
+                     <table>
+                        <tbody>
+                           <tr>
+                              <th>Admin ID</th>
+                              <th>Name</th>
+                              <th>Team</th>
+                              <th>User Name</th>
+                              <th>Email</th>
+                              <th>Role</th>
+                              <th>Status</th>
+                              <th>Action</th>
+                           </tr>
+                           <tr class="td_row">
+                              <td>1</td>
+                              <td>ahmedkedic7</td>
+                              <td ><i class="uil uil-shield-check icon" style='color: green; font-size: 20px'></i></td>
+                              <td>ahmedkedic7</td>
+                              <td>ahmedkedic7@gmail.com</td>
+                              <td>GA</td>
+                              <td>Unlocked</td>
+                           </tr>
+                           <tr class="td_row">
+                              <td>2</td>
+                              <td>name name</td>
+                              <td>Team Name</td>
+                              <td>name.name</td>
+                              <td>name@gmail.com</td>
+                              <td>TA</td>
+                              <td>Unlocked</td>
+                              <td class="actioBtn flex" style='gap:0.5rem; justify-content: center;'>
+                                 <a href="" class="updateLink"><i class="uil uil-pen icon btn"></i></a>
+                                 <a href="" class="updateLink"><i class="uil uil-trash-alt icon btn deleteBtn"></i></a>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </section>
+               </div>
+            </div>
+            
+            <!-- Dashboard Body content -->
+            <!-- footer section starts here =============================================================-->
+            <div class="footer">
+            </div>
+            <!-- footer section ends here =============================================================-->
+         </div>
+         
+      </div>
+      <div id="myModal" class="modal">
+         <!-- Modal content -->
+         <div class="modal-content">
+             <span class="close">&times;</span>
+             <h2>Are you sure you want to update/delete ?</h2>
+             <div class="button-container">
+               <button class="btn" id="confirmYes">Yes</button>
+               <button class="btn" id="confirmNo">No</button>
+            </div>
+         </div>
+     </div>
+   </div>  
+   
+      
+      <div class="smallDevices grid">
+         <i class="uil uil-exclamation-triangle icon exclamation"></i>
+         <h2>Please Login On Desktop</h2>
+         <span>Admininstrator dashboard is currently available on deskop screen size only.
+         <br>
+         <br>
+         <a href="#home" class="btn homeBtn">
+         <i class="uil uil-arrow-left icon"></i> Back Home 
+         </a>
+         <!-- footer section starts here =============================================================-->
+         <div class="footer">
+         </div>
+         <!-- footer section ends here =============================================================-->
+      </div>
+      <script src="../dashboard.js"></script>
+      <script src="../main.js"></script>
+      <script src="../forms.js"></script>
+      <script src="../modal.js"></script>
+</body>
+</html>

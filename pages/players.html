@@ -14,73 +14,11 @@
       <link rel="stylesheet" href="swiper-bundle.min.css">
    </head>
    <body>
-      <div class="header">
-         <!-- club logos -->
-         <div class="topSection">
-            <a href="clubs.html">
-            <img src="./assets/logos/team (1).png" alt="Team Logo" class="teamLogo" />
-            </a>
-            <a href="clubs.html">
-            <img src="./assets/logos/team (2).png" alt="Team Logo" class="teamLogo" />
-            </a>
-            <a href="clubs.html">
-            <img src="./assets/logos/team (3).png" alt="Team Logo" class="teamLogo" />
-            </a>
-            <a href="clubs.html">
-            <img src="./assets/logos/team (4).png" alt="Team Logo" class="teamLogo" />
-            </a>
-            <a href="clubs.html">
-            <img src="./assets/logos/team (5).png" alt="Team Logo" class="teamLogo" />
-            </a>
-            <a href="clubs.html">
-            <img src="./assets/logos/team (6).png" alt="Team Logo" class="teamLogo" />
-            </a>
-            <a href="clubs.html">
-            <img src="./assets/logos/team (7).png" alt="Team Logo" class="teamLogo" />
-            </a>
-            <a href="clubs.html">
-            <img src="./assets/logos/team (8).png" alt="Team Logo" class="teamLogo" />
-            </a>
-            <a href="clubs.html">
-            <img src="./assets/logos/team (9).png" alt="Team Logo" class="teamLogo" />
-            </a>
-            <a href="clubs.html">
-            <img src="./assets/logos/team (10).png" alt="Team Logo" class="teamLogo" />
-            </a>
-            <a href="clubs.html">
-            <img src="./assets/logos/team (11).png" alt="Team Logo" class="teamLogo" />
-            </a>
-            <a href="clubs.html">
-            <img src="./assets/logos/team (12).png" alt="Team Logo" class="teamLogo" />
-            </a>
-         </div>
-         <div class="lowerSection">
-            <div class="logoDiv">
-               <img src="./assets/logos/kksbih.png" alt="Logo" class="logo">
-            </div>
-            <div class="navBar">
-               <ul class="navList">
-                  <li class="navItem"><a href="./index.html" class="navLink">Home</a></li>
-                  <li class="navItem"><a href="./about.html" class="navLink">About</a></li>
-                  <li class="navItem"><a href="./clubs.html" class="navLink">Clubs</a></li>
-                  <li class="navItem"><a href="./fixtures.html" class="navLink">Fixtures</a></li>
-                  <li class="navItem"><a href="./results.html" class="navLink">Results</a></li>
-               </ul>
-               <a href="login.html">
-                  <div class="button" >
-                     LOG IN
-                  </div>
-               </a>
-            </div>
-            <div class="navBarBtn">
-               <i class="uil uil-bars icon"></i>
-            </div>
-         </div>
-      </div>
+      
       <div class="bodyFlex">
          <div class="sideBody">
             <!-- Clubs section =================================== -->     
-            <div class="clubsSection section" id="clubs">
+            <div class="clubsSection section" >
                <div class="sectionHeader flex">
                   <div class="seasonYear">
                      <h6>2024/5</h6>
@@ -102,7 +40,7 @@
                            </div>
                         </div>
                         <div class="rightRow">
-                           <a href="clubs.html"><i class="uil uil-angle-right icon"></i></a>
+                           <a href="#clubs"><i class="uil uil-angle-right icon"></i></a>
                         </div>
                      </div>
                   </div>
@@ -160,7 +98,7 @@
                            <span class="venue"><strong>Venue: </strong>Pitch Two</span>
                         </div>
                         <div class="detailsLink">
-                           <a href="results.html">
+                           <a href="#results">
                            <span>View All <i class="uil uil-arrow-right icon"></i></span>
                            </a>
                         </div>
@@ -228,7 +166,7 @@
                               </tr>
                            </table>
                            <div class="detailsLink">
-                              <a href="results.html">
+                              <a href="#results">
                               <span>View Full Table <i class="uil uil-arrow-right icon"></i></span>
                               </a>
                            </div>
@@ -248,151 +186,45 @@
             </div>
             <!-- Banner section ends============================ -->
             <!-- Results Section ================================ -->
-            <div class="section container resultsSection" id="results">
+            <div class="section container resultsSection" >
                <div class="sectionContainer">
                   <div class="sectionIntro borderBottom">
                      <h2>Ongoing Season</h2>
                      <span class="sectionSubTitle">Our current league stats</span>
                   </div>
-                  <div class="sectionContent grid">
+                  <div class="sectionContent grid" id="playersContent">
                      <!-- Table  ==================== -->
                      <div class="clubName">
-                        <h2><i class="uil uil-constructor icon"></i>Team Name</span></h2>
+                         <h2><i class="uil uil-constructor icon"></i><span id="teamName"></span></h2>
                      </div>
                      <div class="table__WeekPlayers grid">
-                        <div class="tableDiv">
-                           <div class="tableLogoDiv">
-                              <img
-                                 src="assets/logos/kksbih.png"
-                                 alt="Logo"
-                                 class="logo"
-                                 />
-                           </div>
-                           <div class="table">
-                              <table>
-                                 <tr>
-                                    <th>#</th>
-                                    <th>Name</th>
-                                    <th>Pos</th>
-                                    <th>Height(cm)</th>
-                                    <th>Nat</th>
-                                 </tr>
-                                 <tr class="tr" style="padding: 1rem 0">
-                                    <td class="pos green ">1</td>
-                                    <td class="flex">
-                                       <div class="name">Player 1</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 </tr>
-                                 <tr class="tr" style="padding: 1rem 0">
-                                    <td class="pos green ">2</td>
-                                    <td class="flex">
-                                       <div class="name">Player 2</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 <tr class="tr">
-                                    <td class="pos green">3</td>
-                                    <td class="flex">
-                                       <div class="name">Player 3</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 </tr>
-                                 <tr class="tr">
-                                    <td class="pos green">4</td>
-                                    <td class="flex">
-                                       <div class="name">Player 4</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 </tr>
-                                 <tr class="tr">
-                                    <td class="pos green">5</td>
-                                    <td class="flex">
-                                       <div class="name">Player 5</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 </tr>
-                                 <tr class="tr">
-                                    <td class="pos">6</td>
-                                    <td class="flex">
-                                       <div class="name">Player 6</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 </tr>
-                                 <tr class="tr">
-                                    <td class="pos">7</td>
-                                    <td class="flex">
-                                       <div class="name">Player 7</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 </tr>
-                                 <tr class="tr">
-                                    <td class="pos">8</td>
-                                    <td class="flex">
-                                       <div class="name">Player 8</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 </tr>
-                                 <tr class="tr">
-                                    <td class="pos ">9</td>
-                                    <td class="flex">
-                                       <div class="name">Player 9</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 </tr>
-                                 <tr class="tr">
-                                    <td class="pos ">10</td>
-                                    <td class="flex">
-                                       <div class="name">Player 10</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 </tr>
-                                 <tr class="tr">
-                                    <td class="pos ">11</td>
-                                    <td class="flex">
-                                       <div class="name">Player 11</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 </tr>
-                                 <tr class="tr">
-                                    <td class="pos ">12</td>
-                                    <td class="flex">
-                                       <div class="name">Player 12</div>
-                                    </td>
-                                    <td>F</td>
-                                    <td>200</td>
-                                    <td>BOS</td>
-                                 </tr>
-                              </table>
-                           </div>
-                           <div class="stat">
-                              <span><i class="uil uil-user-nurse icon"></i> Coach: </span>
-                              <span class="res">Manager Name</span>
-                           </div>
-                        </div>
+                         <div class="tableDiv">
+                             <div class="tableLogoDiv">
+                                 <img src="assets/logos/kksbih.png" alt="Logo" class="logo">
+                             </div>
+                             <div class="table">
+                                 <table id="playersTable">
+                                     <thead>
+                                         <tr>
+                                             <th>#</th>
+                                             <th>Name</th>
+                                             <th>Pos</th>
+                                             <th>Height(cm)</th>
+                                             <th>Nat</th>
+                                         </tr>
+                                     </thead>
+                                     <tbody id="tableBody">
+                                         <!-- Table body content will be populated dynamically -->
+                                     </tbody>
+                                 </table>
+                             </div>
+                             <div class="stat">
+                                 <span><i class="uil uil-user-nurse icon"></i> Coach: </span>
+                                 <span class="res" id="coachName"></span>
+                             </div>
+                         </div>
                      </div>
-                  </div>
+                 </div>
                </div>
             </div>
             <!-- Results Section ends================================ -->
@@ -424,15 +256,15 @@
             </div>
             <div class="col">
                <h6>MAIN LINKS</h6>
-               <a href="./index.html" class="footerLink">Home</a>
-               <a href="./about.html" class="footerLink">About</a>
-               <a href="./clubs.html" class="footerLink">Clubs</a>
+               <a href="#home" class="footerLink">Home</a>
+               <a href="#about" class="footerLink">About</a>
+               <a href="#clubs" class="footerLink">Clubs</a>
             </div>
             <div class="col">
                <h6>STATS</h6>
-               <a href="./results.html" class="footerLink">Table</a>
-               <a href="./results.html" class="footerLink">Results</a>
-               <a href="./fixtures.html" class="footerLink">Fixtures</a>
+               <a href="#results" class="footerLink">Table</a>
+               <a href="#results" class="footerLink">Results</a>
+               <a href="#fixtures" class="footerLink">Fixtures</a>
             </div>
          </div>
       </div>
@@ -440,6 +272,7 @@
       <!-- swiper.js link -->
       <script src="swiper-bundle.min.js"></script>
       <!-- link javascript -->
-      <script src="main.js"></script>
+      <script src="./main.js"></script>
+      
    </body>
 </html>

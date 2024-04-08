@@ -1,0 +1,420 @@
+[{
+    "number": 10,
+    "name": "Edin Džeko",
+    "position": "Forward",
+    "height_cm": 200,
+    "nationality": "BOS"
+},
+{
+    "number": 17,
+    "name": "Michael Johnson",
+    "position": "Guard",
+    "height_cm": 195,
+    "nationality": "USA"
+},
+{
+    "number": 3,
+    "name": "Carlos Hernandez",
+    "position": "Center",
+    "height_cm": 210,
+    "nationality": "ESP"
+},
+{
+    "number": 6,
+    "name": "Daniel Brown",
+    "position": "Guard",
+    "height_cm": 190,
+    "nationality": "CAN"
+},
+{
+    "number": 22,
+    "name": "Jean-Luc Moreau",
+    "position": "Forward",
+    "height_cm": 198,
+    "nationality": "FRA"
+},
+{
+    "number": 8,
+    "name": "Maximilian Schmidt",
+    "position": "Center",
+    "height_cm": 205,
+    "nationality": "GER"
+},
+{
+    "number": 2,
+    "name": "Isabella Nguyen",
+    "position": "Guard",
+    "height_cm": 192,
+    "nationality": "AUS"
+},
+{
+    "number": 19,
+    "name": "Matteo Bianchi",
+    "position": "Forward",
+    "height_cm": 197,
+    "nationality": "ITA"
+},
+{
+    "number": 5,
+    "name": "Wei Li",
+    "position": "Center",
+    "height_cm": 203,
+    "nationality": "CHN"
+},
+{
+    "number": 11,
+    "name": "Gustavsson Eriksson",
+    "position": "Guard",
+    "height_cm": 188,
+    "nationality": "SWE"
+},
+{
+    "number": 16,
+    "name": "Oliver Jones",
+    "position": "Forward",
+    "height_cm": 196,
+    "nationality": "GBR"
+},
+{
+    "number": 1,
+    "name": "Dmitri Ivanov",
+    "position": "Center",
+    "height_cm": 207,
+    "nationality": "RUS"
+},
+{
+    "number": 10,
+    "name": "Nedim Hadžić",
+    "position": "Forward",
+    "height_cm": 200,
+    "nationality": "BOS"
+},
+{
+    "number": 17,
+    "name": "John Smith",
+    "position": "Guard",
+    "height_cm": 195,
+    "nationality": "USA"
+},
+{
+    "number": 3,
+    "name": "Javier González",
+    "position": "Center",
+    "height_cm": 210,
+    "nationality": "ESP"
+},
+{
+    "number": 6,
+    "name": "David Martin",
+    "position": "Guard",
+    "height_cm": 190,
+    "nationality": "CAN"
+},
+{
+    "number": 22,
+    "name": "Pierre Dubois",
+    "position": "Forward",
+    "height_cm": 198,
+    "nationality": "FRA"
+},
+{
+    "number": 8,
+    "name": "Max Müller",
+    "position": "Center",
+    "height_cm": 205,
+    "nationality": "GER"
+},
+{
+    "number": 2,
+    "name": "Emma Novak",
+    "position": "Guard",
+    "height_cm": 192,
+    "nationality": "AUS"
+},
+{
+    "number": 19,
+    "name": "Luca Rossi",
+    "position": "Forward",
+    "height_cm": 197,
+    "nationality": "ITA"
+},
+{
+    "number": 5,
+    "name": "Chen Wang",
+    "position": "Center",
+    "height_cm": 203,
+    "nationality": "CHN"
+},
+{
+    "number": 11,
+    "name": "Erik Karlsson",
+    "position": "Guard",
+    "height_cm": 188,
+    "nationality": "SWE"
+},
+{
+    "number": 16,
+    "name": "Jack Williams",
+    "position": "Forward",
+    "height_cm": 196,
+    "nationality": "GBR"
+},
+{
+    "number": 1,
+    "name": "Ivan Petrov",
+    "position": "Center",
+    "height_cm": 207,
+    "nationality": "RUS"
+},{
+    "number": 10,
+    "name": "Aleksandar Petrović",
+    "position": "Forward",
+    "height_cm": 200,
+    "nationality": "SRB"
+},
+{
+    "number": 17,
+    "name": "John Smith",
+    "position": "Guard",
+    "height_cm": 195,
+    "nationality": "USA"
+},
+{
+    "number": 3,
+    "name": "Juan Martínez",
+    "position": "Center",
+    "height_cm": 210,
+    "nationality": "ESP"
+},
+{
+    "number": 6,
+    "name": "Lucas Silva",
+    "position": "Guard",
+    "height_cm": 190,
+    "nationality": "BRA"
+},
+{
+    "number": 22,
+    "name": "Pierre Dupont",
+    "position": "Forward",
+    "height_cm": 198,
+    "nationality": "FRA"
+},
+{
+    "number": 8,
+    "name": "Hans Müller",
+    "position": "Center",
+    "height_cm": 205,
+    "nationality": "GER"
+},
+{
+    "number": 2,
+    "name": "Chen Wei",
+    "position": "Guard",
+    "height_cm": 192,
+    "nationality": "CHN"
+},
+{
+    "number": 19,
+    "name": "Giovanni Rossi",
+    "position": "Forward",
+    "height_cm": 197,
+    "nationality": "ITA"
+},
+{
+    "number": 5,
+    "name": "Mikhail Ivanov",
+    "position": "Center",
+    "height_cm": 203,
+    "nationality": "RUS"
+},
+{
+    "number": 11,
+    "name": "Erik Svensson",
+    "position": "Guard",
+    "height_cm": 188,
+    "nationality": "SWE"
+},
+{
+    "number": 16,
+    "name": "David Johnson",
+    "position": "Forward",
+    "height_cm": 196,
+    "nationality": "GBR"
+},
+{
+    "number": 1,
+    "name": "Antonio da Silva",
+    "position": "Center",
+    "height_cm": 207,
+    "nationality": "POR"
+}, {
+    "number": 10,
+    "name": "Matej Novak",
+    "position": "Forward",
+    "height_cm": 200,
+    "nationality": "CRO"
+},
+{
+    "number": 17,
+    "name": "Andreas Müller",
+    "position": "Guard",
+    "height_cm": 195,
+    "nationality": "GER"
+},
+{
+    "number": 3,
+    "name": "Pablo García",
+    "position": "Center",
+    "height_cm": 210,
+    "nationality": "ESP"
+},
+{
+    "number": 6,
+    "name": "Giuseppe Rossi",
+    "position": "Guard",
+    "height_cm": 190,
+    "nationality": "ITA"
+},
+{
+    "number": 22,
+    "name": "Tomasz Nowak",
+    "position": "Forward",
+    "height_cm": 198,
+    "nationality": "POL"
+},
+{
+    "number": 8,
+    "name": "Vladimir Ivanov",
+    "position": "Center",
+    "height_cm": 205,
+    "nationality": "RUS"
+},
+{
+    "number": 2,
+    "name": "Akira Tanaka",
+    "position": "Guard",
+    "height_cm": 192,
+    "nationality": "JPN"
+},
+{
+    "number": 19,
+    "name": "Joaquín López",
+    "position": "Forward",
+    "height_cm": 197,
+    "nationality": "ESP"
+},
+{
+    "number": 5,
+    "name": "Lars Andersen",
+    "position": "Center",
+    "height_cm": 203,
+    "nationality": "DEN"
+},
+{
+    "number": 11,
+    "name": "Matías Fernández",
+    "position": "Guard",
+    "height_cm": 188,
+    "nationality": "CHI"
+},
+{
+    "number": 16,
+    "name": "Kevin Johnson",
+    "position": "Forward",
+    "height_cm": 196,
+    "nationality": "USA"
+},
+{
+    "number": 1,
+    "name": "Alexandru Popescu",
+    "position": "Center",
+    "height_cm": 207,
+    "nationality": "ROU"
+}
+
+, {
+    "number": 10,
+    "name": "Ibrahim Al-Mansouri",
+    "position": "Forward",
+    "height_cm": 200,
+    "nationality": "KSA"
+},
+{
+    "number": 17,
+    "name": "Muhammad Rahman",
+    "position": "Guard",
+    "height_cm": 195,
+    "nationality": "PAK"
+},
+{
+    "number": 3,
+    "name": "Arjun Patel",
+    "position": "Center",
+    "height_cm": 210,
+    "nationality": "IND"
+},
+{
+    "number": 6,
+    "name": "Ali Khan",
+    "position": "Guard",
+    "height_cm": 190,
+    "nationality": "BAN"
+},
+{
+    "number": 22,
+    "name": "Yusuf Al-Farsi",
+    "position": "Forward",
+    "height_cm": 198,
+    "nationality": "OMA"
+},
+{
+    "number": 8,
+    "name": "Ahmed Said",
+    "position": "Center",
+    "height_cm": 205,
+    "nationality": "EGY"
+},
+{
+    "number": 2,
+    "name": "Mehmet Yilmaz",
+    "position": "Guard",
+    "height_cm": 192,
+    "nationality": "TUR"
+},
+{
+    "number": 19,
+    "name": "Amir Hosseini",
+    "position": "Forward",
+    "height_cm": 197,
+    "nationality": "IRN"
+},
+{
+    "number": 5,
+    "name": "Ali Al-Maktoum",
+    "position": "Center",
+    "height_cm": 203,
+    "nationality": "UAE"
+},
+{
+    "number": 11,
+    "name": "Jamil Qureshi",
+    "position": "Guard",
+    "height_cm": 188,
+    "nationality": "PAK"
+},
+{
+    "number": 16,
+    "name": "Nasser Al-Mansouri",
+    "position": "Forward",
+    "height_cm": 196,
+    "nationality": "QAT"
+},
+{
+    "number": 1,
+    "name": "Khalid Al-Fahad",
+    "position": "Center",
+    "height_cm": 207,
+    "nationality": "KWT"
+}
+]
