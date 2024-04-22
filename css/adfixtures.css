@@ -12,6 +12,7 @@
   --linearGradient: linear-gradient(to right, #3b54c3, #131100);
   --fontSize_13px: 13px;
   --boxShadow: 0px 2px 2px var(--greyColor);
+  
 }
 
 .dashboardBody .fixturesSection .sectionContainer .sectionContent .fixtureDiv .allFixtures {

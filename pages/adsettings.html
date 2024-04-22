@@ -310,50 +310,40 @@
                         </div>
                      </div>
                      <!-- Create Player -->
-                     <div class="singleCard createPlayer">
+                      <div class="singleCard createPlayer">
                         <span class="cardTitle"> Add New Player </span>
                         <div class="tbh">
                            <div class="sectionIntro borderBottom">
                               <span class="sectionSubTitle">One new superstar to the leauge.</span>
                            </div>
                            <div class="updateForm">
-                              <form class="createForm" method="POST" >
+                              <form class="createForm" action="../backend/rest/add_player.php" method="POST" >
                                  <div class="rows grid">
                                     <div class="row">
                                        <label for="pFName">Player First Name <em>*</em></label>
                                        <input type="text" id="pFName" name="pFName" placeholder="Enter Player First Name" value="" required="">
                                     </div>
-                                    <div class="row">
-                                       <label for="pSName">Player Second Name <em>*</em></label>
-                                       <input type="text" id="pSName" name="pSName" placeholder="Enter Player Second Name" value="" required="">
-                                    </div>
+                                    
                                     <div class="row">
                                        <label for="playerTeam">Team<em>*</em></label>
                                        <select name="playerTeam" id="playerTeam">
                                           <option value="-1">All</option>
-                                          <option value="20">KK Široki</option>
-                                          <option value="21">KK Bosna</option>
-                                          <option value="22">KK Promo</option>
-                                          <option value="24">KK Spartak</option>
-                                          <option value="25">KK Spars</option>
-                                          <option value="26">KK Orlovik</option>
-                                          <option value="27">KK Borac</option>
-                                          <option value="28">KK Posušje</option>
-                                          <option value="29">KK Slavija</option>
-                                          <option value="30">KK Mladost</option>
-                                          <option value="31">KK Leotar</option>
-                                          <option value="32">KK Sloboda</option>
+                                          <option value="10002">KK Široki</option>
+                                          <option value="10001">KK Bosna</option>
+                                            <option value="10003">KK Promo</option>
+                                            <option value="10004">KK Spartak</option>
+                                            <option value="10005">KK Spars</option>
+                                            <option value="10006">KK Orlovik</option>
+                                            <option value="10007">KK Borac</option>
+                                            <option value="10008">KK Posušje</option>
+                                            <option value="10009">KK Slavija</option>
+                                            <option value="10010">KK Mladost</option>
+                                            <option value="10011">KK Leotar</option>
+                                            <option value="10012">KK Sloboda</option>
                                        </select>
                                     </div>
-                                    <div class="row">
-                                       <label for="dob">Date Of Birth<em>*</em></label>
-                                       <input type="date" id="dob" name="dob" placeholder="" value="" required="">
-                                    </div>
-                                    <div class="row">
-                                       <label class="image" for="pImage">Player Image <i class="uil uil-camera-plus icon"></i><em>*</em>
-                                       </label>
-                                       <input type="file" id="pImage" name="playerImage" accept=".png" required="">
-                                    </div>
+                                    
+                                    
                                     <div class="row">
                                        <label for="nationality">Nationality<em>*</em></label>
                                        <input type="text" id="nationality" name="nationality" placeholder="Enter Player Nationality" value="" required="">
@@ -366,19 +356,12 @@
                                        <label for="position">Position<em>*</em></label>
                                        <select name="playerPosition" id="position">
                                           <option value="">-- Select Position --</option>
-                                          <option value="Goal Keeper">Goal Keeper</option>
-                                          <option value="Defender">Defender</option>
-                                          <option value="Midfielder">Midfielder</option>
-                                          <option value="Forward">Forward</option>
+                                            <option value="Forward">Forward</option>
+                                            <option value="Center">Center</option>
+                                            <option value="Guard">Guard</option>
                                        </select>
                                     </div>
-                                    <div class="row">
-                                       <label for="position">Captain?</label>
-                                       <select name="captain" id="position">
-                                          <option value="no" selected="">No</option>
-                                          <option value="yes">Yes</option>
-                                       </select>
-                                    </div>
+                                    
                                     <!-- <input type="reset" value="Clear Form"> -->
                                     <button class="btn flex" name="submit">
                                     Add Player <i class="uil uil-plus icon"></i>
@@ -695,5 +678,5 @@
       <script src="../main.js"></script>
       <script src="../forms.js"></script>
       <script src="../modal.js"></script>
-</body>
+      
 </html>
