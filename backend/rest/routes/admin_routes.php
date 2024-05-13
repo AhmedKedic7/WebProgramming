@@ -13,6 +13,9 @@ Flight::group("/admins",function(){
  *     tags={"admins"},
  *     summary="Get all admins",
  *     description="Retrieve all admins from the server.",
+ *     security={
+ *          {"ApiKey": {}} 
+ *          },
  *     @OA\Response(
  *         response=200,
  *         description="An array of all admins",
@@ -71,9 +74,13 @@ Flight::route("GET /all", function() {
  *     tags={"admins"},
  *     summary="Add a new admin",
  *     description="Add a new admin with the provided data.",
+ *     security={
+ *          {"ApiKey": {}} 
+ *          },
  *     @OA\RequestBody(
  *         required=true,
  *         description="Admin data",
+ *         
  *         @OA\JsonContent(
  *             required={"fName"},
  *             @OA\Property(property="fName", type="string", example="John"),
@@ -84,7 +91,7 @@ Flight::route("GET /all", function() {
  *             @OA\Property(property="adminRole", type="string", example="admin"),
  *             @OA\Property(property="accStatus", type="string", example="active"),
  *             @OA\Property(property="adPswd", type="string", example="password")
- *             @OA\Property(property="adPswd", type="string", example="some_secret_password")
+ *             
  *         )
  *     ),
  *     @OA\Response(
@@ -154,6 +161,9 @@ Flight::route("POST /add", function() {
  *     tags={"admins"},
  *     summary="Delete an admin",
  *     description="Delete an admin by ID.",
+ *     security={
+ *          {"ApiKey": {}} 
+ *          },
  *     @OA\Parameter(
  *         name="admin_id",
  *         in="path",

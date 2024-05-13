@@ -36,6 +36,9 @@ Flight::group("/players", function() {
      *      path="/players/add",
      *      tags={"players"},
      *      summary="Add a player",
+     *      security={
+ *          {"ApiKey": {}} 
+ *          },
      *      @OA\Response(
      *           response=200,
      *           description="Input the player info and add the player to the database"
@@ -89,6 +92,9 @@ Flight::group("/players", function() {
  *      path="/players/delete/{player_id}",
  *      tags={"players"},
  *      summary="Delete player by ID",
+ *      security={
+ *          {"ApiKey": {}} 
+ *          },
  *      @OA\Response(
  *           response=200,
  *           description="Delete the player with the specified ID from the database, or get 'Invalid player id'"

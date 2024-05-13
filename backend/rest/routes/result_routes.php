@@ -27,6 +27,9 @@ Flight::group("/results",function(){
  *      path="/results/delete/{result_id}",
  *      tags={"results"},
  *      summary="Delete a result",
+ *      security={
+ *          {"ApiKey": {}} 
+ *          },
  *      @OA\Parameter(
  *          name="result_id",
  *          in="path",
@@ -67,6 +70,9 @@ Flight::route("DELETE /delete/@result_id", function($result_id) {
  *      path="/results/add",
  *      tags={"results"},
  *      summary="Add a new result",
+ *      security={
+ *          {"ApiKey": {}} 
+ *          },
  *      @OA\RequestBody(
  *          required=true,
  *          @OA\JsonContent(

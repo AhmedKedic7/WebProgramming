@@ -42,6 +42,9 @@ Flight::group("/tables", function() {
  *      tags={"tables"},
  *      summary="Update table",
  *      description="Update table data based on the provided table ID.",
+ *      security={
+ *          {"ApiKey": {}} 
+ *          },
  *      @OA\RequestBody(
  *          required=true,
  *          description="Table data payload",

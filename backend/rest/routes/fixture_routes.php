@@ -28,6 +28,9 @@ Flight::route("GET /all", function() {
  *      path="/fixtures/add",
  *      tags={"fixtures"},
  *      summary="Add a new fixture",
+ *      security={
+ *          {"ApiKey": {}} 
+ *          },
  *      @OA\RequestBody(
  *          required=true,
  *          @OA\JsonContent(
@@ -98,6 +101,9 @@ Flight::route("POST /add", function() {
      *      path="/fixtures/delete/{fixture_id}",
      *      tags={"fixtures"},
      *      summary="Delete a fixture",
+     *      security={
+ *          {"ApiKey": {}} 
+ *          },
      *      @OA\Parameter(
      *          name="fixture_id",
      *          in="path",
