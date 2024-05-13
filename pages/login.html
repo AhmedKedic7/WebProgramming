@@ -11,8 +11,7 @@
       <!-- link icons -->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-      <!-- link swiper.min.css -->
-      <link rel="stylesheet" href="swiper-bundle.min.css">
+      
       <link rel="stylesheet" href="css/main.css">
       
    </head>
@@ -39,12 +38,12 @@
             <form id="loginForm" method = 'POST'>
                <div class="rows grid">
                   <div class="row">
-                     <label for="username">User Name</label>
-                     <input type="text" id="username" name="adun" placeholder="Enter your User Name" required>
+                     <label for="uName">User Name</label>
+                     <input type="text" id="uName" name="uName" placeholder="Enter your User Name" required>
                   </div>
                   <div class="row">
-                     <label for="password">Password</label>
-                     <input type="password" id="password" name="adpswd" placeholder="Enter Password" required>
+                     <label for="adPswd">Password</label>
+                     <input type="password" id="adPswd" name="adPswd" placeholder="Enter Password" required>
                   </div>
                   <div class="row">
                      <button id="loginBtn" name="submit" class="submitBtn btn flex">Login <i class="uil uil-arrow-up-right icon"></i></button>
@@ -71,9 +70,9 @@
             </form>
            
          </div>
-         <div class="registerBtn">
+         <!--<div class="registerBtn">
             <a  href="#register" class="registerBtn submitBtn btn flex">Register here <i class="uil uil-arrow-up-right icon"></i></a>
-         </div>
+         </div>-->
       </section>
       <!-- Login Section ends ======================== -->
       <script>
@@ -130,11 +129,14 @@
          </div>
       </div>
       <!-- footer section ends here =============================================================-->
-      <!-- swiper.js link -->
-      <script src="swiper-bundle.min.js"></script>
+      
       <!-- link javascript -->
-      <script src="../main.js"></script>
-      <script src="../forms.js"></script>
+      <script src="main.js"></script>
+      <script src="utils/utils.js"></script>
+      <script src="utils/constants.js"></script>
+      <script src="utils/rest_client.js"></script>
+      <script src="forms.js"></script>
+      
       <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
    </body>
 </html>

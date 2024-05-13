@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Local Basketball League Management System</title>
+      <link rel="shortcut icon" href="https://basket.ba/prvenstvo/wp-content/uploads/2019/03/faivon2.png">
+      <!-- Link css -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+      <!-- link icons -->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+      
+      <link rel="stylesheet" href="../css/main.css">
+      
+   </head>
+   <body>
+      
+      <div class="aboutBanner" style="padding: 10rem 0 5rem;">
+         <span class="bannerText">
+            <i class="uil uil-constructor icon"></i>
+            <h2>Admin Login</h2>
+         </span>
+      </div>
+      <!-- Login Section ======================== -->
+      <section class=" loginSection section">
+         <div class="sectionIntro">
+            <h2 class="title">
+               Club Admin
+            </h2>
+            <span class="subTitle" style='margin-bottom: .5rem'>
+            Be authentic, only admins.
+            </span>
+         </div>
+         <div class="formContainer">
+            <div class="overlay"></div>
+            <form id="loginForm" method = 'POST'>
+               <div class="rows grid">
+                  <div class="row">
+                     <label for="uName">User Name</label>
+                     <input type="text" id="uName" name="uName" placeholder="Enter your User Name" required>
+                  </div>
+                  <div class="row">
+                     <label for="adPswd">Password</label>
+                     <input type="password" id="adPswd" name="adPswd" placeholder="Enter Password" required>
+                  </div>
+                  <div class="row">
+                     <button id="loginBtn" type="submit" name="submit" class="submitBtn btn flex">Login <i class="uil uil-arrow-up-right icon"></i></button>
+                  </div>
+                  <span class='forgotPass flex'>Forgot Password!</span>
+                  <div class="infoCard">
+                     <div class="info">
+                        <i class="uil uil-exclamation-triangle icon exclamation"></i>
+                        <h6>We're Notified!</h6>
+                        <p>
+                           
+                           <br> <br>
+                           Kindly reach out to your Administrator to reset your password!
+                        </p>
+                        <button class='btn flex' id='closeCard'>Close</button>
+                     </div>
+                  </div>
+                  
+               </div>
+               
+
+               </div>
+               
+            </form>
+           
+         </div>
+         <!--<div class="registerBtn">
+            <a  href="#register" class="registerBtn submitBtn btn flex">Register here <i class="uil uil-arrow-up-right icon"></i></a>
+         </div>-->
+      </section>
+      <!-- Login Section ends ======================== -->
+      <script>
+         // Show Alert
+         const calink = document.querySelector(".forgotPass");
+         console.log(calink)
+         const card = document.querySelector(".infoCard");
+         const close = document.getElementById("closeCard");
+         
+         calink.addEventListener('click', function () {
+           card.classList.add('flowIn')
+         })
+         close.addEventListener('click', function () {
+           card.classList.remove('flowIn')
+         })
+         </script>
+          
+      <!-- footer section starts here =============================================================-->
+      <div class="footer">
+         <div class="footerContent container grid">
+            <div class="col firstCol">
+               <img src="../assets/logos/bhbl.png" alt="Logo Image" class="footerLogo">
+               <span class="text">
+               Basketball League
+               </span>
+               <p>We celebrate our Basketball and generations!</p>
+               <div class="socials flex">
+                  <a href="#" target="_blank">
+                  <i class="uil uil-facebook-f icon"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                  <i class="uil uil-envelope-heart icon"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                  <i class="uil uil-whatsapp icon"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                  <i class="uil uil-youtube icon"></i>
+                  </a>
+               </div>
+            </div>
+            <div class="col">
+               <h6>MAIN LINKS</h6>
+               <a href="#home" class="footerLink">Home</a>
+               <a href="#about" class="footerLink">About</a>
+               <a href="#clubs" class="footerLink">Clubs</a>
+            </div>
+            <div class="col">
+               <h6>STATS</h6>
+               <a href="#results" class="footerLink">Table</a>
+               <a href="#results" class="footerLink">Results</a>
+               <a href="#fixtures" class="footerLink">Fixtures</a>
+            </div>
+         </div>
+      </div>
+      <!-- footer section ends here =============================================================-->
+      
+      <!-- link javascript -->
+      <script src="../main.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src=></script>
+      <script src="../utils/utils.js"></script>
+      <script src="../utils/constants.js"></script>
+      <script src="../utils/rest_client.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+      <script>
+         if (Utils.get_from_localstorage("user")) {
+        window.location = "../";
+      }
+         document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+            console.log("hallo");
+    // Retrieve input values
+    var username = document.getElementById("uName").value;
+    var password = document.getElementById("adPswd").value;
+
+    // Use RestClient.post to submit the form data
+    RestClient.post(
+        "auth/login",
+        {
+            uName: username,
+            adPswd: password
+        },
+        function(response) {
+            if (response.token) {
+                toastr.success('Login successful!', '');
+                $("#adminLink").show();
+                Utils.set_to_localstorage("user", response.user);
+                //window.location = "../"; // Redirect to the admin page
+            } else {
+                toastr.error('Invalid password or username', '');
+            }
+        },
+        function(xhr) {
+            toastr.error(xhr.responseText);
+        }
+    );
+
+    // Reset the form
+    
+});
+
+      </script>
+   </body>
+</html>

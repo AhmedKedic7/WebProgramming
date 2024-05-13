@@ -3,6 +3,14 @@ var RestClient = {
       $.ajax({
         url: Constants.API_BASE_URL + url,
         type: "GET",
+        beforeSend: function (xhr) {
+          if (Utils.get_from_localstorage("user")) {
+            xhr.setRequestHeader(
+              "Authentication",
+              Utils.get_from_localstorage("user").token
+            );
+          }
+        },
         success: function (response) {
           if (callback) callback(response);
         },
@@ -12,10 +20,19 @@ var RestClient = {
       });
     },
     request: function (url, method, data, callback, error_callback) {
+      
       $.ajax({
           url: Constants.API_BASE_URL + url,
           type: method,
           data: data,
+          beforeSend: function (xhr) {
+            if (Utils.get_from_localstorage("user")) {
+              xhr.setRequestHeader(
+                "Authentication",
+                Utils.get_from_localstorage("user").token
+              );
+            }
+          },
       })
       .done(function (response, status, jqXHR) {
           if (callback) callback(response);

@@ -9,13 +9,17 @@
       <!-- Link css -->
       <link rel="stylesheet" href="css/main.css">
       <link href="spapp/css/spapp.css" rel="stylesheet">
+      
+      <link rel="stylesheet" href="css/dashboard.css">
+      <link rel="stylesheet" href="css/adsettings.css">
+      <!-- link icons -->
       <!-- link icons -->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
       <!-- link swiper.min.css -->
       
       
     <!-- DataTables Bootstrap 5 CSS -->
-      <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css">
+      
    </head>
    <body>
       <div class="header">
@@ -70,7 +74,7 @@
                   <li class="navItem"><a href="#fixtures" class="navLink">Fixtures</a></li>
                   <li class="navItem"><a href="#results" class="navLink">Results</a></li>
                   <li class="navItem" id="adminLink" style="display: none;"><a href="#admin" class="navLink">Admin</a></li>
-                  <li class="navItem">
+                  <li class="navItem" id="loginNavItem">
                      <a href="#login" class="navLinkAbout">
                         <div class="button" >
                            LOG IN
@@ -111,8 +115,7 @@
       
       <!-- footer section ends here =============================================================-->
       <!-- swiper.js link -->
-      <script src="main.js"></script>
-      <script src="forms.js"></script>
+      
       <!-- link javascript -->
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -122,10 +125,34 @@
       <script src="spapp/js/jquery.spapp.js"></script>
       <script src="spapp/js/custom.js"></script>
       <!-- Bootstrap DataTables JavaScript -->
-      <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-      <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+      <!--<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+      <script src="main.js"></script>
+      <script src="utils/utils.js"></script>
+      
+      <script src="utils/constants.js"></script>
+      <script src="utils/rest_client.js"></script>
+      <script src="forms.js"></script>
+      
+      <script>
+         if (Utils.get_from_localstorage("user")) {
+    $("#adminLink").show();
+    $("#loginNavItem").hide();
+    Utils.init_spapp();
+         }
+    else{
+      window.location="login";
+      
+      
+    }
+    
+    
+  
+      </script>
+            
+            
       
    </body>
 </html>

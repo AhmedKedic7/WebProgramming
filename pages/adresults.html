@@ -7,11 +7,12 @@
       <title>Local Basketball League Management System</title>
       <link rel="shortcut icon" href="https://basket.ba/prvenstvo/wp-content/uploads/2019/03/faivon2.png">
       <!-- Link css -->
-      <link rel="stylesheet" href="../css/main.css">
-      <link rel="stylesheet" href="../css/dashboard.css">
-      <link rel="stylesheet" href="../css/adresults.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/dashboard.css">
+      <link rel="stylesheet" href="css/adresults.css">
       <!-- link icons -->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
    </head>
    <body>
       <div class="dashboardFlex flex">
@@ -28,10 +29,10 @@
                <i class="uil uil-create-dashboard icon"></i>
                <span> Dashboard </span>
                </a>
-               <a href="#adteams" class="singleLink flex">
+               <!--<a href="#adteams" class="singleLink flex">
                <i class="uil uil-trophy icon"></i>
                <span> Teams </span>
-               </a>
+               </a>-->
                <a href="#adfixtures" class="singleLink flex">
                <i class="uil uil-schedule icon"></i>
                <span> Fixtures </span>
@@ -55,12 +56,10 @@
             <div class="adminDiv sectionDesign">
                <div class="sectionIntro">
                   <h2 class="title">Administrator</h2>
-                  <span class="subTitle">Please Be Authentic!</span>
+                  
                </div>
                <div class="secContent grid">
-                  <img src="./uploads/admin.jpg" alt="Team Logo" class="adminImg">
-                  <span class="adminName" >Ahmed </span>
-                  <span class="adminEmail">ahmedkedic7@gmail.com</span>
+                  
                   <button class="btn" id="signOutBtn">
                   <a href="#home">
                   Sign Out <i class="uil uil-signout icon"></i></a>
@@ -99,162 +98,14 @@
                   <div class="sectionContent grid">
                      <!-- Results div ============== -->
                      <div class="resultsDiv" id="results">
-                        <span class="matchNumber"> Matchweek 1 Results </span>
+                        <span class="matchNumber"> Matchweek Results </span>
                         <div class="leagueLogo">
                            <img src="./assets/logos/Košarkaški_Savez_BiH_logo.png" alt="Logo" class="logo" />
                         </div>
-                        <small>Results from week 1</small>
-                        <div class="date">Sunday 21 April</div>
+                        <small>Results from last week</small>
+                        
                         <div class="allResults">
-                           <div class="singleResult">
-                              <div class="teams flex">
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="name">Team 1</div>
-                                    <div class="teamLogoDiv">
-                                       <img src="./assets/logos/team (1).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                 </div>
-                                 <p class="time">5-0</p>
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="./assets/logos/team (10).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">Team 10</div>
-                                 </div>
-                              </div>
-                              <span class="venue"><strong>Venue: </strong>Pitch Two</span>
-                              <div class="editResult flex">
-                                 <a href="" class="btn flex updateLink">
-                                 Manage Results <i class="uil uil-pen icon"></i>
-                                 </a>
-                                 <em>*Only Super Administrators</em>
-                              </div>
-                           </div>
-                           <div class="singleResult">
-                              <div class="teams flex">
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="name">Team 3</div>
-                                    <div class="teamLogoDiv">
-                                       <img src="./assets/logos/team (3).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                 </div>
-                                 <p class="time">3-1</p>
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="./assets/logos/team (4).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">Team 4</div>
-                                 </div>
-                              </div>
-                              <span class="venue"><strong>Venue: </strong>Pitch Three</span
-                                 >
-                              <div class="editResult flex">
-                                 <a href="" class="btn flex updateLink">
-                                 Manage Results <i class="uil uil-pen icon"></i>
-                                 </a>
-                                 <em>*Only Super Administrators</em>
-                              </div>
-                           </div>
-                           <div class="singleResult">
-                              <div class="teams flex">
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="name">Team 5</div>
-                                    <div class="teamLogoDiv">
-                                       <img
-                                          src="./assets/logos/team (5).png"
-                                          alt="Team Logo"
-                                          class="teamLogo"
-                                          />
-                                    </div>
-                                 </div>
-                                 <p class="time">1-0</p>
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="teamLogoDiv">
-                                       <img
-                                          src="./assets/logos/team (6).png"
-                                          alt="Team Logo"
-                                          class="teamLogo"
-                                          />
-                                    </div>
-                                    <div class="name">Team 6</div>
-                                 </div>
-                              </div>
-                              <span class="venue"
-                                 ><strong>Venue: </strong>Pitch Four</span
-                                 >
-                              <div class="editResult flex">
-                                 <a href="" class="btn flex updateLink">
-                                 Manage Results <i class="uil uil-pen icon"></i>
-                                 </a>
-                                 <em>*Only Super Administrators</em>
-                              </div>
-                           </div>
-                           <div class="singleResult">
-                              <div class="teams flex">
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="name">Team 7</div>
-                                    <div class="teamLogoDiv">
-                                       <img
-                                          src="./assets/logos/team (7).png"
-                                          alt="Team Logo"
-                                          class="teamLogo"
-                                          />
-                                    </div>
-                                 </div>
-                                 <p class="time">1-1</p>
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="teamLogoDiv">
-                                       <img
-                                          src="./assets/logos/team (8).png"
-                                          alt="Team Logo"
-                                          class="teamLogo"
-                                          />
-                                    </div>
-                                    <div class="name">Team 8</div>
-                                 </div>
-                              </div>
-                              <span class="venue"
-                                 ><strong>Venue: </strong>Pitch Five</span
-                                 >
-                              <div class="editResult flex">
-                                 <a href="" class="btn flex updateLink">
-                                 Manage Results <i class="uil uil-pen icon"></i>
-                                 </a>
-                                 <em>*Only Super Administrators</em>
-                              </div>
-                           </div>
-                           <div class="singleResult">
-                              <div class="teams flex">
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="name">Team 9</div>
-                                    <div class="teamLogoDiv">
-                                       <img
-                                          src="./assets/logos/team (9).png"
-                                          alt="Team Logo"
-                                          class="teamLogo"
-                                          />
-                                    </div>
-                                 </div>
-                                 <p class="time">2-0</p>
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="teamLogoDiv">
-                                       <img
-                                          src="./assets/logos/team (2).png"
-                                          alt="Team Logo"
-                                          class="teamLogo"
-                                          />
-                                    </div>
-                                    <div class="name">Team 2</div>
-                                 </div>
-                              </div>
-                              <span class="venue"><strong>Venue: </strong>Pitch Six</span>
-                              <div class="editResult flex">
-                                 <a href="" class="btn flex updateLink">
-                                 Manage Results <i class="uil uil-pen icon"></i>
-                                 </a>
-                                 <em>*Only Super Administrators</em>
-                              </div>
-                           </div>
+                           
                         </div>
                      </div>
                      <div class="table__WeekPlayers grid">
@@ -263,7 +114,8 @@
                                <img src="assets/logos/kksbih.png" alt="Logo" class="logo">
                            </div>
                            <div class="table">
-                               <table>
+                               <table id="tbl_clubs">
+                                 <thead>
                                    <tr>
                                        <th>Pos</th>
                                        <th>Club</th>
@@ -275,6 +127,10 @@
                                        <th>GD</th>
                                        <th>Pts</th>
                                    </tr>
+                                 </thead>
+                                   <tbody>
+
+                                   </tbody>
                                </table>
                            </div>
                        </div>
@@ -284,10 +140,10 @@
             </div>
             <!-- Results Section ends================================ -->
             <div class="editResults flex">
-               <a href="" class="btn flex updateLink">
+               <a href="#"  class="btn flex updateLink">
                Update Table <i class="uil uil-plus icon"></i>
                </a>
-               <em>*Only Super Administrators</em>
+               
             </div>
             
            
@@ -297,17 +153,74 @@
             <!-- footer section ends here =============================================================-->
          </div>
       </div>
-      <div id="myModal" class="modal">
-         <!-- Modal content -->
+      <div id="editTableModal" class="modal">
          <div class="modal-content">
              <span class="close">&times;</span>
-             <h2>Are you sure you want to update?</h2>
-             <div class="button-container">
-               <button class="btn" id="confirmYes">Yes</button>
-               <button class="btn" id="confirmNo">No</button>
-            </div>
+             <h2>Edit Table</h2>
+             <form id="editTableForm" method="POST">
+                 <input type="hidden" id="editPlayerId" name="player_id">
+               <div class="rows grid">
+                 <div class="row">
+                     <label for="editPlayerTeam">Team:</label>
+                     <select name="table_id" id="table_id">
+                         <option value="101">KK Široki</option>
+                         <option value="102">KK Bosna</option>
+                         <option value="103">KK Sloboda</option>
+                        <option value="104">KK Borac</option>
+                        <option value="105">KK Spars</option>
+                        <option value="106">KK Orlovik</option>
+                        <option value="107">KK Leotar</option>
+                        <option value="108">KK Mladost</option>
+                       <option value="109">KK Promo</option>
+                       <option value="110">KK Slavija</option>
+                       <option value="111">KK Posušje</option>
+                       <option value="112">KK Spartak</option>
+
+                         
+                     </select>
+                 </div>
+     
+                 <div class="row">
+                     <label for="editPlayerPL">PL:</label>
+                     <input type="number" id="editPlayerPL" name="PL">
+                 </div>
+     
+                 <div class="row">
+                     <label for="editPlayerW">W:</label>
+                     <input type="number" id="editPlayerW" name="W">
+                 </div>
+     
+                 <div class="row">
+                     <label for="editPlayerL">L:</label>
+                     <input type="number" id="editPlayerL" name="L">
+                 </div>
+     
+                 <div class="row">
+                     <label for="editPlayerGF">GF:</label>
+                     <input type="number" id="editPlayerGF" name="GF">
+                 </div>
+     
+                 <div class="row">
+                     <label for="editPlayerGA">GA:</label>
+                     <input type="number" id="editPlayerGA" name="GA">
+                 </div>
+     
+                 <div class="row">
+                     <label for="editPlayerGD">GD:</label>
+                     <input type="number" id="editPlayerGD" name="GD">
+                 </div>
+     
+                 <div class="row">
+                     <label for="editPlayerPts">Pts:</label>
+                     <input type="number" id="editPlayerPts" name="Pts">
+                 </div>
+     
+                 <button class="btn" type="submit">Update Table</button>
+               </div>
+             </form>
          </div>
      </div>
+     
       </div>
       <div class="smallDevices grid">
          <i class="uil uil-exclamation-triangle icon exclamation"></i>
@@ -323,9 +236,33 @@
          </div>
          <!-- footer section ends here =============================================================-->
       </div>
-      <script src="../modal.js"></script>
-      <script src="../table.js"></script>
-      <script src="../forms.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+      <!--<script src="modal.js"></script>-->
+      
+      <script src="forms.js"></script>
+      <script src="services/result.js"></script>
+      <script src="services/table.js"></script>
+      <script> 
+         $(document).ready(function() {
+    // Handle click event on the "Update Table" link
+    $('.updateLink').click(function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        
+        // Show the modal
+        $('#editTableModal').show();
+    });
+    $('#editTableModal .close').click(function() {
+        $('#editTableModal').hide();
+    });
+    
+    // Close modal when clicking outside the modal
+    $(window).click(function(event) {
+        if (event.target == $('#editTableModal')[0]) {
+            $('#editTableModal').hide();
+        }
+    });
+});
+         </script>
       
    </body>
 </html>
