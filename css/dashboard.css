@@ -83,6 +83,7 @@ body .test {
 }
 
 .dashboardFlex .dashboardMenu {
+    vertical-align: top;
     width: 20%;
     background: var(--greyColor);
     
@@ -453,7 +454,7 @@ body .test {
 
 .dashboardFlex .dashboardBody .banner {
     position: relative;
-    background-image: url(../assets/bahrain/Plain-BG-White.png);
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

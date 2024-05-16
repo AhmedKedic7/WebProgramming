@@ -6,9 +6,10 @@
       <title>Local Basketball League Management System</title>
       <link rel="shortcut icon" href="https://basket.ba/prvenstvo/wp-content/uploads/2019/03/faivon2.png">
       <!-- Link css -->
-      <link rel="stylesheet" href="./css/main.css">
-      <link rel="stylesheet" href="./css/dashboard.css">
-      <link rel="stylesheet" href="./css/adfixtures.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/dashboard.css">
+      <link rel="stylesheet" href="css/adfixtures.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
       <!-- link icons -->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
    </head>
@@ -29,10 +30,10 @@
                <i class="uil uil-create-dashboard icon"></i>
                <span> Dashboard </span>
                </a>
-               <a href="#adteams" class="singleLink flex">
+               <!--<a href="#adteams" class="singleLink flex">
                <i class="uil uil-trophy icon"></i>
                <span> Teams </span>
-               </a>
+               </a>-->
                <a href="#adfixtures" class="singleLink flex active">
                <i class="uil uil-schedule icon"></i>
                <span> Fixtures </span>
@@ -93,103 +94,14 @@
                <div class="sectionContainer">
                   <div class="sectionContent grid">
                      <div class="fixtureDiv borderTop">
-                        <span class="matchNumber"> Matchweek 2 </span>
+                        <span class="matchNumber"> Matchweek</span>
                         <div class="leagueLogo">
                            <img src="./assets/logos/Košarkaški_Savez_BiH_logo.png" alt="Logo" class="logo">
                         </div>
                         <small>All times shown are local</small>
-                        <div class="date">Thursday 28 December</div>
+                        <div class="date">This Week</div>
                         <div class="allFixtures">
-                           <div class="singleFixture">
-                              <div class="teams flex">
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="name">KK Orlovik </div>
-                                    <div class="teamLogoDiv">
-                                       <img src="./assets/logos/team (6).png" alt="Team Logo" class="teamLogo">
-                                    </div>
-                                 </div>
-                                 <p class="time">23:13</p>
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="./assets/logos/team (5).png" alt="Team Logo" class="teamLogo">
-                                    </div>
-                                    <div class="name">KK Spars</div>
-                                 </div>
-                              </div>
-                              <span class="venue"><strong>Venue: </strong>Maracanã  Stadium</span>
-                              <div class="editResult flex">
-                                 <a href="" class="btn flex updateLink">
-                                 Edit Fixture<i class="uil uil-pen icon"></i>
-                                 </a>
-                                 <em>*Only Super Administrators</em>
-                              </div>
-                              <div class="editResult flex">
-                                 <a href="" class="btn  flex updateLink">
-                                 Delete Fixture<i class="uil uil-trash-alt icon"></i>
-                                 </a>
-                                 <em>*Only Super Administrators</em>
-                              </div>
-                           </div>
-                           <div class="singleFixture">
-                              <div class="teams flex">
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="name">KK Borac</div>
-                                    <div class="teamLogoDiv">
-                                       <img src="./assets/logos/team (4).png" alt="Team Logo" class="teamLogo">
-                                    </div>
-                                 </div>
-                                 <p class="time">13:17</p>
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="./assets/logos/team (3).png" alt="Team Logo" class="teamLogo">
-                                    </div>
-                                    <div class="name">KK Sloboda</div>
-                                 </div>
-                              </div>
-                              <span class="venue"><strong>Venue: </strong>Ulsan Munsu Stadium</span>
-                              <div class="editResult flex">
-                                 <a href="" class="btn flex updateLink">
-                                 Edit Fixture<i class="uil uil-pen icon"></i>
-                                 </a>
-                                 <em>*Only Super Administrators</em>
-                              </div>
-                              <div class="editResult flex">
-                                 <a href="" class="btn  flex updateLink">
-                                 Delete Fixture<i class="uil uil-trash-alt icon"></i>
-                                 </a>
-                                 <em>*Only Super Administrators</em>
-                              </div>
-                           </div>
-                           <div class="singleFixture">
-                              <div class="teams flex">
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="name">KK Bosna</div>
-                                    <div class="teamLogoDiv">
-                                       <img src="./assets/logos/team (2).png" alt="Team Logo" class="teamLogo">
-                                    </div>
-                                 </div>
-                                 <p class="time">21:15</p>
-                                 <div class="teamName_teamLogo flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="./assets/logos/team (1).png" alt="Team Logo" class="teamLogo">
-                                    </div>
-                                    <div class="name">KK Široki</div>
-                                 </div>
-                              </div>
-                              <span class="venue"><strong>Venue: </strong>Vespucio Stadium</span>
-                              <div class="editResult flex">
-                                 <a href="" class="btn flex updateLink">
-                                 Edit Fixture<i class="uil uil-pen icon"></i>
-                                 </a>
-                                 <em>*Only Super Administrators</em>
-                              </div>
-                              <div class="editResult flex">
-                                 <a href="" class="btn flex updateLink">
-                                 Delete Fixture<i class="uil uil-trash-alt icon"></i>
-                                 </a>
-                                 <em>*Only Super Administrators</em>
-                              </div>
-                           </div>
+                           
                         </div>
                         <!-- <small>*All time subjected to change.</small> -->
                      </div>
@@ -234,10 +146,12 @@
          </div>
          <!-- footer section ends here =============================================================-->
       </div>
-      <script src="../modal.js"></script>
-      <script src="../forms.js"></script>
+      <script src="modal.js"></script>
+      <script src="forms.js"></script>
+      <script src="services/fixture.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
      
-      <script>
+      <!--<script>
          // Toggle clubs' details by arrow click======>
          /*=============== ACCORDION ===============*/
          const accordion = document.getElementsByClassName('singleClub')
@@ -246,6 +160,6 @@
              this.classList.toggle('active')
          })
          }
-      </script>
+      </script>-->
    </body>
 </html>

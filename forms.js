@@ -23,39 +23,96 @@ document.querySelectorAll('.updateForm1').forEach(function(form) {
   });
 });
 
-// Add event listener to all elements with class 'createForm'
-document.querySelectorAll('.createForm').forEach(function(form) {
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
+$(document).ready(function() {
+    $('#playerForm').submit(function(e) {
+        e.preventDefault(); // Prevent the default form submission
 
-    // Get form data
-    const formData = new FormData(event.target);
+        // Serialize form data
+        var formData = $(this).serialize();
 
-    // Convert form data to JSON
-    const jsonData = {};
-    formData.forEach((value, key) => {
-        jsonData[key] = value;
+        // Send form data to the PHP script
+        $.post(Constants.API_BASE_URL + "players/add", formData) // Updated URL
+            .done(function(data) {
+                toastr.success("You have successfully added the player.");
+                PlayerService.reload_players_table();
+                // Reset the form
+                e.target.reset(); // Use e.target.reset() to reset the form // Reset the first form in case there are multiple forms with the same class
+            })
+            .fail(function(xhr) {
+                toastr.error("Error.");
+            });
     });
-
-    // Log JSON data to the console
-    console.log(jsonData);
-
-    // Send success message to user
-    alert('Created successfully!');
-
-    // Reset the form
-    event.target.reset();
-  });
 });
 
+$(document).ready(function() {
+    $('#resultForm').submit(function(e) {
+        e.preventDefault(); // Prevent the default form submission
 
+        // Serialize form data
+        var formData = $(this).serialize();
 
-document.getElementById("loginForm").addEventListener("submit", function(event) {
+        // Send form data to the PHP script
+        $.post(Constants.API_BASE_URL + "results/add", formData) // Updated URL
+            .done(function(data) {
+                toastr.success("You have successfully added the result.");
+                ResultService.populate_results();
+                // Reset the form
+                e.target.reset(); // Use e.target.reset() to reset the form // Reset the first form in case there are multiple forms with the same class
+            })
+            .fail(function(xhr) {
+                toastr.error("Error.");
+            });
+    });
+});
+
+$(document).ready(function() {
+    $('#fixtureForm').submit(function(e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Serialize form data
+        var formData = $(this).serialize();
+
+        // Send form data to the PHP script
+        $.post(Constants.API_BASE_URL+"fixtures/add", formData) // Updated URL
+            .done(function(data) {
+                toastr.success("You have successfully added the fixture.");
+                FixtureService.populate_fixtures();
+                // Reset the form
+                e.target.reset(); // Use e.target.reset() to reset the form // Reset the first form in case there are multiple forms with the same class
+            })
+            .fail(function(xhr) {
+                toastr.error("Error.");
+            });
+    });
+});
+
+$(document).ready(function() {
+    $('#adminForm').submit(function(e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Serialize form data
+        var formData = $(this).serialize();
+
+        // Send form data to the PHP script
+        $.post(Constants.API_BASE_URL+"admins/add", formData) // Updated URL
+            .done(function(data) {
+                toastr.success("You have successfully added the admin.");
+                AdminService.reload_admins_table();
+                // Reset the form
+                e.target.reset(); // Use e.target.reset() to reset the form // Reset the first form in case there are multiple forms with the same class
+            })
+            .fail(function(xhr) {
+                toastr.error("Error.");
+            });
+    });
+});
+
+/*document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
 
     // Retrieve input values
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    var username = document.getElementById("uName").value;
+    var password = document.getElementById("adPswd").value;
 
     const formData = new FormData(event.target);
   
@@ -87,6 +144,48 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
             }
         })
         .catch(error => alert('Error fetching user data:', error));
+});*/
+if (Utils.get_from_localstorage("user")) {
+    $("#adminLink").show();
+    $("#loginNavItem").hide();
+    
+    
+  }
+     document.getElementById("loginForm").addEventListener("submit", function(event) {
+event.preventDefault(); // Prevent form submission
+        console.log("hallo");
+// Retrieve input values
+var username = document.getElementById("uName").value;
+var password = document.getElementById("adPswd").value;
+
+// Use RestClient.post to submit the form data
+RestClient.post(
+    "auth/login",
+    {
+        uName: username,
+        adPswd: password
+    },
+    function(response) {
+        if (response.token) {
+            toastr.success('Login successful!', '');
+            
+            Utils.set_to_localstorage("user", response.user);
+            $("#adminLink").show();
+            $("#loginNavItem").hide();
+
+                // Redirect to the admin page
+            window.location = "#home";
+        } else {
+            toastr.error('Invalid password or username', '');
+        }
+    },
+    function(xhr) {
+        toastr.error(xhr.responseText);
+    }
+);
+
+// Reset the form
+
 });
 
 $(document).ready(function() {
@@ -151,7 +250,10 @@ document.getElementById("signOutBtn").addEventListener("click", function(event) 
 
     // Hide the admin link
     $("#adminLink").hide();
+    
+    $("#loginNavItem").show()
 
     // Redirect to home page
-    window.location.href = '#home';
+    window.location="#home";
+    ;
 });

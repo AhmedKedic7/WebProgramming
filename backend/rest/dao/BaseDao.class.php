@@ -1,6 +1,6 @@
 <?php 
 
-require_once __DIR__ . "../../config.php";
+require_once __DIR__ . "/../config.php";
 
 class BaseDao {
     protected $connection;
@@ -44,7 +44,7 @@ class BaseDao {
         return $prepared_statement;
     }
 
-    /*public function insert($table, $entity) {
+    public function insert($table, $entity) {
         $query = "INSERT INTO {$table} (";
         foreach($entity as $column => $value) {
             $query .= $column . ", ";
@@ -62,7 +62,8 @@ class BaseDao {
         $entity['id'] = $this->connection->lastInsertId();
 
         return $entity;
-    }*/
+    }
+    
 }
 
 ?>

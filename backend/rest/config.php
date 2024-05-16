@@ -19,5 +19,6 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-echo "Connected successfully!";
+//JWT SECRET
+define('JWT_SECRET','#q4tJP7u$+F&1!UKu:Y-jrA[0*#RiK')
 ?>

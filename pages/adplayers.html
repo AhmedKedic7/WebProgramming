@@ -7,16 +7,16 @@
       <title>Local Basketball League Management System</title>
       <link rel="shortcut icon" href="https://basket.ba/prvenstvo/wp-content/uploads/2019/03/faivon2.png">
       <!-- Link css -->
-      <link rel="stylesheet" href="../css/main.css">
-      <link rel="stylesheet" href="../css/dashboard.css">
-      <link rel="stylesheet" href="../css/adplayers.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/dashboard.css">
+      <link rel="stylesheet" href="css/adplayers.css">
       <!-- link icons -->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
       <!-- Link to Bootstrap 5 CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">-->
     
-    <!-- Link to DataTables Bootstrap 5 CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css">
+    <!-- Link to DataTables Bootstrap 5 CSS 
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css">-->
 
       
     <!-- DataTables Bootstrap 5 CSS -->
@@ -39,10 +39,10 @@
                <i class="uil uil-create-dashboard icon"></i>
                <span> Dashboard </span>
                </a>
-               <a href="#adteams" class="singleLink flex">
+               <!--<a href="#adteams" class="singleLink flex">
                <i class="uil uil-trophy icon"></i>
                <span> Teams </span>
-               </a>
+               </a>-->
                <a href="#adfixtures" class="singleLink flex">
                <i class="uil uil-schedule icon"></i>
                <span> Fixtures </span>
@@ -68,9 +68,7 @@
                   <span class="subTitle">Please Be Authentic!</span>
                </div>
                <div class="secContent grid">
-                  <img src="./uploads/admin.jpg" alt="Team Logo" class="adminImg">
-                  <span class="adminName">Ahmed </span>
-                  <span class="adminEmail">ahmedkedic7@gmail.com</span>
+                  
                   <button class="btn" id="signOutBtn">
                   <a href="#home">
                   Sign Out <i class="uil uil-signout icon"></i></a>
@@ -118,10 +116,10 @@
                                     />
                               </div>
                               <div class="table">
-                                 <table id="example"  style="width:100%">
+                                 <table id="tbl_players"  style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>Number</th>
+                                            <th>ID</th>
                                             <th>Name</th>
                                             <th>Position</th>
                                             <th>Height (cm)</th>
@@ -159,13 +157,77 @@
          <div class="footer">
             
          </div>
+         
          <!-- footer section ends here =============================================================-->
       </div>
+      <!-- Edit Modal -->
+<div id="editModal" class="modal">
+   <div class="modal-content">
+     <span class="close">&times;</span>
+     <h2>Edit Player</h2>
+     <form id="editPlayerForm" method="POST">
+      <div class="rows grid">
+         <input type="hidden" id="editPlayerId" name="player_id">
+         <div class="row">
+            <label for="editPlayerName"> Name:</label>
+            <input type="text" id="editPlayerName" name="pFName">
+         </div>
+          
+          <div class="row">
+            <label for="editPlayerNationality">Nationality:</label>
+            <input type="text" id="editPlayerNationality" name="nationality">
+          </div>
+          <div class="row">
+            <label for="editPlayerHeight">Height (cm):</label>
+            <input type="number" id="editPlayerHeight" name="height">
+
+            <label for="editPlayerTeam">Team:</label>
+            <select name="playerTeam" id="editPlayerTeam">
+               
+               <option value="10002">KK Široki</option>
+               <option value="10001">KK Bosna</option>
+               <option value="10003">KK Promo</option>
+               <option value="10004">KK Spartak</option>
+               <option value="10005">KK Spars</option>
+               <option value="10006">KK Orlovik</option>
+               <option value="10007">KK Borac</option>
+               <option value="10008">KK Posušje</option>
+               <option value="10009">KK Slavija</option>
+               <option value="10010">KK Mladost</option>
+               <option value="10011">KK Leotar</option>
+               <option value="10012">KK Sloboda</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="editPlayerPosition">Position<em>*</em></label>
+            <select name="playerPosition" id="editPlayerPosition">
+               
+               <option value="Forward">Forward</option>
+               <option value="Center">Center</option>
+               <option value="Guard">Guard</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="editPlayerJerseyNumber">Jersey Number:</label>
+            <input type="number" id="editPlayerJerseyNumber" name="jersey_number">
+          </div>
+         <!-- Add more form fields for other player attributes -->
+         <button class= "btn" type="submit">Update Player</button>
+      </div>
+     </form>
+   </div>
+ </div>
+ 
+ <!-- JavaScript -->
+ 
+ 
       <!-- Bootstrap DataTables JavaScript -->
-      <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-      <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-      <script src="../forms.js"></script>
-      <script>
+      <!--<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>-->
+      <script src="forms.js"></script>
+      <script src="services/players.js"></script>
+     
+      <!--<script>
           $(document).ready(function() {
          // Fetch JSON data
          $.getJSON('./json/players.json', function(data) {
@@ -190,6 +252,6 @@
          });
       });
      
-     </script>
+     </script>-->
    </body>
 </html>
