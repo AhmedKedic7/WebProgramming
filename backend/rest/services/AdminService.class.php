@@ -11,7 +11,10 @@ class AdminService{
     }
     
     public function add_admin($admin){
-        $admin[':adPswd']=password_hash($admin[':adPswd'],PASSWORD_BCRYPT);
+        // Hash the password using bcrypt before adding the admin
+        $admin[':adPswd'] = password_hash($admin[':adPswd'], PASSWORD_BCRYPT);
+        
+        // Add the admin with the hashed password
         return $this->admin_dao->add_admin($admin);
     }
     public function get_all_admins(){

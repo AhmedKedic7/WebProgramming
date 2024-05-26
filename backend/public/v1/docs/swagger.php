@@ -2,8 +2,11 @@
 
 require __DIR__ . '/../../../vendor/autoload.php';
 
-   
-define('BASE_URL', 'http://localhost/WebProgramming/backend/');
+if($_SERVER['SERVER_NAME']=='localhost' || $_SERVER['SERVER_NAME']=='127.0.0.1'){
+    define('BASE_URL', 'http://localhost/WebProgramming/backend/');
+}else{
+    define('BASE_URL', 'https://oyster-app-ppfen.ondigitalocean.app/backend/');
+}
 
 error_reporting(0);
 

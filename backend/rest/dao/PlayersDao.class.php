@@ -17,7 +17,7 @@ class PlayersDao extends BaseDao{
         $query = "SELECT * FROM players;";
         return $this->query($query, []);
     }
-   
+    
     public function delete_player($id) {
         $query = "DELETE FROM players WHERE player_id = :id";
         $this->execute($query, ["id" => $id]);

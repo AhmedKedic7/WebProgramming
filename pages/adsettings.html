@@ -60,11 +60,9 @@
                   
                </div>
                <div class="secContent grid">
-                  
-                  <button class="btn" id="signOutBtn">
-                  <a href="#index">
-                  Sign Out <i class="uil uil-signout icon"></i></a>
-                  </button>
+                  <button class="btn" id="signOutBtn" onclick="signOut()">
+                     Sign Out <i class="uil uil-signout icon"></i>
+                 </button>
                </div>
             </div>
             <!-- Admininstrator Div Ends -->
@@ -648,23 +646,30 @@
       <script src="services/admins.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
       <script>
-       /* $(document).ready(function() {
-    $('.createForm').submit(function(e) {
-        e.preventDefault(); // Prevent the default form submission
 
-        // Serialize form data
-        var formData = $(this).serialize();
+      
+document.addEventListener('DOMContentLoaded', function() {
+    const signOutBtn = document.getElementById("signOutBtn");
+    
+    if (signOutBtn) {
+        signOutBtn.addEventListener("click", function(event) {
+            // Prevent default link behavior
+            event.preventDefault();
 
-        // Send form data to the PHP script
-        $.post("./backend/rest/add_player.php", formData) // Updated URL
-            .done(function(data) {
-                toastr.success("You have successfully added the player.");
-            })
-            .fail(function(xhr) {
-                toastr.error("Error.");
-            });
-    });
-});*/
+            // Hide the admin link
+            $("#adminLink").hide();
+            
+            $("#loginNavItem").show();
+
+            // Redirect to home page
+            window.location = "#login";
+            
+            console.log("Sign-out button clicked.");
+        });
+    } else {
+        console.error("Sign-out button element not found.");
+    }
+});
       </script>
       
 </html>

@@ -17,34 +17,7 @@
       <div class="bodyFlex">
          <div class="sideBody">
             <!-- Clubs section =================================== -->
-            <div class="clubsSection section" id="">
-               <div class="sectionHeader flex">
-                  <div class="seasonYear">
-                     <h6>2022/5</h6>
-                  </div>
-                  <div class="seasonYear">
-                     <h6>Featured Club</h6>
-                  </div>
-               </div>
-               <div class="clubsContainer container">
-                  <div class="singleClub">
-                     <div class="singleClubTop flex">
-                        <div class="leftRow flex">
-                           <div class="teamLogoDiv">
-                              <img src="assets/logos/team (6).png" alt="Team Logo" class="teamLogo" />
-                           </div>
-                           <div class="clubName">
-                              <span class="name">KK Orlovik</span>
-                              <span class="classYear">Established: 1999</span>
-                           </div>
-                        </div>
-                        <div class="rightRow">
-                           <a href="#clubs"><i class="uil uil-angle-right icon"></i></a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            
             <!-- Clubs section ends =================================== -->
             <!-- League Logs Section -->
             <section class="section container logSection sectionDesign">
@@ -55,13 +28,12 @@
                   </div>
                   <div class="sectionContent grid">
                      <div class="resultsDiv borderTop">
-                        <span class="matchNumber"> Matchweek 1 Results </span>
+                        <span class="matchNumber"> Matchweek  Results </span>
                         <div class="leagueLogo">
                            <img src="assets/logos/Košarkaški_Savez_BiH_logo.png" alt="Logo" class="logo" />
                         </div>
-                        <small>Results from week 1</small>
-                        <div class="date">Sunday 21 April</div>
-                        <div class="singleFixture">
+                        <div class="resultsDiv" id="resultSide"></div>
+                        <!--<div class="singleFixture">
                            <div class="teams flex">
                               <div class="teamName_teamLogo flex">
                                  <div class="name">KK Mladost</div>
@@ -96,21 +68,22 @@
                               </div>
                            </div>
                            <span class="venue"><strong>Venue: </strong>Pitch Two</span>
-                        </div>
+                        </div>-->
                         <div class="detailsLink">
                            <a href="#results">
-                           <span>View All <i class="uil uil-arrow-right icon"></i></span>
+                           <span>View Table <i class="uil uil-arrow-right icon"></i></span>
                            </a>
                         </div>
                      </div>
                      <div class="fixtureDiv borderTop">
-                        <span class="matchNumber"> Matchweek 2 Fixtures </span>
+                        <span class="matchNumber"> Matchweek Fixtures </span>
                         <div class="leagueLogo">
                            <img src="assets/logos/Košarkaški_Savez_BiH_logo.png" alt="Logo" class="logo" />
                         </div>
                         <small>All times shown are local</small>
-                        <div class="date">Thursday 28 April</div>
-                        <div class="singleFixture">
+                        
+                        <div class="fixtureDiv" id="fixtureSide"></div>
+                        <!---<div class="singleFixture">
                            <div class="teams flex">
                               <div class="teamName_teamLogo flex">
                                  <div class="name">KK Promo</div>
@@ -145,82 +118,14 @@
                               </div>
                            </div>
                            <span class="venue"><strong>Venue: </strong>Kyamate Stadium</span>
-                        </div>
+                        </div>-->
                         <div class="detailsLink">
                            <a href="#fixtures">
                            <span>View All <i class="uil uil-arrow-right icon"></i></span>
                            </a>
                         </div>
                      </div>
-                     <div class="tableDiv">
-                        <div class="tableLogoDiv">
-                           <img src="assets/logos/kksbih.png" alt="Logo" class="logo" />
-                        </div>
-                        <div class="table">
-                           <table>
-                              <tr>
-                                 <th>Pos</th>
-                                 <th>Club</th>
-                                 <th>Pl</th>
-                                 <th>GD</th>
-                                 <th>Pts</th>
-                              </tr>
-                              <tr class="tr" style="padding: 1rem 0">
-                                 <td class="pos green leader">1</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(1).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Široki</div>
-                                 </td>
-                                 <td>1</td>
-                                 <td>+5</td>
-                                 <td class="points">3</td>
-                              </tr>
-                              <tr class="tr">
-                                 <td class="pos green">2</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(2).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Bosna</div>
-                                 </td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td class="points">0</td>
-                              </tr>
-                              <tr class="tr">
-                                 <td class="pos">3</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(3).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Sloboda</div>
-                                 </td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td class="points">0</td>
-                              </tr>
-                              <tr class="tr">
-                                 <td class="pos">4</td>
-                                 <td class="flex">
-                                    <div class="teamLogoDiv">
-                                       <img src="assets/logos/team&#32;(4).png" alt="Team Logo" class="teamLogo" />
-                                    </div>
-                                    <div class="name">KK Borac</div>
-                                 </td>
-                                 <td>0</td>
-                                 <td>0</td>
-                                 <td class="points">0</td>
-                              </tr>
-                           </table>
-                           <div class="detailsLink">
-                              <a href="#results">
-                              <span>View Full Table <i class="uil uil-arrow-right icon"></i></span>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
+                     
                   </div>
                </div>
             </section>
@@ -320,7 +225,8 @@
       </div>
       <!-- footer section ends here =============================================================-->
      
-      
+      <script src="services/result.js"></script>
+      <script src="services/fixture.js"></script>
       
    </body>
 </html>

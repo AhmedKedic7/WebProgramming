@@ -59,13 +59,9 @@
                   <span class="subTitle">Please Be Authentic!</span>
                </div>
                <div class="secContent grid">
-                  <img src="./uploads/admin.jpg" alt="Team Logo" class="adminImg">
-                  <span class="adminName">Ahmed </span>
-                  <span class="adminEmail">ahmedkedic7@gmail.com</span>
-                  <button class="btn" id="signOutBtn">
-                  <a href="#home">
-                  Sign Out <i class="uil uil-signout icon"></i></a>
-                  </button>
+                  <button class="btn" id="signOutBtn" onclick="signOut()">
+                     Sign Out <i class="uil uil-signout icon"></i>
+                 </button>
                   
                </div>
             </div>
@@ -100,7 +96,7 @@
                         </div>
                         <small>All times shown are local</small>
                         <div class="date">This Week</div>
-                        <div class="allFixtures">
+                        <div class="allFixtures" id = "allFixturesAdmin">
                            
                         </div>
                         <!-- <small>*All time subjected to change.</small> -->

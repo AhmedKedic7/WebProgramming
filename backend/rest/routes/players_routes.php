@@ -127,12 +127,12 @@ Flight::route("DELETE /delete/@player_id", function($player_id) {
  *          in="path",
  *          required=true,
  *          description="ID of the player to retrieve",
- *          @OA\Schema(type="integer")
+ *          
  *      ),
  *      @OA\Response(
  *          response=200,
  *          description="Player data retrieved successfully",
- *          @OA\JsonContent(ref="#/components/schemas/Player")
+ *          
  *      ),
  *      @OA\Response(
  *          response=400,
@@ -152,6 +152,8 @@ Flight::route("GET /get_player/@player_id", function($player_id) {
 
     Flight::json($player);
 });
+
+
 
 /**
  * @OA\Post(
