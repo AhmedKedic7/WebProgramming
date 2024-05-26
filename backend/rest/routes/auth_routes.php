@@ -47,16 +47,27 @@ Flight::group('/auth', function(){
  * )
  */
     Flight::route('POST /login' , function(){
-        $payload=Flight::request()->data->getData();
 
-        $admin=Flight::get('auth_service')->get_admin_by_username($payload['uName']);
+      
         
 
-        if(!$admin )//pasword_verify nece da radi ovako sam ga implementirao password_verify($payload['adPswd'],$admin['password']) na openAPI sam pokusao sa uName: "ahmed" i adPswd: "1234" i hash za ovaj password je $2y$10$RJSH5PxFtDj6wA5Z0XWUceGbP.WoA/0btVIB8xhgW9f  
-            Flight::halt(500,"Invalid password or username!");
+            $payload = Flight::request()->data->getData();
+            $authService = Flight::get('auth_service');
+            
+            // Fetch admin data based on the username provided
+            $admin = $authService->get_admin_by_username($payload['uName']);
+            
         
+            // Check if admin data was found
+            if (!$admin) {
+                Flight::halt(404, "Admin not found");
+            }
         
-
+            // Check if the provided password matches the hashed password stored in the database
+            if (!password_verify($payload['adPswd'], $admin['password'])) {
+                Flight::halt(500, "Invalid password");
+            }
+        
         $jwt_payload=[
             'user'=>$admin,
             'iat'=>time(),
@@ -65,7 +76,7 @@ Flight::group('/auth', function(){
 
         $token=JWT::encode(
             $jwt_payload,
-            JWT_SECRET,
+            Config::JWT_SECRET(),
             'HS256'
         );
 
@@ -96,7 +107,7 @@ Flight::group('/auth', function(){
             $token = Flight::request()->getHeader("Authentication");
             if(!$token)
                 Flight::halt(401,"Missing authentication header");
-            $decoded_token=JWT::decode($token, new Key(JWT_SECRET,'HS256'));
+            $decoded_token=JWT::decode($token, new Key(Config::JWT_SECRET(),'HS256'));
 
             Flight::json([
                 'jwt_decoded'=>$decoded_token,

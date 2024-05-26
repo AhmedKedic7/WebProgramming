@@ -40,7 +40,7 @@ Flight::group("/admins",function(){
 
 
 Flight::route("GET /all", function() {
-    try{
+    /*try{
         $token = Flight::request()->getHeader("Authentication");
         if(!$token)
             Flight::halt(401,"Missing authentication header");
@@ -54,7 +54,7 @@ Flight::route("GET /all", function() {
         );
     }catch(\Exception $e){
         Flight::halt(401,$e->getMessage());
-    }
+    }*/
     try {
         // Assuming you have a method in your AdminService to retrieve all admins
         $adminService = new AdminService();
@@ -196,9 +196,6 @@ Flight::route("POST /add", function() {
  */
 
 Flight::route("DELETE /delete/@admin_id", function($admin_id) {
-    if ($admin_id == NULL || $admin_id == "") {
-        Flight::halt(400, "Invalid admin id");
-    }
     
     $adminService = Flight::get("admin_service");
     

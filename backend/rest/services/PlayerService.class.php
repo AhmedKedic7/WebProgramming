@@ -17,6 +17,7 @@ class PlayerService{
     public function get_all_players() {
         return $this->player_dao->get_all_players();
     }
+    
     public function delete_player($player_id) {
         $this->player_dao->delete_player($player_id);
     }

@@ -1,18 +1,16 @@
 var TableService = {
     fetchAndPopulateTable: function() {
-        $.ajax({
-            url: Constants.API_BASE_URL + "tables/get_table",
-            type: "GET",
-            dataType: "json",
-            success: function(data) {
-                // Call the function to populate the table with the retrieved data
-                TableService.populateTable(data);
+        RestClient.get(
+            "tables/get_table",
+            function (data) {
+              // Call the function to populate the table with the retrieved data
+              TableService.populateTable(data);
             },
-            error: function(xhr, status, error) {
-                // Handle error
-                console.error("Error fetching data:", error);
+            function (xhr) {
+              // Handle error
+              console.error("Error fetching data:", xhr.responseText);
             }
-        });
+          );
     },
     
     populateTable: function(data) {
@@ -57,19 +55,18 @@ var TableService = {
 $('#editTableForm').submit(function(event) {
     event.preventDefault();
     var formData = $(this).serialize();
-    $.ajax({
-        url: Constants.API_BASE_URL + 'tables/update_table',
-        method: 'POST',
-        data: formData,
-        success: function(response) {
-            toastr.success('Table entry updated successfully');
-            $('#editTableModal').hide();
-            TableService.fetchAndPopulateTable();
+    RestClient.post(
+        'tables/update_table',
+        formData,
+        function(response) {
+          toastr.success('Table entry updated successfully');
+          $('#editTableModal').hide();
+          TableService.fetchAndPopulateTable();
         },
-        error: function(xhr, status, error) {
-            console.error('Error updating table entry:', error);
+        function(xhr) {
+          console.error('Error updating table entry:', xhr.responseText);
         }
-    });
+      );
 });
 
 $(document).ready(function() {

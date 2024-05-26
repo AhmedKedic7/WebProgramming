@@ -1,36 +1,34 @@
 var PlayerService = {
     reload_players_table: function () {
         // Make an AJAX request to fetch player data from the server
-        $.ajax({
-            url: Constants.API_BASE_URL+"players/all", //get players
-            type: "GET",
-            dataType: "json",
-            success: function (data) {
-                // Clear the existing table body
-                $("#tbl_players tbody").empty();
-                
-                // Iterate over the player data and populate the table rows
-                $.each(data, function (index, player) {
-                    var row = "<tr>" +
-                        "<td>" + player.player_id + "</td>" +
-                        "<td>" + player.player_name + "</td>" +
-                        "<td>" + player.player_position + "</td>" +
-                        
-                        "<td>" + player.height_cm + "</td>" +
-                        "<td>" + player.nationality + "</td>" +
-                        "<td>" +
-                            "<button class='btn deleteBtn' data-id='" + player.player_id + "'>Delete</button>" +
-                            "<button class='btn editBtn' data-id='" + player.player_id + "'>Edit</button>" +
-                        "</td>" +
-                        "</tr>";
-                    $("#tbl_players tbody").append(row);
-                });
+        RestClient.get(
+            "players/all",
+            function (data) {
+              // Clear the existing table body
+              $("#tbl_players tbody").empty();
+              
+              // Iterate over the player data and populate the table rows
+              $.each(data, function (index, player) {
+                var row = "<tr>" +
+                  "<td>" + player.player_id + "</td>" +
+                  "<td>" + player.player_name + "</td>" +
+                  "<td>" + player.player_position + "</td>" +
+                  
+                  "<td>" + player.height_cm + "</td>" +
+                  "<td>" + player.nationality + "</td>" +
+                  "<td>" +
+                    "<button id='deletePlayer' class='btn deleteBtn' data-id='" + player.player_id + "'>Delete</button>" +
+                    "<button class='btn editBtn' data-id='" + player.player_id + "'>Edit</button>" +
+                  "</td>" +
+                  "</tr>";
+                $("#tbl_players tbody").append(row);
+              });
             },
-            error: function (xhr, status, error) {
-                // Handle error
-                console.error("Error fetching player data:", error);
+            function (xhr) {
+              // Handle error
+              console.error("Error fetching player data:", xhr.responseText);
             }
-        });
+          );
     },
 
     delete_player: function (player_id) {
@@ -44,14 +42,15 @@ var PlayerService = {
                 });
         }
     },
+    
 
     // Function to handle edit action
     edit_player: function (player_id) {
         // Make an AJAX request to fetch player data from the server
-        $.ajax({
-            url: Constants.API_BASE_URL + "players/get_player/" + player_id, //get player by id
-            method: "GET",
-            success: function(response) {
+        RestClient.get(
+            "players/get_player/" + player_id, //get player by id
+            {},
+            function(response) {
                 // Populate form fields with player data
                 $('#editPlayerId').val(response.player_id);
                 $('#editPlayerName').val(response.player_name);
@@ -63,10 +62,10 @@ var PlayerService = {
                 // Show edit modal
                 $('#editModal').show();
             },
-            error: function(xhr, status, error) {
+            function(xhr, status, error) {
                 console.error('Error fetching player data:', error);
             }
-        });
+        );
         $('#editModal .close').click(function() {
             $('#editModal').hide();
         });
@@ -80,20 +79,19 @@ var PlayerService = {
         $('#editPlayerForm').submit(function(event) {
             event.preventDefault();
             var formData = $(this).serialize();
-            $.ajax({
-                url: Constants.API_BASE_URL + 'players/update_player',
-                method: 'POST',
-                data: formData,
-                success: function(response) {
+            RestClient.post(
+                'players/update_player',
+                formData)
+                .done( function(response) {
                     toastr.success('Player updated successfully');
                     $('#editModal').hide();
                     PlayerService.reload_players_table();
-                },
-                error: function(xhr, status, error) {
+                })
+                .fail (function(xhr, status, error) {
                     console.error('Error updating player:', error);
-                }
+                });
             });
-        });
+        
     }
 
 };
@@ -101,9 +99,9 @@ var PlayerService = {
 $(document).ready(function () {
     // Call the reload_players_table function when the document is ready
     PlayerService.reload_players_table();
-
+    
     // Event delegation for delete button click
-    $(document).on("click", ".deleteBtn", function () {
+    $(document).on("click", "#deletePlayer", function () {
         var player_id = $(this).data("id");
         PlayerService.delete_player(player_id);
     });
